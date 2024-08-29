@@ -79,7 +79,7 @@ export default defineConfig({
 
         //编辑本页
         editLink: {
-            pattern: 'https://github.com/Yiov/vitepress-doc/edit/main/docs/:path', // 改成自己的仓库
+            pattern: 'https://github.com/ye0130/yeecore-doc/edit/master/docs/:path', // 改成自己的仓库
             text: '在GitHub编辑本页'
         },
 
