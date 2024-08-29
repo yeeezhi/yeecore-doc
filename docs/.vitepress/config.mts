@@ -125,6 +125,7 @@ export default defineConfig({
                             {text: '货币', link: '/YeeCore/表达式/货币'},
                             {text: '数值', link: '/YeeCore/表达式/数值'},
                             {text: '其它', link: '/YeeCore/表达式/其它'},
+
                         ],
                     },
                 ],
