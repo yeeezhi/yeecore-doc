@@ -11,8 +11,8 @@ const pkg = require('vitepress/package.json')
 
 export default defineConfig({
     lang: 'zh-CN',
-    title: "YeeCore",
-    description: "YeeCore表达式文档教程",
+    title: "清守插件",
+    description: "清守系列插件文档",
 
     // #region fav
     head: [
