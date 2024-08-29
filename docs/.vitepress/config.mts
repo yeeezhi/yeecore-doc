@@ -114,7 +114,7 @@ export default defineConfig({
                 text: 'YeeCore',
                 collapsed: false,
                 items: [
-                    {text: '快速上手', link: '/getting-started',},
+                    {text: '快速上手', link: '/YeeCore/快速上手',},
                     {
                         text: '表达式',
                         collapsed: true,
@@ -124,6 +124,7 @@ export default defineConfig({
                             {text: '物品', link: '/YeeCore/表达式/物品'},
                             {text: '货币', link: '/YeeCore/表达式/货币'},
                             {text: '数值', link: '/YeeCore/表达式/数值'},
+                            {text: '其它', link: '/YeeCore/表达式/其它'},
 
                         ],
                     },
@@ -132,12 +133,10 @@ export default defineConfig({
             },
             {
                 //分组标题3
-                text: '进阶玩法',
+                text: '更多插件',
                 collapsed: false,
                 items: [
-                    {text: '更新及卸载', link: '/update'},
                     {text: 'YeeTask', link: '/YeeTask'},
-                    {text: 'YeeJewelry', link: '/YeeJewelry'},
                 ],
             },
             {
@@ -190,7 +189,7 @@ export default defineConfig({
         //页脚
         footer: {
             message: 'Released under the MIT License.',
-            copyright: `Copyright © 2023-${new Date().getFullYear()} 备案号：<a href="https://beian.miit.gov.cn/" target="_blank">闽ICP备2023002896号-1</a>`,
+            copyright: `Copyright ©${new Date().getFullYear()} <a href="https://beian.miit.gov.cn/" target="_blank">闽ICP备2023002896号-1</a>`,
         },
 
 

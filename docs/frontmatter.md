@@ -108,7 +108,7 @@ hero: // [!code focus:14]
   actions:
     - theme: brand
       text: 开始
-      link: /getting-started
+      link: /YeeCore/快速上手
     - theme: alt
       text: GitHub
       link: https://github.com/vuejs/vitepress
