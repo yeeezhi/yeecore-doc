@@ -128,7 +128,6 @@ export default defineConfig({
 
                         ],
                     },
-                    {text: 'Frontmatter', link: '/frontmatter'},
                 ],
             },
             {
