@@ -27,6 +27,7 @@ import Linkcard from "./components/Linkcard.vue" //链接卡片
 // 不蒜子
 import { inBrowser } from 'vitepress'
 import busuanzi from 'busuanzi.pure.js'
+// @ts-ignore
 import view from "./components/view.vue"
 
 
@@ -68,7 +69,7 @@ export default {
       'doc-footer-before': () => h(backTop), // 使用doc-footer-before插槽
     })
   },
-  
+
   // medium-zoom
   setup() {
     const route = useRoute();
@@ -96,7 +97,7 @@ export default {
       mapping: 'pathname',
       inputPosition: 'bottom',
       lang: 'zh-CN',
-      }, 
+      },
       {
         frontmatter, route
       },
