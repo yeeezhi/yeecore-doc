@@ -13,7 +13,7 @@ hero:
       text: 开始使用
       link: /wiki/YeeCore/快速上手
     - theme: alt
-      text: 插件详情
+      text: 插件官网
       link: https://www.goodmc.cn/
 
 features:
