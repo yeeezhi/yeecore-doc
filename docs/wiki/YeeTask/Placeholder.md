@@ -18,6 +18,6 @@ table {
     width: 100%;
 }
 th, td {
-    width: 300px;
+    width: 350px;
 }
 </style>

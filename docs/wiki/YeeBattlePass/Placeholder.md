@@ -23,12 +23,11 @@
 | 周期开始时间 |       `{cycle_time}`       |
 | 周期结束时间 |   `{cycle_finish_time}`    |
 
-
 <style>
 table {
     width: 100%;
 }
 th, td {
-    width: 300px;
+    width: 350px;
 }
 </style>

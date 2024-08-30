@@ -1,38 +1,50 @@
-# YeeTask 变量
+# YeeHuya 变量
 
 ## Placeholder
 
-|    内容    |                变量                |
-|:--------:|:--------------------------------:|
-|  玩家的排名   |       `%yeerank_info_排行榜%`       |
-|   玩家的值   |      `%yeerank_value_排行榜%`       |
-|  玩家的称号   |      `%yeerank_title_排行榜%`       |
-| 玩家数据更新时间 |   `%yeerank_update-time_排行榜%`    |
-| 指定排名的玩家名 |     `%yeerank_rank_排行榜_排名%`      |
-| 指定排名的数据  |  `%yeerank_rank-value_排行榜_排名%`   |
-| 指定玩家的排名  |    `%yeerank_player_排行榜_玩家名%`    |
-| 指定玩家的数值  | `%yeerank_player-value_排行榜_玩家名%` |
-| 排行周期结束时间 | `%yeerank_next-finish-time_排行榜%` |
+|      内容      |                  变量                   |
+|:------------:|:-------------------------------------:|
+|    直播时长排名    |           `%yeehuya_info%`            |
+|      称号      |           `%yeehuya_title%`           |
+|     房间号      |          `%yeehuya_room-id%`          |
+|     主播名      |        `%yeehuya_anchor-name%`        |
+|    直播间状态     |     `%yeehuya_live-room-status%`      |
+|    今日最高人气    |        `%yeehuya_popularity%`         |
+|    今日直播时长    |      `%yeehuya_today-duration%`       |
+| 今日直播时长(单位分钟) |    `%yeehuya_today-duration-min%`     |
+|    累计直播时长    |      `%yeehuya_total-duration%`       |
+| 累计直播时长(单位分钟) |    `%yeehuya_total-duration-min%`     |
+|   玩家数据更新时间   |        `%yeehuya_update-time%`        |
+|    排名的玩家名    |          `%yeehuya_rank_排名%`          |
+|   排名的直播时长    |  `%yeehuya_rank-total-duration_排名%`   |
+|    玩家的排名     |        `%yeehuya_player_玩家名%`         |
+|  玩家的累计直播时长   | `%yeehuya_player-total-duration_玩家名%` |
+|   排行周期结束时间   |     `%yeehuya_next-finish-time%`      |
+
 
 ## 内部变量
-
-|   内容   |       变量        |
-|:------:|:---------------:|
-|  排行榜   |   `{rankId}`    |
-|  玩家名   |    `{name}`     |
-|   排名   |    `{rank}`     |
-|   数值   |    `{value}`    |
-| 排行周期名  |   `{period}`    |
-|  排行称号  |    `{title}`    |
-|  更新时间  | `{update_time}` |
-| 周期结束时间 | `{finish_time}` |
-
+|      内容      |           变量           |
+|:------------:|:----------------------:|
+|     玩家名      |        `{name}`        |
+|      排名      |        `{rank}`        |
+|     主播名      |    `{anchor_name}`     |
+|     房间号      |      `{room_id}`       |
+|    今日最高人气    |     `{popularity}`     |
+|    今日直播时长    |   `{today_duration}`   |
+| 今日直播时长(单位分钟) | `{today_duration_min}` |
+|    累计直播时长    |   `{total_duration}`   |
+| 累计直播时长(单位分钟) | `{total_duration_min}` |
+|    排行周期名     |       `{period}`       |
+|      称号      |       `{title}`        |
+|     更新时间     |    `{update_time}`     |
+|   排行周期结束时间   |    `{finish_time}`     |
+|    直播间状态     |  `{live_room_status}`  |
 
 <style>
 table {
     width: 100%;
 }
 th, td {
-    width: 300px;
+    width: 350px;
 }
 </style>
