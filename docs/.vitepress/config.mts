@@ -1,6 +1,6 @@
 import {defineConfig} from 'vitepress'
 
-//命令集：pnpm add -D vitepress vue @mdit-vue/shared @types/node busuanzi.pure.js canvas-confetti less medium-zoom sass vitepress-plugin-comment-with-giscus xgplayer
+//命令集：pnpm add -D vitepress vue @mdit-vue/shared @types/node busuanzi.pure.js canvas-confetti less medium-zoom sass vitepress-wiki-comment-with-giscus xgplayer
 
 // 版本获取 pnpm add -D @types/node
 import {createRequire} from 'module'
@@ -95,7 +95,7 @@ export default defineConfig({
         //导航栏
         nav: [
             {text: '首页', link: '/'},
-            {text: '更新日志', link: '/changelog.md'},
+            {text: '更新日志', link: '/更新日志.md'},
         ],
 
 
@@ -103,38 +103,69 @@ export default defineConfig({
         sidebar: [
             {
                 //分组标题1
-                text: '介绍',
-                collapsed: false,
-                items: [
-                    {text: '前言', link: '/preface'},
-                ],
-            },
-            {
-                //分组标题2
                 text: 'YeeCore',
                 collapsed: false,
                 items: [
-                    {text: '快速上手', link: '/YeeCore/快速上手',},
+                    {text: '前言', link: '/wiki/YeeCore/前言'},
+                    {text: '快速上手', link: '/wiki/YeeCore/快速上手',},
                     {
                         text: '表达式',
                         collapsed: true,
                         items: [
-                            {text: '条件', link: '/YeeCore/表达式/条件'},
-                            {text: '玩家', link: '/YeeCore/表达式/玩家'},
-                            {text: '物品', link: '/YeeCore/表达式/物品'},
-                            {text: '货币', link: '/YeeCore/表达式/货币'},
-                            {text: '数值', link: '/YeeCore/表达式/数值'},
-                            {text: '其它', link: '/YeeCore/表达式/其它'},
+                            {text: '条件', link: '/wiki/YeeCore/表达式/条件'},
+                            {text: '玩家', link: '/wiki/YeeCore/表达式/玩家'},
+                            {text: '物品', link: '/wiki/YeeCore/表达式/物品'},
+                            {text: '货币', link: '/wiki/YeeCore/表达式/货币'},
+                            {text: '数值', link: '/wiki/YeeCore/表达式/数值'},
+                            {text: '其它', link: '/wiki/YeeCore/表达式/其它'},
                         ],
                     },
                 ],
             },
             {
-                //分组标题3
+                //分组标题2
                 text: '更多插件',
                 collapsed: false,
                 items: [
-                    {text: 'YeeTask', link: '/YeeTask'},
+                    {
+                        text: 'YeeRank',
+                        collapsed: true,
+                        items: [
+                            {text: 'Placeholder', link: '/wiki/YeeRank/Placeholder'},
+                        ],
+                    },
+                    {
+                        text: 'YeeHuya',
+                        collapsed: true,
+                        items: [
+                            {text: 'Placeholder', link: '/wiki/YeeHuya/Placeholder'},
+                        ],
+                    },
+                    {
+                        text: 'YeeTask',
+                        collapsed: true,
+                        items: [
+                            {text: 'Placeholder', link: '/wiki/YeeTask/Placeholder'},
+                        ],
+                    },
+                    {
+                        text: 'YeeBattlePass',
+                        collapsed: true,
+                        items: [
+                            {text: 'Placeholder', link: '/wiki/YeeBattlePass/Placeholder'},
+                        ],
+                    },
+                    {
+                        text: 'SpaceRingPlus',
+                        collapsed: true,
+                        items: [
+                            {text: 'Placeholder', link: '/wiki/SpaceRingPlus/Placeholder'},
+
+                            {text: '掉落物配置', link: '/wiki/SpaceRingPlus/Decompose'},
+                            {text: '快捷分解', link: '/wiki/SpaceRingPlus/Drop'},
+                            {text: '迁移KLRing数据', link: '/wiki/SpaceRingPlus/KLRing'},
+                        ],
+                    },
                 ],
             },
             {
@@ -177,6 +208,12 @@ export default defineConfig({
 
         //社交链接
         socialLinks: [
+            {
+                icon: {
+                    svg: '<svg t="1707404275090" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4218" width="32" height="32"><path d="M824.8 613.2c-16-51.4-34.4-94.6-62.7-165.3C766.5 262.2 689.3 112 511.5 112 331.7 112 256.2 265.2 261 447.9c-28.4 70.8-46.7 113.7-62.7 165.3-34 109.5-23 154.8-14.6 155.8 18 2.2 70.1-82.4 70.1-82.4 0 49 25.2 112.9 79.8 159-26.4 8.1-85.7 29.9-71.6 53.8 11.4 19.3 196.2 12.3 249.5 6.3 53.3 6 238.1 13 249.5-6.3 14.1-23.8-45.3-45.7-71.6-53.8 54.6-46.2 79.8-110.1 79.8-159 0 0 52.1 84.6 70.1 82.4 8.5-1.1 19.5-46.4-14.5-155.8z" p-id="4219"></path></svg>'
+                },
+                link: 'https://qm.qq.com/q/ZtZxlAyYYU'
+            },
             {icon: 'github', link: 'https://github.com/ye0130'},
         ],
 
