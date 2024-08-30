@@ -161,8 +161,8 @@ export default defineConfig({
                         items: [
                             {text: 'Placeholder', link: '/wiki/SpaceRingPlus/Placeholder'},
 
-                            {text: '掉落物配置', link: '/wiki/SpaceRingPlus/Decompose'},
-                            {text: '快捷分解', link: '/wiki/SpaceRingPlus/Drop'},
+                            {text: '快捷分解', link: '/wiki/SpaceRingPlus/Decompose'},
+                            {text: '掉落物配置', link: '/wiki/SpaceRingPlus/Drop'},
                             {text: '迁移KLRing数据', link: '/wiki/SpaceRingPlus/KLRing'},
                         ],
                     },
