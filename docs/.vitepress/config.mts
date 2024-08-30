@@ -95,7 +95,7 @@ export default defineConfig({
         //导航栏
         nav: [
             {text: '首页', link: '/'},
-            {text: '更新日志', link: '/更新日志.md'},
+            {text: '更新日志', link: '/wiki/YeeCore/更新日志.md'},
         ],
 
 
