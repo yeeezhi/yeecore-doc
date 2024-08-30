@@ -110,7 +110,7 @@ export default defineConfig({
                     {text: '快速上手', link: '/wiki/YeeCore/快速上手',},
                     {
                         text: '表达式',
-                        collapsed: true,
+                        collapsed: false,
                         items: [
                             {text: '条件', link: '/wiki/YeeCore/表达式/条件'},
                             {text: '玩家', link: '/wiki/YeeCore/表达式/玩家'},
