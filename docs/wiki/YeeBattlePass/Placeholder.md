@@ -18,10 +18,12 @@
 |  战令等级  |    `{battlepass_level}`    |
 |  战令经验  |     `{battlepass_exp}`     |
 | 升级所需经验 | `{battlepass_upgrade_exp}` |
+|  战令Id  |     `{battlepass_id}`      |
 |  周期Id  |        `{cycle_id}`        |
 | 战令周期名  |       `{cycle_name}`       |
 | 周期开始时间 |       `{cycle_time}`       |
 | 周期结束时间 |   `{cycle_finish_time}`    |
+| 战令当前页数 |        `{pageNum}`         |
 
 <style>
 table {

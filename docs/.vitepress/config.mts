@@ -118,6 +118,7 @@ export default defineConfig({
                             {text: '货币', link: '/wiki/YeeCore/表达式/货币'},
                             {text: '数值', link: '/wiki/YeeCore/表达式/数值'},
                             {text: '其它', link: '/wiki/YeeCore/表达式/其它'},
+                            {text: '字符串', link: '/wiki/YeeCore/表达式/字符串'},
                         ],
                     },
                 ],
