@@ -121,6 +121,7 @@ export default defineConfig({
                             {text: '字符串', link: '/wiki/YeeCore/表达式/字符串'},
                         ],
                     },
+                    {text: '物品库', link: '/wiki/YeeCore/物品库'},
                     {text: 'Placeholder', link: '/wiki/YeeCore/Placeholder'},
                 ],
             },
