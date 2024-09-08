@@ -131,6 +131,13 @@ export default defineConfig({
                 collapsed: false,
                 items: [
                     {
+                        text: 'YeeIntensify',
+                        collapsed: true,
+                        items: [
+                            {text: 'Placeholder', link: '/wiki/YeeIntensify/Placeholder'},
+                        ],
+                    },
+                    {
                         text: 'YeeRank',
                         collapsed: true,
                         items: [
