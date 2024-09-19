@@ -134,6 +134,7 @@ export default defineConfig({
                         text: 'YeeIntensify',
                         collapsed: true,
                         items: [
+                            {text: '扩展示例', link: '/wiki/YeeIntensify/扩展示例'},
                             {text: 'Placeholder', link: '/wiki/YeeIntensify/Placeholder'},
                         ],
                     },
