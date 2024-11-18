@@ -10,8 +10,7 @@ export function countWord(data: string) {
     for (let i = 0; i < m.length; i += 1) {
         if (m[i].charCodeAt(0) >= 0x4E00) {
             count += m[i].length
-        }
-        else {
+        } else {
             count += 1
         }
     }

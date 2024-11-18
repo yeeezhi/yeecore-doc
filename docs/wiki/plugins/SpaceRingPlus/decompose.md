@@ -12,8 +12,6 @@
 | command | 指令              |
 | message | 消息提示            |
 
-
-
 <style>
 table {
     width: 100%;

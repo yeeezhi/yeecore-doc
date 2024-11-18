@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { withBase } from 'vitepress'
-import { slugify } from '@mdit-vue/shared'
+import {computed} from 'vue'
+import {withBase} from 'vitepress'
+import {slugify} from '@mdit-vue/shared'
 
-import { NavLink } from '../untils/types'
+import {NavLink} from '../untils/types'
 
 const props = defineProps<{
   noIcon?: boolean
@@ -28,7 +28,7 @@ const svg = computed(() => {
 
 const formatBadge = computed(() => {
   if (typeof props.badge === 'string') {
-    return { text: props.badge, type: 'info' }
+    return {text: props.badge, type: 'info'}
   }
   return props.badge
 })
@@ -42,9 +42,9 @@ const formatBadge = computed(() => {
           <div v-if="svg" class="icon" v-html="svg"></div>
           <div v-else-if="icon && typeof icon === 'string'" class="icon">
             <img
-              :src="withBase(icon)"
-              :alt="title"
-              onerror="this.parentElement.style.display='none'"
+                :src="withBase(icon)"
+                :alt="title"
+                onerror="this.parentElement.style.display='none'"
             />
           </div>
         </template>
@@ -52,7 +52,7 @@ const formatBadge = computed(() => {
           {{ title }}
         </h5>
       </div>
-      <Badge v-if="formatBadge" class="badge" :type="formatBadge.type" :text="formatBadge.text" />
+      <Badge v-if="formatBadge" class="badge" :type="formatBadge.type" :text="formatBadge.text"/>
       <p v-if="desc" class="desc">{{ desc }}</p>
     </article>
   </a>
@@ -70,6 +70,7 @@ const formatBadge = computed(() => {
   height: 100%;
   background-color: var(--vp-c-bg-soft);
   transition: all 0.25s;
+
   &:hover {
     box-shadow: var(--vp-shadow-2);
     //border-color: var(--vp-c-brand);
@@ -85,9 +86,11 @@ const formatBadge = computed(() => {
     padding: var(--m-nav-box-gap);
     height: 100%;
     color: var(--vp-c-text-1);
+
     &.has-badge {
       padding-top: calc(var(--m-nav-box-gap) + 2px);
     }
+
     &-header {
       display: flex;
       align-items: center;
@@ -105,10 +108,12 @@ const formatBadge = computed(() => {
     font-size: var(--m-nav-icon-size);
     background-color: var(--vp-c-bg-soft-down);
     transition: background-color 0.25s;
+
     :deep(svg) {
       width: var(--m-nav-icon-size);
       fill: currentColor;
     }
+
     :deep(img) {
       border-radius: 4px;
       width: var(--m-nav-icon-size);
@@ -122,6 +127,7 @@ const formatBadge = computed(() => {
     text-overflow: ellipsis;
     font-size: 16px;
     font-weight: 600;
+
     &:not(.no-icon) {
       line-height: var(--m-nav-icon-box-size);
     }

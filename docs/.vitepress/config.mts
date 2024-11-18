@@ -1,7 +1,6 @@
 import {defineConfig} from 'vitepress'
 
 //命令集：pnpm add -D vitepress vue @mdit-vue/shared @types/node busuanzi.pure.js canvas-confetti less medium-zoom sass vitepress-wiki-comment-with-giscus xgplayer
-
 // 版本获取 pnpm add -D @types/node
 import {createRequire} from 'module'
 // @ts-ignore
@@ -78,10 +77,10 @@ export default defineConfig({
         //siteTitle: 'Hello World',
 
         //编辑本页
-        editLink: {
-            pattern: 'https://github.com/ye0130/yeecore-doc/edit/master/docs/:path', // 改成自己的仓库
-            text: '在GitHub编辑本页'
-        },
+        //editLink: {
+        //    pattern: 'https://github.com/ye0130/yeecore-doc/edit/master/docs/:path', // 改成自己的仓库
+        //    text: '在GitHub编辑本页'
+        //},
 
         //上次更新时间
         lastUpdated: {
@@ -180,6 +179,11 @@ export default defineConfig({
                         ],
                     },
                     {
+                        text: '椰の饰品',
+                        link: '/wiki/plugins/YeeJewelry/intro',
+                        collapsed: true,
+                    },
+                    {
                         text: '椰の排行',
                         link: '/wiki/plugins/YeeRank/intro',
                         collapsed: true,
@@ -206,6 +210,7 @@ export default defineConfig({
                     {
                         text: '灵魂空间',
                         collapsed: true,
+                        link: '/wiki/plugins/SpaceRingPlus/intro',
                         items: [
                             {text: '插件变量', link: '/wiki/plugins/SpaceRingPlus/Placeholder'},
 
@@ -214,14 +219,38 @@ export default defineConfig({
                             {text: '迁移KLRing数据', link: '/wiki/plugins/SpaceRingPlus/KLRing'},
                         ],
                     },
+
+                    {
+                        text: '限时倍率',
+                        collapsed: true,
+                        link: '/wiki/plugins/SpaceRingItem/intro'
+                    },
+                    {
+                        text: '灵魂商店',
+                        collapsed: true,
+                        link: '/wiki/plugins/SpaceRingShop/intro'
+                    },
+                    {
+                        text: '灵魂聚宝盆',
+                        collapsed: true,
+                        link: '/wiki/plugins/SpaceGoldmine/intro'
+                    },
+
+                ],
+            },
+
+            {
+                text: '免费插件',
+                collapsed: false,
+                items: [
+                    {text: '授权后台', link: 'https://admin.goodmc.cn/'},
                 ],
             },
             {
                 //分组标题3
-                text: '其他站点',
+                text: '用户中心',
                 collapsed: false,
                 items: [
-                    {text: '插件官网', link: 'https://www.goodmc.cn/'},
                     {text: '授权后台', link: 'https://admin.goodmc.cn/'},
                 ],
             },
@@ -271,7 +300,7 @@ export default defineConfig({
 
         //页脚
         footer: {
-            message: 'Released under the MIT License.',
+            // message: '',
             copyright: `Copyright ©${new Date().getFullYear()} <a href="https://beian.miit.gov.cn/" target="_blank">闽ICP备2023002896号-1</a>`,
         },
 

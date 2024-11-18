@@ -1,7 +1,9 @@
 # 扩展示例
 
 ## 装备名上添加强化等级
+
 现有两种配置方案
+
 ```yaml
 # GUI触发不同事件时执行的动作
 action:
@@ -30,9 +32,13 @@ action:
     - string.contains('{weapon-name}','测试武器A') && item.setName('测试武器A +${match.number('强化等级')}')
     - string.contains('{weapon-name}','测试武器B') && item.setName('测试武器B +${match.number('强化等级')}')
 ```
+
 :::
+
 ## 保底次数增加成功率
+
 同理可通过其它变量或表达式计算强化属性，成功率等
+
 ```yaml
 2:
   match:
@@ -45,8 +51,11 @@ action:
   # 基础概率10%,每累计一次保底统计就增加5%概率
   probability: ${0.1+{current-guarantees}*0.05}
 ```
+
 ## 满足权限权限生效成功率
+
 同理可以使用其它条件来生效不同的成功率
+
 ```yaml
 2:
   match:

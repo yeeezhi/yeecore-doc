@@ -4,7 +4,7 @@ layout: home
 hero:
   name: 椰の系列
   text: "专注 Minecraft 服务器优质插件"
-#  tagline: 如果你也想搭建它，那跟我一起做吧
+  #  tagline: 如果你也想搭建它，那跟我一起做吧
   image:
     src: /logo.png
     alt: VitePress

@@ -4,15 +4,15 @@
 <template>
   <div class="panel">
     <div class="container">
-<!--      <section class="grid">-->
-<!--        <span class="text">-->
-<!--          本站总访问量 <span id="busuanzi_value_site_pv" class="font-bold">&#45;&#45;</span> 次-->
-<!--        </span>-->
-<!--        <img src="/heart.gif" alt="heart" width="50" height="50" />-->
-<!--        <span class="text">-->
-<!--          本站访客数 <span id="busuanzi_value_site_uv" class="font-bold">&#45;&#45;</span> 人次-->
-<!--        </span>-->
-<!--      </section>-->
+      <!--      <section class="grid">-->
+      <!--        <span class="text">-->
+      <!--          本站总访问量 <span id="busuanzi_value_site_pv" class="font-bold">&#45;&#45;</span> 次-->
+      <!--        </span>-->
+      <!--        <img src="/heart.gif" alt="heart" width="50" height="50" />-->
+      <!--        <span class="text">-->
+      <!--          本站访客数 <span id="busuanzi_value_site_uv" class="font-bold">&#45;&#45;</span> 人次-->
+      <!--        </span>-->
+      <!--      </section>-->
     </div>
   </div>
 </template>

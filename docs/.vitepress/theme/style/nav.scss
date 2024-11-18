@@ -6,6 +6,7 @@
   .container {
     max-width: var(--vp-layout-max-width) !important;
   }
+
   .content-container,
   .content {
     max-width: 100% !important;
@@ -26,6 +27,7 @@
     .custom-block-title {
       display: none;
     }
+
     p {
       margin: 0;
     }
@@ -38,7 +40,7 @@
   .medium-zoom-overlay {
     z-index: 0;
   }
-  
+
   .medium-zoom-image {
     z-index: 0 !important;
   }
