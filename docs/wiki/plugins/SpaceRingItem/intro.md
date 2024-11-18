@@ -10,10 +10,7 @@
 
 #### 插件购买：
 
-捆绑包1 38元：
-
-- 限时倍率 - SpaceRingItem
-- 灵魂兑换 - SpaceRingExchange
+捆绑包1 38元： SpaceRingItem(限时倍率) + SpaceRingExchange(灵魂兑换)
 
 捆绑包2 99元：
 

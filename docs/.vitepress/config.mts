@@ -208,6 +208,16 @@ export default defineConfig({
                         ],
                     },
                     {
+                        text: '椰の抽奖',
+                        collapsed: true,
+                        link: '/wiki/plugins/YeeCrate/intro',
+                    },
+                    {
+                        text: '椰の刮刮乐',
+                        collapsed: true,
+                        link: '/wiki/plugins/ScratchCard/intro',
+                    },
+                    {
                         text: '灵魂空间',
                         collapsed: true,
                         link: '/wiki/plugins/SpaceRingPlus/intro',
@@ -220,6 +230,11 @@ export default defineConfig({
                         ],
                     },
 
+                    {
+                        text: '灵魂兑换',
+                        collapsed: true,
+                        link: '/wiki/plugins/SpaceRingExchange/intro'
+                    },
                     {
                         text: '限时倍率',
                         collapsed: true,
