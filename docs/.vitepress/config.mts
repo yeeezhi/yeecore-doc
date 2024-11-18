@@ -11,8 +11,8 @@ const pkg = require('vitepress/package.json')
 
 export default defineConfig({
     lang: 'zh-CN',
-    title: "清守插件",
-    description: "清守系列插件文档",
+    title: "椰の插件",
+    description: "椰の系列插件文档",
 
     // #region fav
     head: [
@@ -102,79 +102,100 @@ export default defineConfig({
         //侧边栏
         sidebar: [
             {
+                text: '首页',
+                collapsed: true,
+                link: '/wiki/yeeplugins',
+                items: [
+                    {text: '云端插件', link: '/wiki/YeePlugins'},
+                    {text: '推广激励', link: '/wiki/popularize'},
+                ],
+            },
+            {
                 //分组标题1
                 text: 'YeeCore',
                 collapsed: false,
                 items: [
-                    {text: '前言', link: '/wiki/YeeCore/前言'},
-                    {text: '快速上手', link: '/wiki/YeeCore/快速上手',},
+                    {text: '简介', link: '/wiki/YeeCore/intro'},
                     {
                         text: '表达式',
-                        collapsed: false,
+                        collapsed: true,
                         items: [
-                            {text: '条件', link: '/wiki/YeeCore/表达式/条件'},
-                            {text: '玩家', link: '/wiki/YeeCore/表达式/玩家'},
-                            {text: '物品', link: '/wiki/YeeCore/表达式/物品'},
-                            {text: '货币', link: '/wiki/YeeCore/表达式/货币'},
-                            {text: '数值', link: '/wiki/YeeCore/表达式/数值'},
-                            {text: '其它', link: '/wiki/YeeCore/表达式/其它'},
-                            {text: '字符串', link: '/wiki/YeeCore/表达式/字符串'},
+                            {text: '条件', link: '/wiki/YeeCore/expression/condition'},
+                            {text: '玩家', link: '/wiki/YeeCore/expression/玩家'},
+                            {text: '物品', link: '/wiki/YeeCore/expression/物品'},
+                            {text: '货币', link: '/wiki/YeeCore/expression/货币'},
+                            {text: '数值', link: '/wiki/YeeCore/expression/数值'},
+                            {text: '字符串', link: '/wiki/YeeCore/expression/字符串'},
+                            {text: '其它', link: '/wiki/YeeCore/expression/其它'},
                         ],
                     },
                     {text: '物品库', link: '/wiki/YeeCore/物品库'},
-                    {text: 'Placeholder', link: '/wiki/YeeCore/Placeholder'},
                 ],
             },
             {
                 //分组标题2
-                text: '更多插件',
+                text: '付费插件',
                 collapsed: false,
                 items: [
                     {
-                        text: 'YeeIntensify',
+                        text: '椰の强化',
+                        link: '/wiki/plugins/YeeIntensify/intro',
                         collapsed: true,
                         items: [
-                            {text: '扩展示例', link: '/wiki/YeeIntensify/扩展示例'},
-                            {text: 'Placeholder', link: '/wiki/YeeIntensify/Placeholder'},
+                            {text: '示例配置', link: '/wiki/plugins/YeeIntensify/example'},
+                            {text: '插件变量', link: '/wiki/plugins/YeeIntensify/placeholder'},
                         ],
                     },
                     {
-                        text: 'YeeRank',
+                        text: '椰の锻造',
+                        link: '/wiki/plugins/YeeForge/intro',
                         collapsed: true,
                         items: [
-                            {text: 'Placeholder', link: '/wiki/YeeRank/Placeholder'},
+                            {text: '示例配置', link: '/wiki/plugins/YeeForge/example'},
+                            {text: '插件变量', link: '/wiki/plugins/YeeForge/placeholder'},
                         ],
                     },
                     {
-                        text: 'YeeHuya',
+                        text: '椰の战令',
                         collapsed: true,
+                        link: '/wiki/plugins/YeeBattlePass/intro',
                         items: [
-                            {text: 'Placeholder', link: '/wiki/YeeHuya/Placeholder'},
+                            {text: '插件变量', link: '/wiki/plugins/YeeBattlePass/Placeholder'},
                         ],
                     },
                     {
-                        text: 'YeeTask',
+                        text: '椰の任务',
                         collapsed: true,
+                        link: '/wiki/plugins/YeeTask/intro',
                         items: [
-                            {text: 'Placeholder', link: '/wiki/YeeTask/Placeholder'},
+                            {text: '插件变量', link: '/wiki/plugins/YeeTask/Placeholder'},
                         ],
                     },
                     {
-                        text: 'YeeBattlePass',
+                        text: '排行榜',
+                        link: '/wiki/plugins/YeeRank/intro',
                         collapsed: true,
                         items: [
-                            {text: 'Placeholder', link: '/wiki/YeeBattlePass/Placeholder'},
+                            {text: '插件变量', link: '/wiki/plugins/YeeRank/placeholder'},
                         ],
                     },
                     {
-                        text: 'SpaceRingPlus',
+                        text: '虎牙奖励',
+                        collapsed: true,
+                        link: '/wiki/plugins/YeeHuya/intro',
+                        items: [
+                            {text: '插件变量', link: '/wiki/plugins/YeeHuya/Placeholder'},
+                        ],
+                    },
+                    {
+                        text: '灵魂空间',
                         collapsed: true,
                         items: [
-                            {text: 'Placeholder', link: '/wiki/SpaceRingPlus/Placeholder'},
+                            {text: '插件变量', link: '/wiki/plugins/SpaceRingPlus/Placeholder'},
 
-                            {text: '快捷分解', link: '/wiki/SpaceRingPlus/Decompose'},
-                            {text: '掉落物配置', link: '/wiki/SpaceRingPlus/Drop'},
-                            {text: '迁移KLRing数据', link: '/wiki/SpaceRingPlus/KLRing'},
+                            {text: '快捷分解', link: '/wiki/plugins/SpaceRingPlus/Decompose'},
+                            {text: '掉落物配置', link: '/wiki/plugins/SpaceRingPlus/Drop'},
+                            {text: '迁移KLRing数据', link: '/wiki/plugins/SpaceRingPlus/KLRing'},
                         ],
                     },
                 ],

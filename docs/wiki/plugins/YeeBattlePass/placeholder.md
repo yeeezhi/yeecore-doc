@@ -29,11 +29,4 @@
 | 周期结束时间 |   `{cycle_finish_time}`    |
 | 战令当前页数 |        `{pageNum}`         |
 
-<style>
-table {
-    width: 100%;
-}
-th, td {
-    width: 350px;
-}
-</style>
+

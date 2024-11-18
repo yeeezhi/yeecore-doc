@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: 清守系列
+  name: 椰の系列
   text: "专注 Minecraft 服务器优质插件"
 #  tagline: 如果你也想搭建它，那跟我一起做吧
   image:
@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 开始使用
-      link: /wiki/YeeCore/快速上手
+      link: /wiki/YeeCore/intro
     - theme: alt
       text: 插件官网
       link: https://www.goodmc.cn/
