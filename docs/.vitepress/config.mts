@@ -103,7 +103,7 @@ export default defineConfig({
         sidebar: [
             {
                 text: '首页',
-                collapsed: true,
+                collapsed: false,
                 link: '/wiki/yeeplugins',
                 items: [
                     {text: '云端插件', link: '/wiki/YeePlugins'},
@@ -172,7 +172,15 @@ export default defineConfig({
                         ],
                     },
                     {
-                        text: '排行榜',
+                        text: '椰の天赋',
+                        link: '/wiki/plugins/YeeTalent/intro',
+                        collapsed: true,
+                        items: [
+                            {text: '插件变量', link: '/wiki/plugins/YeeTalent/placeholder'},
+                        ],
+                    },
+                    {
+                        text: '椰の排行',
                         link: '/wiki/plugins/YeeRank/intro',
                         collapsed: true,
                         items: [
@@ -180,11 +188,19 @@ export default defineConfig({
                         ],
                     },
                     {
-                        text: '虎牙奖励',
+                        text: '椰の虎牙',
                         collapsed: true,
                         link: '/wiki/plugins/YeeHuya/intro',
                         items: [
                             {text: '插件变量', link: '/wiki/plugins/YeeHuya/Placeholder'},
+                        ],
+                    },
+                    {
+                        text: '椰の图鉴',
+                        collapsed: true,
+                        link: '/wiki/plugins/YeeGuide/intro',
+                        items: [
+                            {text: '插件变量', link: '/wiki/plugins/YeeGuide/Placeholder'},
                         ],
                     },
                     {
