@@ -131,13 +131,13 @@ export default defineConfig({
                     {text: '物品库', link: '/wiki/YeeCore/物品库'},
                 ],
             },
+
             {
-                //分组标题2
-                text: '付费插件',
+                text: '精选系列',
                 collapsed: false,
                 items: [
                     {
-                        text: '椰の强化',
+                        text: '椰の强化🔥',
                         link: '/wiki/plugins/YeeIntensify/intro',
                         collapsed: true,
                         items: [
@@ -146,7 +146,7 @@ export default defineConfig({
                         ],
                     },
                     {
-                        text: '椰の锻造',
+                        text: '椰の锻造🔥',
                         link: '/wiki/plugins/YeeForge/intro',
                         collapsed: true,
                         items: [
@@ -200,25 +200,7 @@ export default defineConfig({
                         ],
                     },
                     {
-                        text: '椰の图鉴',
-                        collapsed: true,
-                        link: '/wiki/plugins/YeeGuide/intro',
-                        items: [
-                            {text: '插件变量', link: '/wiki/plugins/YeeGuide/Placeholder'},
-                        ],
-                    },
-                    {
-                        text: '椰の抽奖',
-                        collapsed: true,
-                        link: '/wiki/plugins/YeeCrate/intro',
-                    },
-                    {
-                        text: '椰の刮刮乐',
-                        collapsed: true,
-                        link: '/wiki/plugins/ScratchCard/intro',
-                    },
-                    {
-                        text: '灵魂空间',
+                        text: '灵魂空间🔥',
                         collapsed: true,
                         link: '/wiki/plugins/SpaceRingPlus/intro',
                         items: [
@@ -253,12 +235,71 @@ export default defineConfig({
 
                 ],
             },
+            {
+                //分组标题2
+                text: '付费插件',
+                collapsed: true,
+                items: [
+
+                    {
+                        text: '椰の图鉴',
+                        collapsed: true,
+                        link: '/wiki/plugins/YeeGuide/intro',
+                        items: [
+                            {text: '插件变量', link: '/wiki/plugins/YeeGuide/Placeholder'},
+                        ],
+                    },
+                    {
+                        text: '椰の抽奖',
+                        collapsed: true,
+                        link: '/wiki/plugins/YeeCrate/intro',
+                    },
+                    {
+                        text: '椰の礼包',
+                        collapsed: true,
+                        link: '/wiki/plugins/YeeGift/intro',
+                    },
+                    {
+                        text: '椰の集字',
+                        collapsed: true,
+                        link: '/wiki/plugins/YeeCollect/intro',
+                    },
+                    {
+                        text: '椰の刮刮乐',
+                        collapsed: true,
+                        link: '/wiki/plugins/ScratchCard/intro',
+                    },
+                    {
+                        text: '交易限制',
+                        collapsed: true,
+                        link: '/wiki/plugins/NoTrade/intro',
+                    },
+                    {
+                        text: '属性映射',
+                        collapsed: true,
+                        link: '/wiki/plugins/AttributeMap/intro',
+                    },
+                    {
+                        text: '刷新点倒计时',
+                        collapsed: true,
+                        link: '/wiki/plugins/MMShow/intro',
+                    },
+
+
+                ],
+            },
 
             {
-                text: '免费插件',
-                collapsed: false,
+                text: '福利插件',
+                collapsed: true,
                 items: [
-                    {text: '授权后台', link: 'https://admin.goodmc.cn/'},
+                    {text: '椰の菜单', link: '/wiki/free/YeeMenu/intro'},
+                    {text: '椰の动作', link: '/wiki/free/YeeAction/intro'},
+                    {text: '椰の变量', link: '/wiki/free/YeeValue/intro'},
+                    {text: '椰の聚宝盆', link: '/wiki/free/YeeCornucopia/intro'},
+                    {text: '玩家保护', link: '/wiki/free/SpawnProtect/intro'},
+                    {text: '怪物保护', link: '/wiki/free/MobProtect/intro'},
+                    {text: '变量格式化', link: '/wiki/free/NumberFormat/intro'},
                 ],
             },
             {
