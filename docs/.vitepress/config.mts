@@ -200,6 +200,15 @@ export default defineConfig({
                             {text: '插件变量', link: '/wiki/plugins/YeeHuya/placeholder'},
                         ],
                     },
+
+                    {
+                        text: '椰の图鉴',
+                        collapsed: true,
+                        link: '/wiki/plugins/YeeGuide/intro',
+                        items: [
+                            {text: '插件变量', link: '/wiki/plugins/YeeGuide/placeholder'},
+                        ],
+                    },
                     {
                         text: '灵魂空间🔥',
                         collapsed: true,
@@ -241,15 +250,6 @@ export default defineConfig({
                 text: '付费插件',
                 collapsed: true,
                 items: [
-
-                    {
-                        text: '椰の图鉴',
-                        collapsed: true,
-                        link: '/wiki/plugins/YeeGuide/intro',
-                        items: [
-                            {text: '插件变量', link: '/wiki/plugins/YeeGuide/placeholder'},
-                        ],
-                    },
                     {
                         text: '椰の抽奖',
                         collapsed: true,
