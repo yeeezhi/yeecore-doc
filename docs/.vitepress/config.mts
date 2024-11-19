@@ -160,7 +160,7 @@ export default defineConfig({
                         collapsed: true,
                         link: '/wiki/plugins/YeeBattlePass/intro',
                         items: [
-                            {text: '插件变量', link: '/wiki/plugins/YeeBattlePass/Placeholder'},
+                            {text: '插件变量', link: '/wiki/plugins/YeeBattlePass/placeholder'},
                         ],
                     },
                     {
@@ -168,7 +168,7 @@ export default defineConfig({
                         collapsed: true,
                         link: '/wiki/plugins/YeeTask/intro',
                         items: [
-                            {text: '插件变量', link: '/wiki/plugins/YeeTask/Placeholder'},
+                            {text: '插件变量', link: '/wiki/plugins/YeeTask/placeholder'},
                         ],
                     },
                     {
@@ -197,7 +197,7 @@ export default defineConfig({
                         collapsed: true,
                         link: '/wiki/plugins/YeeHuya/intro',
                         items: [
-                            {text: '插件变量', link: '/wiki/plugins/YeeHuya/Placeholder'},
+                            {text: '插件变量', link: '/wiki/plugins/YeeHuya/placeholder'},
                         ],
                     },
                     {
@@ -205,10 +205,10 @@ export default defineConfig({
                         collapsed: true,
                         link: '/wiki/plugins/SpaceRingPlus/intro',
                         items: [
-                            {text: '插件变量', link: '/wiki/plugins/SpaceRingPlus/Placeholder'},
+                            {text: '插件变量', link: '/wiki/plugins/SpaceRingPlus/placeholder'},
 
-                            {text: '快捷分解', link: '/wiki/plugins/SpaceRingPlus/Decompose'},
-                            {text: '掉落物配置', link: '/wiki/plugins/SpaceRingPlus/Drop'},
+                            {text: '快捷分解', link: '/wiki/plugins/SpaceRingPlus/decompose'},
+                            {text: '掉落物配置', link: '/wiki/plugins/SpaceRingPlus/drop'},
                             {text: '迁移KLRing数据', link: '/wiki/plugins/SpaceRingPlus/KLRing'},
                         ],
                     },
@@ -247,7 +247,7 @@ export default defineConfig({
                         collapsed: true,
                         link: '/wiki/plugins/YeeGuide/intro',
                         items: [
-                            {text: '插件变量', link: '/wiki/plugins/YeeGuide/Placeholder'},
+                            {text: '插件变量', link: '/wiki/plugins/YeeGuide/placeholder'},
                         ],
                     },
                     {
