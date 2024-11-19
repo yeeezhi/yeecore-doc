@@ -13,8 +13,8 @@ hero:
       text: 详情了解
       link: /wiki/YeePlugins
     - theme: alt
-      text: 插件官网
-      link: https://www.goodmc.cn/
+      text: 联系我们
+      link: https://qm.qq.com/q/BmwKs6EYI8
 
 features:
   - icon: 👍️
