@@ -340,7 +340,7 @@ export default defineConfig({
                 },
                 link: 'https://qm.qq.com/q/ZtZxlAyYYU'
             },
-            {icon: 'github', link: 'https://github.com/ye0130'},
+            {icon: 'github', link: 'https://github.com/yeeezhi'},
         ],
 
         //手机端深浅模式文字修改
