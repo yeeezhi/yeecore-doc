@@ -24,4 +24,4 @@
 #### 使用教程：
 
 只需将 %sx_value% 改为 %nf_sx_value% 就可以显示格式化后的值
-![img.png](img.png)
+![img.png](img/img.png)

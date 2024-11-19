@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="上海服务器" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
+  <component name="PublishConfigData" serverName="上海节点1" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
     <option name="confirmBeforeUploading" value="false" />
     <serverData>
-      <paths name="上海服务器">
+      <paths name="上海节点1">
         <serverdata>
           <mappings>
-            <mapping deploy="/opt/1panel/apps/openresty/openresty/www/sites/wiki.goodmc.cn/index" local="$PROJECT_DIR$/docs/.vitepress/dist" web="/" />
+            <mapping deploy="/opt/1panel/apps/openresty/openresty/www/sites/www.goodmc.cn/index" local="$PROJECT_DIR$/docs/.vitepress/dist" web="/" />
+            <mapping local="" />
           </mappings>
         </serverdata>
       </paths>

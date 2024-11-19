@@ -107,6 +107,7 @@ export default defineConfig({
                 items: [
                     {text: '云端插件', link: '/wiki/YeePlugins'},
                     {text: '推广激励', link: '/wiki/popularize'},
+                    {text: '授权后台', link: 'https://admin.goodmc.cn/'},
                 ],
             },
             {
@@ -133,7 +134,7 @@ export default defineConfig({
             },
 
             {
-                text: '精选系列',
+                text: '精选插件',
                 collapsed: false,
                 items: [
                     {
@@ -300,14 +301,6 @@ export default defineConfig({
                     {text: '玩家保护', link: '/wiki/free/SpawnProtect/intro'},
                     {text: '怪物保护', link: '/wiki/free/MobProtect/intro'},
                     {text: '变量格式化', link: '/wiki/free/NumberFormat/intro'},
-                ],
-            },
-            {
-                //分组标题3
-                text: '用户中心',
-                collapsed: false,
-                items: [
-                    {text: '授权后台', link: 'https://admin.goodmc.cn/'},
                 ],
             },
         ],
