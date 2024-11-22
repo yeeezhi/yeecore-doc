@@ -1,0 +1,7 @@
+version: 1.0.0
+message:
+  prefix: "§8[§c{0}§8] "
+  version: "§a发现新版本 §e{0}"
+  download: "§a下载地址：§e{0}"
+  update: "§a更新内容："
+  update_head: "§e"
