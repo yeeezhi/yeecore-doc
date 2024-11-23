@@ -19,7 +19,6 @@
 2. 原插件配置文件中的 `code` 参数不再有效，请将其删除。
 3. 云端加载仅更改了插件的加载方式，原插件的配置文件和数据不受影响。
 
-
 ### 使用步骤
 
 - 将 YeePlugins 和 YeeCore 安装至服务器的 plugins 目录。
@@ -61,6 +60,5 @@ cloud-plugin-code:
 | SpaceRingItem | 正常   |
 | SpaceRingShop | 正常   |
 | SpaceGoldmine | `内测` |
-
 
 如果您在迁移或使用过程中遇到问题，请及时联系售后群获取帮助。
