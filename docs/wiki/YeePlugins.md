@@ -23,14 +23,17 @@
 
 - 将 YeePlugins 和 YeeCore 安装至服务器的 plugins 目录。
 - 通过售后群机器人指令 `我的授权` 获取全插件通用授权码，使用指令 `我的插件` 获取插件名。
-- 在 YeePlugins 配置文件中，添加需要加载的插件名称及其对应的授权码：
+- 在 YeePlugins 配置文件中，填写您的授权码和需要加载的插件。
 
 ```yaml
-# 云端插件授权码
-cloud-plugin-code:
-  # 插件名
-  YeeForge: "授权码"
-  SpaceRingPlus: "授权码"
+# 全局授权码
+code: ""
+
+# 云端插件
+# 默认根据上方的 code 加载插件，或独立配置授权码（格式："插件名#授权码"）
+cloud-plugins:
+  - YeeForge
+  - YeeIntensify
 ```
 
 ### 插件试用
