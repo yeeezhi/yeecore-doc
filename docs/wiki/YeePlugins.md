@@ -48,22 +48,22 @@ cloud-plugins:
 适配版本: 1.9-1.21
 以下插件已支持云端加载：
 
-| 插件名           | 状态   |
-|---------------|------|
-| YeeIntensify  | 正常   |
-| YeeForge      | 正常   |
-| YeeTalent     | `内测` |
-| YeeJewelry    | 正常   |
-| YeeRank       | 正常   |
-| YeeHuya       | 正常   |
-| YeeGuide      | `内测` |
-| YeeCrate      | `内测` |
-| YeeTask       | `内测` |
-| YeeBattlePass | `内测` |
-| ScratchCard   | `内测` |
-| SpaceRingPlus | 正常   |
-| SpaceRingItem | 正常   |
-| SpaceRingShop | 正常   |
-| SpaceGoldmine | `内测` |
+| 插件名           | 状态 |
+|---------------|----|
+| YeeIntensify  | 正常 |
+| YeeForge      | 正常 |
+| YeeTalent     | 正常 |
+| YeeJewelry    | 正常 |
+| YeeRank       | 正常 |
+| YeeHuya       | 正常 |
+| YeeGuide      | 正常 |
+| YeeCrate      | 正常 |
+| YeeTask       | 正常 |
+| YeeBattlePass | 正常 |
+| ScratchCard   | 正常 |
+| SpaceRingPlus | 正常 |
+| SpaceRingItem | 正常 |
+| SpaceRingShop | 正常 |
+| SpaceGoldmine | 正常 |
 
 如果您在迁移或使用过程中遇到问题，请及时联系售后群获取帮助。
