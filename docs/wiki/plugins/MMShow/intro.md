@@ -32,4 +32,4 @@
 
 #### 效果展示：
 
-![img.png](img.png)
+![img.png](img/img.png)
