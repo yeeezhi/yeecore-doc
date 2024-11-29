@@ -151,7 +151,7 @@ export default defineConfig({
                         link: '/wiki/plugins/YeeForge/intro',
                         collapsed: true,
                         items: [
-                            {text: '示例配置', link: '/wiki/plugins/YeeForge/example'},
+                            {text: '锻造奖励', link: '/wiki/plugins/YeeForge/reward'},
                             {text: '插件变量', link: '/wiki/plugins/YeeForge/placeholder'},
                         ],
                     },
