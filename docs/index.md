@@ -19,16 +19,13 @@ hero:
 features:
   - icon: 👍️
     title: 专业开发
-    details: 多年开发经验，以深厚的专业知识为你的服务器护航
+    details: 深耕多年开发领域，以专业技术为你的服务器保驾护航
   - icon: 🚀
     title: 高扩展性
-    details: 强大的YeeCore生态，极大丰富了插件的扩展性
+    details: 借助强大的 YeeCore 生态，显著提升插件的功能扩展能力
   - icon: 💡
-    title: 化繁为简
-    details: 杜绝繁琐和冗余的配置，专注于插件核心功能
-  - icon: ✅
-    title: 售后无忧
-    details: 反馈BUG快速响应，插件更新迭代极为迅速
+    title: 简约高效
+    details: 摒弃复杂冗余，专注实现插件核心功能，打造高效体验
 ---
 
 <HomeUnderline />

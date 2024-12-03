@@ -193,6 +193,14 @@ export default defineConfig({
                         ],
                     },
                     {
+                        text: '椰の直播🔥',
+                        collapsed: true,
+                        link: '/wiki/plugins/YeeLive/intro',
+                        items: [
+                            {text: '插件变量', link: '/wiki/plugins/YeeLive/placeholder'},
+                        ],
+                    },
+                    {
                         text: '椰の虎牙',
                         collapsed: true,
                         link: '/wiki/plugins/YeeHuya/intro',
