@@ -1,4 +1,4 @@
-# 属性映射 - AttributeMap - 28R
+# 属性映射 - AttributeMap
 
 #### 适用版本
 

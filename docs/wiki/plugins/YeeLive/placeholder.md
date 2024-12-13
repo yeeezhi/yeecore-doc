@@ -2,36 +2,36 @@
 
 ::: warning 注意
 
-目前哔哩哔哩暂不支持获取直播间人气，因此相关变量将无法使用
+目前哔哩哔哩暂时无法准确获取直播间人气，因此相关变量不建议使用
 
 :::
 
 ### Placeholder
 
-虎牙相关变量前缀 `yeehuya` 例如：`%yeehuya_info%`
+| 内容           | 变量                                       |
+|--------------|------------------------------------------|
+| 直播时长排名       | `%yeelive_平台_info%`                      |
+| 称号           | `%yeelive_平台_title%`                     |
+| 房间号          | `%yeelive_平台_room-id%`                   |
+| 主播名          | `%yeelive_平台_anchor-name%`               |
+| 直播间状态        | `%yeelive_平台_live-room-status%`          |
+| 今日最高人气       | `%yeelive_平台_popularity%`                |
+| 今日直播时长       | `%yeelive_平台_today-duration%`            |
+| 今日直播时长(单位分钟) | `%yeelive_平台_today-duration-min%`        |
+| 累计直播时长       | `%yeelive_平台_total-duration%`            |
+| 累计直播时长(单位分钟) | `%yeelive_平台_total-duration-min%`        |
+| 玩家数据更新时间     | `%yeelive_平台_update-time%`               |
+| 排名的玩家名       | `%yeelive_平台_rank_排名%`                   |
+| 排名的直播时长      | `%yeelive_平台_rank-total-duration_排名%`    |
+| 玩家的排名        | `%yeelive_平台_player_玩家名%`                |
+| 玩家的累计直播时长    | `%yeelive_平台_player-total-duration_玩家名%` |
+| 排行周期结束时间     | `%yeelive_平台_next-finish-time%`          |
 
-B站相关变量前缀 `yeebilibili` 例如：`%yeebilibili_info%`
+例如：
 
-| 内容           | 变量                                    |
-|--------------|---------------------------------------|
-| 直播时长排名       | `%yeehuya_info%`                      |
-| 称号           | `%yeehuya_title%`                     |
-| 房间号          | `%yeehuya_room-id%`                   |
-| 主播名          | `%yeehuya_anchor-name%`               |
-| 直播间状态        | `%yeehuya_live-room-status%`          |
-| 今日最高人气       | `%yeehuya_popularity%`                |
-| 今日直播时长       | `%yeehuya_today-duration%`            |
-| 今日直播时长(单位分钟) | `%yeehuya_today-duration-min%`        |
-| 累计直播时长       | `%yeehuya_total-duration%`            |
-| 累计直播时长(单位分钟) | `%yeehuya_total-duration-min%`        |
-| 玩家数据更新时间     | `%yeehuya_update-time%`               |
-| 排名的玩家名       | `%yeehuya_rank_排名%`                   |
-| 排名的直播时长      | `%yeehuya_rank-total-duration_排名%`    |
-| 玩家的排名        | `%yeehuya_player_玩家名%`                |
-| 玩家的累计直播时长    | `%yeehuya_player-total-duration_玩家名%` |
-| 排行周期结束时间     | `%yeehuya_next-finish-time%`          |
+虎牙 `%yeelive_huya_info%`、B站 `%yeelive_bilibili_info%`、抖音 `%yeelive_douyin_info%`
 
-### 内部变量
+### GUI内部变量
 
 | 内容           | 变量                     |
 |--------------|------------------------|

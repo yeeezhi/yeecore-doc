@@ -200,14 +200,6 @@ export default defineConfig({
                             {text: '插件变量', link: '/wiki/plugins/YeeLive/placeholder'},
                         ],
                     },
-                    {
-                        text: '椰の虎牙',
-                        collapsed: true,
-                        link: '/wiki/plugins/YeeHuya/intro',
-                        items: [
-                            {text: '插件变量', link: '/wiki/plugins/YeeHuya/placeholder'},
-                        ],
-                    },
 
                     {
                         text: '椰の图鉴',
@@ -255,7 +247,7 @@ export default defineConfig({
             },
             {
                 //分组标题2
-                text: '付费插件',
+                text: '其它付费',
                 collapsed: true,
                 items: [
                     {
@@ -269,11 +261,6 @@ export default defineConfig({
                         link: '/wiki/plugins/YeeGift/intro',
                     },
                     {
-                        text: '椰の集字',
-                        collapsed: true,
-                        link: '/wiki/plugins/YeeCollect/intro',
-                    },
-                    {
                         text: '椰の刮刮乐',
                         collapsed: true,
                         link: '/wiki/plugins/ScratchCard/intro',
@@ -283,18 +270,6 @@ export default defineConfig({
                         collapsed: true,
                         link: '/wiki/plugins/NoTrade/intro',
                     },
-                    {
-                        text: '属性映射',
-                        collapsed: true,
-                        link: '/wiki/plugins/AttributeMap/intro',
-                    },
-                    {
-                        text: '刷新点倒计时',
-                        collapsed: true,
-                        link: '/wiki/plugins/MMShow/intro',
-                    },
-
-
                 ],
             },
 
@@ -302,13 +277,26 @@ export default defineConfig({
                 text: '福利插件',
                 collapsed: true,
                 items: [
-                    {text: '椰の菜单', link: '/wiki/free/YeeMenu/intro'},
-                    {text: '椰の动作', link: '/wiki/free/YeeAction/intro'},
-                    {text: '椰の变量', link: '/wiki/free/YeeValue/intro'},
+                    {text: '椰の菜单🔥', link: '/wiki/free/YeeMenu/intro'},
+                    {text: '椰の动作🔥', link: '/wiki/free/YeeAction/intro'},
+                    {text: '椰の变量🔥', link: '/wiki/free/YeeValue/intro'},
+                    {text: '椰の集字', link: '/wiki/free/YeeCollect/intro',},
                     {text: '椰の聚宝盆', link: '/wiki/free/YeeCornucopia/intro'},
+                    // {
+                    //     text: '椰の虎牙🔥',
+                    //     collapsed: true,
+                    //     link: '/wiki/free/YeeHuya/intro',
+                    //     items: [
+                    //         {text: '插件变量', link: '/wiki/free/YeeHuya/placeholder'},
+                    //     ],
+                    // },
+                    {text: '魂珠空间', link: '/wiki/free/HZRing/intro',},
+                    {text: '怪物卡牌', link: '/wiki/free/MonsterCard/intro',},
+                    {text: '属性映射', link: '/wiki/free/AttributeMap/intro',},
                     {text: '玩家保护', link: '/wiki/free/SpawnProtect/intro'},
                     {text: '怪物保护', link: '/wiki/free/MobProtect/intro'},
                     {text: '变量格式化', link: '/wiki/free/NumberFormat/intro'},
+                    {text: '刷新点倒计时', link: '/wiki/free/MMShow/intro',},
                 ],
             },
         ],
