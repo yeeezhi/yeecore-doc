@@ -138,6 +138,16 @@ export default defineConfig({
                 collapsed: false,
                 items: [
                     {
+                        text: '椰の宝石🔥',
+                        link: '/wiki/plugins/YeeGem/intro',
+                        collapsed: true,
+                        items: [
+                            {text: '示例配置', link: '/wiki/plugins/YeeGem/example'},
+                            {text: '插件变量', link: '/wiki/plugins/YeeGem/placeholder'},
+                            {text: 'ZF-Runes迁移', link: '/wiki/plugins/YeeGem/ZFRunes'},
+                        ],
+                    },
+                    {
                         text: '椰の强化🔥',
                         link: '/wiki/plugins/YeeIntensify/intro',
                         collapsed: true,
@@ -251,6 +261,14 @@ export default defineConfig({
                 collapsed: true,
                 items: [
                     {
+                        text: '椰の虎牙',
+                        collapsed: true,
+                        link: '/wiki/plugins/YeeHuya/intro',
+                        items: [
+                            {text: '插件变量', link: '/wiki/plugins/YeeHuya/placeholder'},
+                        ],
+                    },
+                    {
                         text: '椰の抽奖',
                         collapsed: true,
                         link: '/wiki/plugins/YeeCrate/intro',
@@ -282,14 +300,7 @@ export default defineConfig({
                     {text: '椰の变量🔥', link: '/wiki/free/YeeValue/intro'},
                     {text: '椰の集字', link: '/wiki/free/YeeCollect/intro',},
                     {text: '椰の聚宝盆', link: '/wiki/free/YeeCornucopia/intro'},
-                    // {
-                    //     text: '椰の虎牙🔥',
-                    //     collapsed: true,
-                    //     link: '/wiki/free/YeeHuya/intro',
-                    //     items: [
-                    //         {text: '插件变量', link: '/wiki/free/YeeHuya/placeholder'},
-                    //     ],
-                    // },
+
                     {text: '魂珠空间', link: '/wiki/free/HZRing/intro',},
                     {text: '怪物卡牌', link: '/wiki/free/MonsterCard/intro',},
                     {text: '属性映射', link: '/wiki/free/AttributeMap/intro',},
