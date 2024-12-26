@@ -143,7 +143,6 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {text: '示例配置', link: '/wiki/plugins/YeeGem/example'},
-                            {text: '插件变量', link: '/wiki/plugins/YeeGem/placeholder'},
                             {text: 'ZF-Runes迁移', link: '/wiki/plugins/YeeGem/ZFRunes'},
                         ],
                     },

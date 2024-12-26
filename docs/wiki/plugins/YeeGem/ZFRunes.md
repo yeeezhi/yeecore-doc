@@ -16,7 +16,7 @@
 2. **配置转换**  
    使用指令 `/yeegemzf run` 一键转换配置 并查看后台转换结果。  
    如果无报错，请检查目录 `plugins\YeeGem\转移配置`，确认配置文件是否完整。
-   ![img.png](img.png)
+   ![img.png](img/转移配置.png)
 
 3. **物品库配置**  
    将 `plugins\YeeGem\转移配置\MythicMobs物品库配置.yml` 移至 `plugins\MythicMobs\Items` 文件夹。
