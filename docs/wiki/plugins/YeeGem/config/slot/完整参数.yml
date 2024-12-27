@@ -1,0 +1,41 @@
+默认宝石:
+  name: "§7可镶嵌 §7[§c红宝石§7]"
+  # 镶嵌格式
+  inlay: "§f已镶嵌 §7[§r{gemName}§7]"
+  # 镶嵌条件
+  condition:
+    - ""
+  # 镶嵌后执行动作
+  action:
+    - ""
+  # 物品上镶嵌该类型的宝石数量上限
+  limit: 0
+  show:
+    material: RED_STAINED_GLASS_PANE
+    name: "{slotName}"
+默认宝石-损坏:
+  name: "§7已损坏 §7[§c红宝石§7]"
+  # 孔位修复
+  repair:
+    # 修复后替换成其它孔位
+    # 支持表达式随机多孔位，如 ${string.random('红宝石','绿宝石','蓝宝石')}
+    slot: "红宝石"
+    # 修复成功率
+    probability: 1.0
+    # 拆卸所需材料
+    # 格式：物品库 物品Id 数量
+    material:
+      - "mm 测试材料 10"
+  # 修复条件
+  condition:
+    - ""
+  # 修复后执行动作
+  action:
+    - ""
+  show:
+    material: RED_STAINED_GLASS_PANE
+    name: "{slotName}"
+    lore:
+      - "{repair-template}"
+    enchants:
+      DURABILITY: 1

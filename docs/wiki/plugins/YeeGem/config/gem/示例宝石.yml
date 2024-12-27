@@ -1,0 +1,10 @@
+# 通过匹配物品名包含“红宝石” 即可对所有符合条件的物品进行镶嵌和拆卸操作
+# 更多表达式详情：https://yeecore.goodmc.cn/
+红宝石:
+  match: "match.name('红宝石')"
+  slot:
+    - "红宝石"
+默认符文:
+  match: "match.name('符文')"
+  slot:
+    - "符文孔"

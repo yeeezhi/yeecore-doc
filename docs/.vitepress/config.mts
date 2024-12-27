@@ -101,7 +101,7 @@ export default defineConfig({
         //侧边栏
         sidebar: [
             {
-                text: '首页',
+                text: '快速上手',
                 collapsed: false,
                 link: '/wiki/yeeplugins',
                 items: [
@@ -142,7 +142,7 @@ export default defineConfig({
                         link: '/wiki/plugins/YeeGem/intro',
                         collapsed: true,
                         items: [
-                            {text: '示例配置', link: '/wiki/plugins/YeeGem/example'},
+                            {text: '插件配置', link: '/wiki/plugins/YeeGem/config'},
                             {text: 'ZF-Runes迁移', link: '/wiki/plugins/YeeGem/ZFRunes'},
                         ],
                     },

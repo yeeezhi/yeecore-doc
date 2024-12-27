@@ -1,11 +1,13 @@
-<script setup>
-import { ref } from 'vue';
+<script setup>import {ref} from 'vue';
 
 const isOpen = ref(false)
 </script>
 
+# 椰の宝石 - YeeGem
 
-# 椰の宝石 - YeeGem - 99R
+::: tip 售价
+原价99R（含UI 128R），现预售价80R，赠送配套UI。
+:::
 
 ## 插件介绍
 
@@ -18,9 +20,11 @@ YeeGem 是一款高扩展性宝石插件，支持通过表达式区分宝石类�
 例如：通过匹配物品名包含“红宝石”，即可对所有符合条件的物品进行镶嵌和拆卸操作。
 
 ## 插件功能
+
 - 支持从 ZF-Runes 一键迁移
 - 表达式匹配宝石，多物品库支持
-- 支持显示、隐藏属性及额外属性加成
+- 支持显示、隐藏属性(符文)及额外属性加成
+- 镶嵌后随机属性，可使用计算公式与表达式
 - 快捷镶嵌与拆卸
 - 指定孔位进行镶嵌与拆卸
 - 设置孔位或宝石镶嵌数量上限
@@ -31,22 +35,32 @@ YeeGem 是一款高扩展性宝石插件，支持通过表达式区分宝石类�
 - 支持解锁、修复孔位，设置货币或物品作为修复条件
 - 支持多达20余种情况执行动作
 - 自定义GUI排版，指定类型孔位显示位置
-- <button @click="isOpen = !isOpen" style= "font-size: 1rem">兼容热门属性插件与饰品背包  {{ isOpen ? '[点击收起]' : '[点击查看]' }}</button>
 
-<div v-if="isOpen">
- <b>插件适配</b>   
- <ul>
-    <li>✅属性 SX-Attribute</li>
-    <li>✅属性 AttributePlus</li>
-    <li>✅属性 ItemLoreOrigin</li>
-    <li>✅属性 OriginAttribute</li>
-    <li>✅饰品 YeeJewelry</li>
-    <li>✅饰品 LyInventory</li>
-    <li>✅饰品 LegendJewelry</li>
-    <li>✅饰品 AttributeInventory</li>
-  </ul>
-</div>
+<details>
+<summary style="font-weight: bold">兼容热门属性与槽位扩展插件，同时支持背包槽位读取 [点击展开]</summary>
 
+- ✅属性 SX-Attribute
+- ✅属性 AttributePlus
+- ✅属性 ItemLoreOrigin
+- ✅属性 OriginAttribute
+- ✅龙核 DragonCore
+- ✅萌芽 GermPlugin
+- ✅时装 DragonInventory
+- ✅饰品 YeeJewelry
+- ✅饰品 LyInventory
+- ✅饰品 LegendJewelry
+- ✅饰品 AttributeInventory
+
+</details>
+
+
+
+<style>
+details summary {
+  list-style: inside;
+  padding-left: 3px;
+}
+</style>
 
 ## 更新计划
 
@@ -54,8 +68,4 @@ YeeGem 是一款高扩展性宝石插件，支持通过表达式区分宝石类�
 - 🚧交互类玩法（技能宝石）
 
 ## 效果展示
-
-![img.png](img/img.png)
-![img_1.png](img/img_1.png)
-![img_2.png](img/img_2.png)
-![img_3.png](img/img_3.png)
+![赠送UI.png](img/赠送UI.png)

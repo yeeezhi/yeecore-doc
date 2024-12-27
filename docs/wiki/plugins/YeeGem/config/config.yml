@@ -1,0 +1,54 @@
+# 默认物品库
+item-library: "mm"
+# 载入宝石属性
+# 使用YeeCore表达式，满足其中一条即为读取宝石属性
+load-gem-attribute:
+  # 允许的主手
+  mainHand:
+    # true 表示允许任意物品读取属性
+    - "true"
+    - "match.lore('类型: 主手')"
+  # 允许的副手
+  offHand:
+    - "true"
+    - "match.lore('类型: 副手')"
+  # 背包额外槽位
+  extra:
+  # 指定槽位，例如 17 号槽位
+  #17:
+  #  - "match.lore('类型: 饰品')"
+template:
+  material: "§b▪ §r{name}§f×{amount}"
+  # 支持以下变量：
+  # 材料: {material}
+  # 金币: {money}
+  # 点券: {points}
+  # 成功率: {probability}
+  take:
+    - ""
+    - "§f拆卸该宝石需要 §e{money} §f金币"
+  repair:
+    - ""
+    - "§f成功率 §e{probability}%"
+    - "§f修复孔位需要 §e{money} §f金币"
+    - ""
+    - "§8-§3材料："
+    - "{material}"
+# 插件兼容
+compatible:
+  YeeJewelry: true
+  LyInventory: true
+  LegendJewelry: true
+  # 适配全版本
+  AttributeInventory: true
+  # 以下参数均为从指定槽位读取宝石
+  # 龙之核心
+  DragonCore:
+    - "测试槽位"
+  # 时装栏
+  # 格式：背包.槽位  例如：shizhuang.头部槽
+  DragonInventory:
+    - "test.armourers1"
+  # 萌芽引擎
+  GermPlugin:
+    - "测试槽位"

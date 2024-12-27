@@ -1,0 +1,19 @@
+红宝石:
+  name: "§7可镶嵌 §7[§c红宝石§7]"
+  inlay: "§f已镶嵌 §7[§r{gemName}§7]"
+  show:
+    material: RED_STAINED_GLASS_PANE
+    name: "{slotName}"
+红宝石-损坏:
+  name: "§7已损坏 §7[§c红宝石§7]"
+  repair:
+    slot: "红宝石"
+    material:
+      - "mm 测试材料 10"
+  show:
+    material: RED_STAINED_GLASS_PANE
+    name: "{slotName}"
+    lore:
+      - "{repair-template}"
+    enchants:
+      DURABILITY: 1

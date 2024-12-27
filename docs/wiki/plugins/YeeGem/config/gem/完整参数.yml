@@ -1,0 +1,83 @@
+# 宝石Id
+默认宝石:
+  # 参数 item 与 match 不可同时使用,二选一即可
+  # 宝石匹配的物品库物品Id
+  # 格式： "物品库-物品Id" 例如："ni-默认宝石"
+  # 可在config.yml中配置插件默认使用物品库,不填物品库Id时自动使用默认物品库
+  # 已适配：https://www.goodmc.cn/wiki/YeeCore/物品库.html
+  item: "默认宝石"
+  # 宝石匹配表达式
+  match: "match.lore('红宝石')"
+  # 允许镶嵌的宝石孔
+  slot:
+    - "红宝石"
+  # 以下所有参数均为可选，不需要可删除
+  # 以下所有参数均为可选，不需要可删除
+  # 以下所有参数均为可选，不需要可删除
+
+  # 镶嵌后显示的lore
+  # 删除该参数则不添加额外lore
+  lore:
+    - "&7&l> &3攻击力&7: &a15"
+  # 额外生效属性
+  # 插件默认通过宝石Lore读取属性，不建议使用该参数
+  attribute:
+    - "攻击力: 1000"
+  # 是否从宝石的Lore中加载属性，默认值为 true
+  load-gem-attribute: true
+  # 宝石镶嵌
+  inlay:
+    # 所需金币
+    money: 0
+    # 所需点券
+    points: 0
+    # 镶嵌成功率
+    probability: 1.0
+    # 镶嵌条件
+    condition:
+      - ""
+    # 镶嵌后执行动作
+    action:
+      - ""
+    # 镶嵌失败执行动作
+    fail-action:
+      - ""
+    # 镶嵌所需材料
+    # 格式：物品库 物品Id 数量
+    material:
+      - "mm 测试材料 10"
+  # 宝石拆卸
+  take:
+    # 所需金币
+    money: 0
+    # 所需点券
+    points: 0
+    # 拆卸成功率
+    probability: 1.0
+    # 拆卸条件
+    condition:
+      - ""
+    # 拆卸后执行动作
+    action:
+      - ""
+    # 拆卸失败执行动作
+    fail-action:
+      - ""
+    # 拆卸所需材料
+    # 格式：物品库 物品Id 数量
+    material:
+      - "mm 测试材料 10"
+    # 拆卸器
+    special:
+      # 拆卸器匹配
+      match: "match.lore('拆卸器')"
+      # none-slot 和 none-return 未配置时，未使用拆卸器无法拆卸
+      # 未使用拆卸器时的孔位替换方案
+      none-slot: "红宝石-损坏"
+      # 未使用拆卸器时是否返还宝石
+      none-return: false
+  # 镶嵌宝石增加的附魔效果
+  enchantment:
+    DAMAGE_ALL: 1
+  # 物品上镶嵌该宝石数量上限
+  limit: 0
