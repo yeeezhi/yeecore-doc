@@ -5,6 +5,9 @@
 - 迁移前已镶嵌的 ZF-Runes 符文需使用原插件拆卸
 - 如果符文属性写在 Lore 中，仅需迁移物品库和槽位配置，无需迁移符文配置
 
+### **视频教学**
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113725046523726&bvid=BV1ruCpY7EeA&cid=27563067321&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
 ### **迁移步骤**
 
 从 ZF-Runes 迁移至 YeeGem，请按照以下步骤操作：
@@ -32,3 +35,5 @@
 
 
 建议再度检查配置和功能，确保一切正常运行。
+
+

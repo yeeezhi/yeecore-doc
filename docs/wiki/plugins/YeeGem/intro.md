@@ -1,3 +1,5 @@
+import iframeVideo from "./components/iframeComp.vue"
+
 <script setup>import {ref} from 'vue';
 
 const isOpen = ref(false)
@@ -68,4 +70,5 @@ details summary {
 - 🚧交互类玩法（技能宝石）
 
 ## 效果展示
+
 ![赠送UI.png](img/赠送UI.png)
