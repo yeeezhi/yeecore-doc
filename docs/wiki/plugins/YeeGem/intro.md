@@ -1,5 +1,3 @@
-import iframeVideo from "./components/iframeComp.vue"
-
 <script setup>import {ref} from 'vue';
 
 const isOpen = ref(false)
