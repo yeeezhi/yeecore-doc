@@ -105,6 +105,7 @@ export default defineConfig({
                 collapsed: false,
                 link: '/wiki/yeeplugins',
                 items: [
+                    {text: '新年贺礼🎆', link: '/wiki/新年贺礼'},
                     {text: '云端插件', link: '/wiki/YeePlugins'},
                     {text: '推广激励', link: '/wiki/popularize'},
                     {text: '授权后台', link: 'https://admin.goodmc.cn/'},
