@@ -25,6 +25,7 @@ YeeGem 是一款高扩展性宝石插件，支持通过表达式区分宝石类�
 - 表达式匹配宝石，多物品库支持
 - 支持显示、隐藏属性(符文)及额外属性加成
 - 镶嵌后随机属性，可使用计算公式与表达式
+- 支持宝石套装
 - 快捷镶嵌与拆卸
 - 指定孔位进行镶嵌与拆卸
 - 设置孔位或宝石镶嵌数量上限
@@ -64,8 +65,11 @@ details summary {
 
 ## 更新计划
 
-- 🚧宝石羁绊（宝石套装）
 - 🚧交互类玩法（技能宝石）
+
+## 视频介绍
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113740062197230&bvid=BV1Hr6uYMEPf&cid=27563067321&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
 
 ## 效果展示
 
