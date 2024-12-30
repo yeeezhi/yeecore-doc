@@ -28,3 +28,4 @@
 | 排行称号   | `{title}`       |
 | 更新时间   | `{update_time}` |
 | 周期结束时间 | `{finish_time}` |
+| 当前页数   | `{pageNum}`     |
