@@ -105,10 +105,9 @@ export default defineConfig({
                 collapsed: false,
                 link: '/wiki/yeeplugins',
                 items: [
-                    {text: '新年贺礼🎆', link: '/wiki/新年贺礼'},
+                    // {text: '新年贺礼🎆', link: '/wiki/新年贺礼'},
                     {text: '云端插件', link: '/wiki/YeePlugins'},
                     {text: '推广激励', link: '/wiki/popularize'},
-                    {text: '授权后台', link: 'https://admin.goodmc.cn/'},
                 ],
             },
             {
@@ -145,6 +144,7 @@ export default defineConfig({
                         items: [
                             {text: '插件配置', link: '/wiki/plugins/YeeGem/config'},
                             {text: 'ZF-Runes迁移', link: '/wiki/plugins/YeeGem/ZFRunes'},
+                            {text: '插件API', link: '/wiki/plugins/YeeGem/API'},
                         ],
                     },
                     {
@@ -258,88 +258,107 @@ export default defineConfig({
             {
                 //分组标题2
                 text: '其它付费',
-                collapsed: true,
-                items: [
-                    {
-                        text: '椰の虎牙',
-                        collapsed: true,
-                        link: '/wiki/plugins/YeeHuya/intro',
-                        items: [
-                            {text: '插件变量', link: '/wiki/plugins/YeeHuya/placeholder'},
-                        ],
-                    },
-                    {
-                        text: '椰の抽奖',
-                        collapsed: true,
-                        link: '/wiki/plugins/YeeCrate/intro',
-                    },
-                    {
-                        text: '椰の礼包',
-                        collapsed: true,
-                        link: '/wiki/plugins/YeeGift/intro',
-                    },
-                    {
-                        text: '椰の刮刮乐',
-                        collapsed: true,
-                        link: '/wiki/plugins/ScratchCard/intro',
-                    },
-                    {
-                        text: '交易限制',
-                        collapsed: true,
-                        link: '/wiki/plugins/NoTrade/intro',
-                    },
-                ],
-            },
+                collapsed:
+                    true,
+                items:
+                    [
+                        {
+                            text: '椰の虎牙',
+                            collapsed: true,
+                            link: '/wiki/plugins/YeeHuya/intro',
+                            items: [
+                                {text: '插件变量', link: '/wiki/plugins/YeeHuya/placeholder'},
+                            ],
+                        },
+                        {
+                            text: '椰の抽奖',
+                            collapsed: true,
+                            link: '/wiki/plugins/YeeCrate/intro',
+                        },
+                        {
+                            text: '椰の礼包',
+                            collapsed: true,
+                            link: '/wiki/plugins/YeeGift/intro',
+                        },
+                        {
+                            text: '椰の刮刮乐',
+                            collapsed: true,
+                            link: '/wiki/plugins/ScratchCard/intro',
+                        },
+                        {
+                            text: '交易限制',
+                            collapsed: true,
+                            link: '/wiki/plugins/NoTrade/intro',
+                        },
+                    ],
+            }
+            ,
 
             {
                 text: '福利插件',
-                collapsed: true,
-                items: [
-                    {text: '椰の菜单🔥', link: '/wiki/free/YeeMenu/intro'},
-                    {text: '椰の动作🔥', link: '/wiki/free/YeeAction/intro'},
-                    {text: '椰の变量🔥', link: '/wiki/free/YeeValue/intro'},
-                    {text: '椰の集字', link: '/wiki/free/YeeCollect/intro',},
-                    {text: '椰の聚宝盆', link: '/wiki/free/YeeCornucopia/intro'},
+                collapsed:
+                    true,
+                items:
+                    [
+                        {text: '椰の菜单🔥', link: '/wiki/free/YeeMenu/intro'},
+                        {text: '椰の动作🔥', link: '/wiki/free/YeeAction/intro'},
+                        {text: '椰の变量🔥', link: '/wiki/free/YeeValue/intro'},
+                        {text: '椰の集字', link: '/wiki/free/YeeCollect/intro',},
+                        {text: '椰の聚宝盆', link: '/wiki/free/YeeCornucopia/intro'},
 
-                    {text: '魂珠空间', link: '/wiki/free/HZRing/intro',},
-                    {text: '怪物卡牌', link: '/wiki/free/MonsterCard/intro',},
-                    {text: '属性映射', link: '/wiki/free/AttributeMap/intro',},
-                    {text: '玩家保护', link: '/wiki/free/SpawnProtect/intro'},
-                    {text: '怪物保护', link: '/wiki/free/MobProtect/intro'},
-                    {text: '变量格式化', link: '/wiki/free/NumberFormat/intro'},
-                    {text: '刷新点倒计时', link: '/wiki/free/MMShow/intro',},
-                ],
-            },
+                        {text: '魂珠空间', link: '/wiki/free/HZRing/intro',},
+                        {text: '怪物卡牌', link: '/wiki/free/MonsterCard/intro',},
+                        {text: '属性映射', link: '/wiki/free/AttributeMap/intro',},
+                        {text: '玩家保护', link: '/wiki/free/SpawnProtect/intro'},
+                        {text: '怪物保护', link: '/wiki/free/MobProtect/intro'},
+                        {text: '变量格式化', link: '/wiki/free/NumberFormat/intro'},
+                        {text: '刷新点倒计时', link: '/wiki/free/MMShow/intro',},
+                    ],
+            }
+            ,
         ],
 
 
-        //本地搜索
+//本地搜索
         search: {
             provider: 'local',
-            options: {
-                locales: {
-                    zh: {
-                        translations: {
-                            button: {
-                                buttonText: '搜索文档',
-                                buttonAriaLabel: '搜索文档'
-                            },
-                            modal: {
-                                noResultsText: '无法找到相关结果',
-                                resetButtonTitle: '清除查询条件',
-                                footer: {
-                                    selectText: '选择',
-                                    navigateText: '切换'
-                                },
-                            },
-                        },
-                    },
-                },
-            },
-        },
+            options:
+                {
+                    locales: {
+                        zh: {
+                            translations: {
+                                button: {
+                                    buttonText: '搜索文档',
+                                    buttonAriaLabel:
+                                        '搜索文档'
+                                }
+                                ,
+                                modal: {
+                                    noResultsText: '无法找到相关结果',
+                                    resetButtonTitle:
+                                        '清除查询条件',
+                                    footer:
+                                        {
+                                            selectText: '选择',
+                                            navigateText:
+                                                '切换'
+                                        }
+                                    ,
+                                }
+                                ,
+                            }
+                            ,
+                        }
+                        ,
+                    }
+                    ,
+                }
+            ,
+        }
+        ,
 
 
-        //社交链接
+//社交链接
         socialLinks: [
             {
                 icon: {
@@ -351,35 +370,44 @@ export default defineConfig({
         ],
 
         //手机端深浅模式文字修改
-        darkModeSwitchLabel: '深浅模式',
+        darkModeSwitchLabel:
+            '深浅模式',
 
 
         //页脚
-        footer: {
-            // message: '',
-            copyright: `Copyright ©${new Date().getFullYear()} <a href="https://beian.miit.gov.cn/" target="_blank">闽ICP备2023002896号-1</a>`,
-        },
+        footer:
+            {
+                // message: '',
+                copyright: `Copyright ©${new Date().getFullYear()} <a href="https://beian.miit.gov.cn/" target="_blank">闽ICP备2023002896号-1</a>`,
+            }
+        ,
 
 
-        //侧边栏文字更改(移动端)
+//侧边栏文字更改(移动端)
         sidebarMenuLabel: '目录',
 
         //返回顶部文字修改(移动端)
-        returnToTopLabel: '返回顶部',
+        returnToTopLabel:
+            '返回顶部',
 
 
         //大纲显示2-3级标题
-        outline: {
-            level: [2, 3],
-            label: '当前页大纲'
-        },
+        outline:
+            {
+                level: [2, 3],
+                label:
+                    '当前页大纲'
+            }
+        ,
 
 
-        //自定义上下页名
+//自定义上下页名
         docFooter: {
             prev: '上一页',
-            next: '下一页',
-        },
+            next:
+                '下一页',
+        }
+        ,
 
     },
 

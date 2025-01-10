@@ -1,7 +1,5 @@
 # 饰品背包 - YeeJewelry - 77R
 
-### YeeCore赋能，超高扩展性颠覆传统饰品背包
-
 #### ℹ️适用版本
 
 - 1.9-1.21
@@ -21,8 +19,9 @@
 - ✅属性 SX-Attribute
 - ✅属性 ItemLoreOrigin
 - ✅属性 OriginAttribute
-- ✅宝石 SpecialAttributes
+- ✅宝石 YeeGem
 - ✅宝石 Legendinlay
+- ✅宝石 SpecialAttributes
 - ✅符文 ZF-Runes
 - ✅时装 DragonArmourers
 
