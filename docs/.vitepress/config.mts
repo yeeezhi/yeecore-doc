@@ -57,7 +57,7 @@ export default defineConfig({
         config: (md) => {
             md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
                 let htmlResult = slf.renderToken(tokens, idx, options);
-                if (tokens[idx].tag === 'h1') htmlResult += `<ArticleMetadata />`;
+                //if (tokens[idx].tag === 'h1') htmlResult += `<ArticleMetadata />`;
                 return htmlResult;
             }
         }
@@ -94,7 +94,7 @@ export default defineConfig({
         //导航栏
         nav: [
             {text: '首页', link: '/'},
-            {text: '联系我们', link: 'https://qm.qq.com/q/BmwKs6EYI8'},
+            {text: '插件购买', link: 'https://qm.qq.com/q/BmwKs6EYI8'},
         ],
 
 
