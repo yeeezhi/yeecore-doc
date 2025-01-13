@@ -31,31 +31,26 @@ YeeValue 数值操作
 
 ```yaml
 condition:
-  - check(value('look','数值Id') >= 1000,'{prefix}§7货币数量不满足')
+  - value.look('数值Id') >= 1000 else '{prefix}§7货币数量不满足'
 ```
 
 添加数值，数值类型必须为number
 
 ```yaml
 action:
-  - value('add','数值Id',100000)
+  - value.add('数值Id',100000)
 ```
 
 扣除数值，数值类型必须为number
 
 ```yaml
 action:
-  - value('take','数值Id',100000)
+  - value.take('数值Id',100000)
 ```
 
 设置数值
 
 ```yaml
 action:
-  - value('set','数值Id',100000)
-```
-
-```yaml
-action:
-  - value('set','数值Id','')
+  - value.set('数值Id',100000)
 ```

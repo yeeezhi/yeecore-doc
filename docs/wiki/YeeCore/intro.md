@@ -27,7 +27,7 @@
 /yeecore run <玩家> <表达式>
 
 例如：
-/yeecore run Yeezhi check(permission("vip.vip1"),"{prefix}§7权限不满足")
+/yeecore run Yeezhi permission("vip.vip1") else "{prefix}§7权限不满足"
 
 ### 调试运算结果
 
