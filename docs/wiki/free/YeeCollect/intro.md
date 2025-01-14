@@ -1,4 +1,4 @@
-# 集字 - YeeCollect - 44R
+# 集字 - YeeCollect
 
 #### ℹ️适用版本
 
