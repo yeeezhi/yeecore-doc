@@ -6,7 +6,7 @@ const isOpen = ref(false)
 # 椰の宝石 - YeeGem
 
 ::: tip 售价
-原价99R（含UI 128R），现预售价80R，赠送配套UI。
+原价99R（含UI 128R），寒假特惠88R，赠送配套UI。
 :::
 
 ## 插件介绍
