@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="26769bf9-be13-4879-b72a-f705afcc999a" name="上海节点1">
-        <fileTransfer accessType="SFTP" host="110.40.132.92" port="22" sshConfigId="fb821af5-3d77-4715-a51d-c68fc62df024" sshConfig="root@110.40.132.92:22 password">
+        <fileTransfer accessType="SFTP" host="node1.goodmc.cn" port="22" sshConfigId="36e12af1-5b2b-40ca-8ae0-8f5ca0d90b82" sshConfig="root@node1.goodmc.cn:22 password">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
