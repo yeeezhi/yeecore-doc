@@ -44,6 +44,7 @@ YeeGem 是一款高扩展性宝石插件，支持通过表达式区分宝石类�
 - ✅属性 AttributePlus
 - ✅属性 ItemLoreOrigin
 - ✅属性 OriginAttribute
+- ✅属性 MMOItems
 - ✅龙核 DragonCore
 - ✅萌芽 GermPlugin
 - ✅时装 DragonInventory

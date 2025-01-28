@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 详情了解
-      link: /wiki/YeePlugins
+      link: /wiki/春节活动
     - theme: alt
       text: 联系我们
       link: https://qm.qq.com/q/BmwKs6EYI8

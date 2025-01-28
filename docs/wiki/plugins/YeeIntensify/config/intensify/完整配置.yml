@@ -1,0 +1,122 @@
+###########################
+#
+# YeeCore 表达式
+# https://yeecore.goodmc.cn/
+#
+###########################
+
+
+# 请勿直接使用此配置文件，需根据格式自行重新配置一份
+# 请勿直接使用此配置文件，需根据格式自行重新配置一份
+# 请勿直接使用此配置文件，需根据格式自行重新配置一份
+# 请勿直接使用此配置文件，需根据格式自行重新配置一份
+
+
+# 装备强化方案匹配，满足其中一条即可
+# 不仅可以根据物品信息进行判断，还能检测玩家权限或其他条件。
+# 如果不需要进行条件判断，删除该参数即可。
+match:
+  - "match.name('恶魔士兵主手')"
+  - "match.name('恶魔士兵副手')"
+# 强化标签，填方案名即可
+tag: "完整配置"
+# 强化石方案
+stone:
+  - "默认强化石"
+# 保护符方案
+unbreakable:
+  - "默认保护符"
+# Lore模板
+template:
+  - "§8§m-----------§8[§c 强化 §8]§8§m-----------"
+  - "{content}"
+  - "§f "
+# 变量库
+entry:
+  "变量1": "1"
+# 强化直升
+intensify-up:
+  "测试直升":
+    # 直升道具,填写 YeeCore 物品匹配表达式
+    prop: "match.name('直升券')"
+    # 直升配方
+    intensify: 2
+    # 概率，支持表达式
+    probability: 0.1
+    # 金币
+    money: 1000
+    # 点券
+    points: 0
+    # 材料,格式：物品库 物品Id 数量
+    # 已适配：https://yeecore.goodmc.cn/wiki/YeeCore/物品库.html
+    material:
+      - "mm 测试材料 10"
+# 强化初始Lore，建议填写完整
+init: "可强化"
+# 强化配方
+intensify:
+  1:
+    # 匹配强化等级表达式
+    match:
+      - "match.lore('可强化')"
+    # 强化后设置物品名,{defaultName}为物品默认名
+    name: "{defaultName} +8"
+    # 强化后替换的内容
+    content:
+      - "§3普通强化 §7[§a2/§320§7]"
+      - "§8「§6※§8」§7伤害加成: §a4%"
+      - "§8「§6※§8」§7暴击伤害: §a20%"
+    # 物品操作器,支持任意表达式，且生效于强化预览
+    operate:
+      - "设置物品名(获取物品名()+' §f(+1)')"
+    # 按条件执行动作
+    # operate与action区别为operate会在预览中生效
+    rules:
+      - condition:
+          - ""
+        operate:
+          - ""
+        action:
+          - ""
+      - condition:
+          - ""
+        operate:
+          - ""
+        action:
+          - ""
+    # 概率，支持表达式
+    probability: 0.1
+    # 金币
+    money: 1000
+    # 点券
+    points: 0
+    # 材料
+    material:
+      - "mm 测试材料 10"
+    # 临时变量
+    entry: ""
+    # 强化失败
+    fail:
+      # 破碎几率，添加参数即使用此功能并不生效降级
+      break-probability: 0.5
+      # 物品破碎执行动作
+      break-action:
+        - 动作表达式
+      # 失败后降级到指定强化配方，支持表达式
+      demote: 1
+      # 降级几率
+      demote-probability: 0.5
+      # 物品降级执行动作
+      demote-action:
+        - 动作表达式
+      # 强化失败执行动作
+      action:
+        - 动作表达式
+    # 强化保底
+    guarantees: 10
+    # 强化条件
+    condition:
+      - 条件表达式
+    # 强化成功执行动作
+    action:
+      - 动作表达式

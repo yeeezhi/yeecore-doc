@@ -103,9 +103,10 @@ export default defineConfig({
             {
                 text: '快速上手',
                 collapsed: false,
-                link: '/wiki/yeeplugins',
+                link: '/wiki/春节活动',
                 items: [
                     // {text: '新年贺礼🎆', link: '/wiki/新年贺礼'},
+                    {text: '春节活动🎆', link: '/wiki/春节活动'},
                     {text: '云端插件', link: '/wiki/YeePlugins'},
                     {text: '推广激励', link: '/wiki/popularize'},
                 ],
@@ -155,7 +156,8 @@ export default defineConfig({
                         link: '/wiki/plugins/YeeIntensify/intro',
                         collapsed: true,
                         items: [
-                            {text: '示例配置', link: '/wiki/plugins/YeeIntensify/example'},
+                            {text: '配置文件', link: '/wiki/plugins/YeeIntensify/config'},
+                            {text: '扩展示例', link: '/wiki/plugins/YeeIntensify/example'},
                             {text: '插件变量', link: '/wiki/plugins/YeeIntensify/placeholder'},
                         ],
                     },
