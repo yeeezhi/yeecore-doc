@@ -123,14 +123,12 @@ export default defineConfig({
                         items: [
                             {text: '条件', link: '/wiki/YeeCore/expression/condition'},
                             {text: '玩家', link: '/wiki/YeeCore/expression/玩家'},
-                            {
-                                text: '物品',
-                                link: '/wiki/YeeCore/expression/物品',
-                            },
                             {text: '货币', link: '/wiki/YeeCore/expression/货币'},
                             {text: '数值', link: '/wiki/YeeCore/expression/数值'},
                             {text: '文本', link: '/wiki/YeeCore/expression/文本'},
                             {text: '其它', link: '/wiki/YeeCore/expression/其它'},
+                            {text: '物品', link: '/wiki/YeeCore/expression/物品'},
+                            {text: '操作器', link: '/wiki/YeeCore/expression/操作器'},
                         ],
                     },
                     {text: '物品库', link: '/wiki/YeeCore/物品库'},
