@@ -1,8 +1,13 @@
 # 默认物品库
 item-library: "mm"
 # 载入宝石属性
-# 使用YeeCore表达式，满足其中一条即为读取宝石属性
 load-gem-attribute:
+  # 属性读取全局条件，需满所有条件
+  condition:
+    # 判断等级限制
+    - "%player_level% >= match.number('等级限制')"
+  # 以下满足任意一条即读取宝石属性
+  # 以下满足任意一条即读取宝石属性
   # 允许的主手
   mainHand:
     # true 表示允许任意物品读取属性
@@ -34,6 +39,9 @@ template:
     - ""
     - "§8-§3材料："
     - "{material}"
+  suit:
+    - ""
+    - "{content}"
 # 插件兼容
 compatible:
   YeeJewelry: true

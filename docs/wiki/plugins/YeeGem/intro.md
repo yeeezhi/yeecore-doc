@@ -11,7 +11,8 @@ const isOpen = ref(false)
 
 ## 插件介绍
 
-YeeGem 是一款高扩展性宝石插件，支持通过表达式区分宝石类型，提供快捷操作和高度自定义配置，简化繁琐设置。
+YeeGem 是一款高扩展性的宝石插件，支持通过表达式区分宝石，提供快捷操作和高度自定义配置，简化配置流程。同时支持从 ZF-Runes 和
+ItemLoreOrigin 一键迁移符文配置
 
 ## 插件特性
 
@@ -21,14 +22,14 @@ YeeGem 是一款高扩展性宝石插件，支持通过表达式区分宝石类�
 
 ## 插件功能
 
-- 支持从 ZF-Runes 一键迁移
+- 支持从 ZF-Runes、ItemLoreOrigin 一键迁移符文
 - 表达式匹配宝石，多物品库支持
 - 支持显示、隐藏属性(符文)及额外属性加成
 - 镶嵌后随机属性，可使用计算公式与表达式
 - 支持宝石套装
 - 快捷镶嵌与拆卸
 - 指定孔位进行镶嵌与拆卸
-- 设置孔位或宝石镶嵌数量上限
+- 宝石镶嵌数量上限，支持按等级、权限等条件设定限制
 - 自定义镶嵌、拆卸所需货币或物品
 - 镶嵌后增加附魔效果
 - 镶嵌、拆卸保护符，提升成功率
@@ -69,8 +70,8 @@ details summary {
 - 🚧交互类玩法（技能宝石）
 
 ## 视频介绍
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113740062197230&bvid=BV1Hr6uYMEPf&cid=27563067321&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113740062197230&bvid=BV1Hr6uYMEPf&cid=27563067321&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 效果展示
 

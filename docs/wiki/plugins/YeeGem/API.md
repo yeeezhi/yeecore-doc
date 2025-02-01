@@ -120,6 +120,14 @@ class GemTag {
 
     // 宝石新增的附魔效果
     var enchantment: Map<String, Int> = mapOf()
+    
+    
+    /**
+     * 获取原宝石物品
+     */
+    fun getRawGemItem(): ItemStack {
+        return rawGem.deserializeToItemStack()
+    }
 }
 
 

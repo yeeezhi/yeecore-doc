@@ -136,7 +136,7 @@ export default defineConfig({
             },
 
             {
-                text: '精选插件',
+                text: '百宝阁',
                 collapsed: false,
                 items: [
                     {
@@ -145,7 +145,14 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {text: '插件配置', link: '/wiki/plugins/YeeGem/config'},
-                            {text: 'ZF-Runes迁移', link: '/wiki/plugins/YeeGem/ZFRunes'},
+                            {
+                                text: '符文迁移',
+                                collapsed: true,
+                                items: [
+                                    {text: 'ZF-Runes迁移', link: '/wiki/plugins/YeeGem/ZFRunes'},
+                                    {text: 'ItemLoreOrigin迁移', link: '/wiki/plugins/YeeGem/ItemLoreOrigin'},
+                                ],
+                            },
                             {text: '插件API', link: '/wiki/plugins/YeeGem/API'},
                         ],
                     },
