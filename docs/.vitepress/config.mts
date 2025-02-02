@@ -262,6 +262,11 @@ export default defineConfig({
                         collapsed: true,
                         link: '/wiki/plugins/SpaceGoldmine/intro'
                     },
+                    {
+                        text: '无尽工艺',
+                        collapsed: true,
+                        link: '/wiki/plugins/CraftX/intro'
+                    },
 
                 ],
             },
