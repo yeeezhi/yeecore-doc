@@ -1,0 +1,72 @@
+# 变量模块
+
+通过以下两种自定义变量，**CraftX** 为用户提供了完善的数据管理能力，满足不同场景下的使用需求
+
+## 预设变量
+
+- 配置：`plugins\CraftX\variable`
+- 特点：可配置默认值、范围及定时任务。
+- 适用场景：货币系统、玩家数据记录、称号管理等需要规范化管理的数据场景。
+
+
+#### 配置
+
+::: code-group
+
+<<< @/wiki/plugins/CraftX/variable/config/货币.yml{yaml}
+<<< @/wiki/plugins/CraftX/variable/config/体力.yml{yaml}
+<<< @/wiki/plugins/CraftX/variable/config/称号.yml{yaml}
+<<< @/wiki/plugins/CraftX/variable/config/统计.yml{yaml}
+
+:::
+
+
+#### 指令：
+
+```
+/variable add <玩家> <变量名> <数值>              # 增加变量值
+/variable take <玩家> <变量名> <数值>             # 扣除变量值
+/variable set <玩家> <变量名> <数据>              # 设置变量值
+/variable info <玩家>                           # 变量详情
+/variable lead <变量> <页数>                     # 变量排行
+/variable reset <player/variable> <玩家名/变量名> # 重置数据
+```
+
+#### 表达式：
+
+```javascript
+variable.get("摩拉")        // 获取变量值
+variable.add("摩拉",50)     // 增加变量值
+variable.add("摩拉",50)     // 扣除变量值
+variable.set("摩拉",50)     // 设置变量值
+variable.reset("摩拉")      // 重置变量值为默认值
+```
+
+
+
+## 临时变量
+
+- 特点：，无需预设参数等创建工作，直接通过指令或表达式动态操作，支持数据过期时间。
+- 
+- 适用场景：快速处理临时数据，灵活应对动态需求。
+
+
+#### 指令：
+
+```
+/tmpvar get <玩家> <变量名>         # 获取变量值
+/tmpvar add <玩家> <变量名> <数值>   # 增加变量值
+/tmpvar take <玩家> <变量名> <数值>  # 扣除变量值
+/tmpvar set <玩家> <变量名> <数据>   # 设置变量值
+/tmpvar info <玩家>                # 变量详情
+/tmpvar lead <变量> <页数>          # 变量排行
+```
+
+#### 表达式：
+
+```javascript
+tmpvar.get("摩拉")        // 获取变量值
+tmpvar.add("摩拉",50)     // 增加变量值
+tmpvar.add("摩拉",50)     // 扣除变量值
+tmpvar.set("摩拉",50)     // 设置变量值
+```
