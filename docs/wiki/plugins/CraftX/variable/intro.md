@@ -39,7 +39,7 @@ variable.get("摩拉")        // 获取变量值
 variable.add("摩拉",50)     // 增加变量值
 variable.add("摩拉",50)     // 扣除变量值
 variable.set("摩拉",50)     // 设置变量值
-variable.reset("摩拉")      // 重置变量值为默认值
+variable.remove("摩拉")     // 删除变量值
 ```
 
 
@@ -58,6 +58,7 @@ variable.reset("摩拉")      // 重置变量值为默认值
 /tmpvar add <玩家> <变量名> <数值>   # 增加变量值
 /tmpvar take <玩家> <变量名> <数值>  # 扣除变量值
 /tmpvar set <玩家> <变量名> <数据>   # 设置变量值
+/tmpvar remove <玩家> <变量名> <数据># 删除变量值
 /tmpvar info <玩家>                # 变量详情
 /tmpvar lead <变量> <页数>          # 变量排行
 ```
