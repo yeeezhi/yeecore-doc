@@ -6,3 +6,16 @@
 |--------|------------------------|
 | 玩家变量数据 | `%variable_info_变量名%`  |
 | 变量全服总数 | `%variable_count_变量名%` |
+
+### Function
+
+可在function模块下任何地方使用
+
+| 内容         | 变量                       |
+|------------|--------------------------|
+| 成功执行(购买)数量 | `{amount}`               |
+| 执行(购买)成功率  | `{probability}`          |
+| 每日限购       | `{purchase-limit-day}`   |
+| 每周限购       | `{purchase-limit-week}`  |
+| 每月限购       | `{purchase-limit-month}` |
+| 累计限购       | `{purchase-limit-total}` |

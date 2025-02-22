@@ -140,6 +140,15 @@ export default defineConfig({
                 collapsed: false,
                 items: [
                     {
+                        text: '无尽工艺',
+                        collapsed: true,
+                        link: '/wiki/plugins/CraftX/intro',
+                        items: [
+                            {text: '功能模块', link: '/wiki/plugins/CraftX/function/intro'},
+                            {text: '变量模块', link: '/wiki/plugins/CraftX/variable/intro'},
+                        ],
+                    },
+                    {
                         text: '椰の宝石🔥',
                         link: '/wiki/plugins/YeeGem/intro',
                         collapsed: true,
@@ -262,17 +271,6 @@ export default defineConfig({
                         collapsed: true,
                         link: '/wiki/plugins/SpaceGoldmine/intro'
                     },
-                   {
-                       text: '无尽工艺',
-                       collapsed: true,
-                       link: '/wiki/plugins/CraftX/intro',
-                       items: [
-                           {text: '变量模块', link: '/wiki/plugins/CraftX/variable/intro'},
-                           {text: '未知模块', link: '/wiki/plugins/CraftX/variable/intro'},
-                           {text: '未知模块', link: '/wiki/plugins/CraftX/variable/intro'},
-                           {text: '未知模块', link: '/wiki/plugins/CraftX/variable/intro'},
-                       ],
-                   },
 
                 ],
             },
