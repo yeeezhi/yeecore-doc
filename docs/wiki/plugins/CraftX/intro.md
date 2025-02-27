@@ -1,11 +1,10 @@
 # 无尽工艺 - CraftX - 预售中
 
 ::: tip 插件购买
-- QQ: 15568820    
+
+- QQ: 15568820
 - 售价：预售99R，正式发售128R，赠送数十套玩法配置和配套UI
-:::
-
-
+  :::
 
 ## 插件介绍
 
@@ -25,11 +24,12 @@
 <details>
 <summary>[点击展开]</summary>
 
+- ✅货币 YeeValue
+- ✅货币 LyShop
+- ✅货币 CustomShop
+- ✅货币 NyEconomy
 - ✅仓库 SpaceRingPlus
 - ✅仓库 LyWarehouse
-- ✅货币 YeeCore
-- ✅货币 CustomShop
-- ✅货币 CustomShop
 
 </details>
 
