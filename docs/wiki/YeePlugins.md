@@ -1,8 +1,8 @@
 # 云端插件
 
-::: warning 注意
+::: tip 提示
 
-支持云端加载的插件请尽快迁移，旧版授权验证接口将停用，未来将不再提供维护和支持
+付费插件无需单独下载，全部通过云端加载。请务必仔细阅读教程
 
 :::
 
@@ -49,9 +49,10 @@ cloud-plugins:
 
 | 插件名           | 状态   |
 |---------------|------|
+| CraftX        | `内测` |
 | YeeIntensify  | 正常   |
 | YeeForge      | 正常   |
-| YeeGem        | `内测` |
+| YeeGem        | 内测   |
 | YeeTalent     | 正常   |
 | YeeJewelry    | 正常   |
 | YeeRank       | 正常   |
