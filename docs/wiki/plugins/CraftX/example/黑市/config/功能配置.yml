@@ -1,0 +1,282 @@
+
+
+#          Powered by YeeCore          #
+#        https://www.goodmc.cn/        #
+
+
+
+title: "                  §c§l黑市"
+layout:
+  - "         "
+  - "         "
+  - " ${variable.get('黑市布局')} "
+  - "         "
+  - "    *    "
+entry:
+  "折扣": "${variable.get('黑市折扣')}"
+  # 优惠=1.0-折扣
+  "优惠": "${取整((1-variable.get('黑市折扣'))*100)}"
+  "折扣价": "{{原价}*{折扣}}"
+function:
+  "湮灭之剑":
+    char: 1
+    display:
+      item: "mm 湮灭之剑 1"
+    entry:
+      "原价": "150000"
+    demand:
+      currency:
+        - "points ${折扣价}"
+    reward:
+      material:
+        - "mm 湮灭之剑 1"
+  "七星熔炼石":
+    char: 2
+    display:
+      item: "mm 七星熔炼石 1"
+    entry:
+      "原价": "50000"
+    demand:
+      currency:
+        - "points ${折扣价}"
+    reward:
+      material:
+        - "mm 七星熔炼石 1"
+  "暗幕次元剑":
+    char: 3
+    display:
+      item: "mm 暗幕次元剑 1"
+    entry:
+      "原价": "80000"
+    demand:
+      currency:
+        - "points ${折扣价}"
+    reward:
+      material:
+        - "mm 暗幕次元剑 1"
+  "幸运石5":
+    char: 4
+    display:
+      item: "mm 幸运石5 1"
+    entry:
+      "原价": "5000"
+    demand:
+      currency:
+        - "points ${折扣价}"
+    reward:
+      material:
+        - "mm 幸运石5 1"
+  "服主的狗头2":
+    char: 5
+    display:
+      item: "mm 服主的狗头2 1"
+    entry:
+      "原价": "5000"
+    demand:
+      currency:
+        - "points ${折扣价}"
+    reward:
+      material:
+        - "mm 服主的狗头2 1"
+  "服主的狗头":
+    char: a
+    display:
+      item: "mm 服主的狗头 1"
+    entry:
+      "原价": "3000"
+    demand:
+      currency:
+        - "points ${折扣价}"
+    reward:
+      material:
+        - "mm 服主的狗头 1"
+  "掉级保护石":
+    char: b
+    display:
+      item: "mm 掉级保护石 1"
+    entry:
+      "原价": "2000"
+    demand:
+      currency:
+        - "points ${折扣价}"
+    reward:
+      material:
+        - "mm 掉级保护石 1"
+  "损坏保护石":
+    char: c
+    display:
+      item: "mm 损坏保护石 1"
+    entry:
+      "原价": "3000"
+    demand:
+      currency:
+        - "points ${折扣价}"
+    reward:
+      material:
+        - "mm 损坏保护石 1"
+  "五星熔炼石":
+    char: d
+    display:
+      item: "mm 五星熔炼石 1"
+    entry:
+      "原价": "10000"
+    demand:
+      currency:
+        - "points ${折扣价}"
+    reward:
+      material:
+        - "mm 五星熔炼石 1"
+  "六星熔炼石":
+    char: e
+    display:
+      item: "mm 六星熔炼石 1"
+    entry:
+      "原价": "25000"
+    demand:
+      currency:
+        - "points ${折扣价}"
+    reward:
+      material:
+        - "mm 六星熔炼石 1"
+  "楼观剑":
+    char: f
+    display:
+      item: "mm 楼观剑 1"
+    entry:
+      "原价": "15000"
+    demand:
+      currency:
+        - "points ${折扣价}"
+    reward:
+      material:
+        - "mm 楼观剑 1"
+  "白楼剑":
+    char: g
+    display:
+      item: "mm 白楼剑 1"
+    entry:
+      "原价": "3000"
+    demand:
+      currency:
+        - "points ${折扣价}"
+    reward:
+      material:
+        - "mm 白楼剑 1"
+  "异星晶剑":
+    char: h
+    display:
+      item: "mm 异星晶剑 1"
+    entry:
+      "原价": "25000"
+    demand:
+      currency:
+        - "points ${折扣价}"
+    reward:
+      material:
+        - "mm 异星晶剑 1"
+  "异星战盔":
+    char: i
+    display:
+      item: "mm 异星战盔 1"
+    entry:
+      "原价": "27000"
+    demand:
+      currency:
+        - "points ${折扣价}"
+    reward:
+      material:
+        - "mm 异星战盔 1"
+  "异星战甲":
+    char: j
+    display:
+      item: "mm 异星战甲 1"
+    entry:
+      "原价": "25000"
+    demand:
+      currency:
+        - "points ${折扣价}"
+    reward:
+      material:
+        - "mm 异星战甲 1"
+  "异星护腿":
+    char: k
+    display:
+      item: "mm 异星护腿 1"
+    entry:
+      "原价": "23000"
+    demand:
+      currency:
+        - "points ${折扣价}"
+    reward:
+      material:
+        - "mm 异星护腿 1"
+  "异星战靴":
+    char: l
+    display:
+      item: "mm 异星战靴 1"
+    entry:
+      "原价": "23000"
+    demand:
+      currency:
+        - "points ${折扣价}"
+    reward:
+      material:
+        - "mm 异星战靴 1"
+  "幸运石4":
+    char: m
+    display:
+      item: "mm 幸运石4 1"
+    entry:
+      "原价": "4000"
+    demand:
+      currency:
+        - "points ${折扣价}"
+    reward:
+      material:
+        - "mm 幸运石4 1"
+  "刷新黑市":
+    char: "*"
+    display:
+      material: NETHER_STAR
+      name: "§3黑市优惠 §c(-{优惠}%)"
+      lore:
+        - "§f-"
+        - " §7刷新需要 §f1000 §7点券"
+        - " §7点击刷新商品与折扣"
+        - "§f-"
+      hide-desc: true
+    demand:
+      currency:
+        - "points 1000"
+    action:
+      - "variable.remove('黑市折扣')"
+      - "variable.remove('黑市布局')"
+# 全局介绍
+global-desc:
+  - ""
+  # 购买需求
+  - "§7原价 §f§m{原价}§f | §7优惠 §c(-{优惠}%)"
+  - "{demand-desc}"
+  - "§7当前拥有 §f%playerpoints_points% §7点券"
+  # 购买状态
+  - "{state-desc}"
+# 执行function时
+on-execute:
+  rules:
+    # 需要排除的配置
+    - condition:
+        - "'{functionName}'!='刷新黑市'"
+      action:
+        - "msg('{prefix}§7商品 ${获取物品名()}§f×{amount} §7购买成功')"
+message:
+  desc:
+    demand:
+      item: '§7购买需要 §f%demand% §7%name%'
+      money: '§7购买需要 §f%demand% §7金币'
+      points: '§7购买需要 §f${取整(%demand%)} §7点券'
+      currency: '§7购买需要 §f%demand% §7%name%'
+    state:
+      enough: "§7[§a✔§7] §3点击购买"
+      insufficient: "§7[§c✘§7] §3点击购买"
+      condition: "§c购买条件不足"
+      purchase-limit: "§7[§c§l!§7] §e已购买上限"

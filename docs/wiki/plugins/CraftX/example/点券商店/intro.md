@@ -1,16 +1,12 @@
-# 药剂合成
+# 点券商店
 
 ### 配置下载
 
-[药剂合成.zip](config/药剂合成.zip)
+[点券商店.zip](config/点券商店.zip)
 
 ### 效果展示
 
 ![img](img/img.png)
-
-### 赠送UI
-
-![img_1](img/img_1.png)
 
 ### 配置文件
 

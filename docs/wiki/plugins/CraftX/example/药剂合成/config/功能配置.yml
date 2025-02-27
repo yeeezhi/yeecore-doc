@@ -5,189 +5,107 @@
 
 
 
-title: "&e&l萌新七日豪礼"
+title: "§3药剂合成"
 layout:
-  - "#########"
-  - "#1234567#"
-  - "#########"
-entry:
-  签到天数: "%variable_info_萌新豪礼%"
+  - "         "
+  - " ABCDEFG "
+  - "         "
 function:
-  "玻璃板":
-    char: "#"
+  "精炼小麦":
+    char: "A"
     display:
-      material: BLACK_STAINED_GLASS_PANE
-      name: " "
-      lore:
-        - "§f "
-  "第一天":
-    char: "1"
-    entry:
-      "签到状态": "${{签到天数}<=0 ? '§a未签到' : '§c已签到'}"
+      item: "mm 精炼小麦 1"
+    demand:
+      material:
+        - "mc WHEAT 10"
+    reward:
+      material:
+        - "mm 精炼小麦 1"
+  "一级治愈药水":
+    char: "B"
     display:
-      material: CHEST
-      name: "&r萌新第 &c1 &r天 &7({签到状态}&7)"
-      lore:
-        - ''
-        - '§b▪ &a当前签到日数: &r第 &e%variable_info_萌新豪礼%  &r天'
-        - ''
-        - '§b▪ &f签到获得奖励: §8「 §e骑章&7[&9I&7]&f-&c拔刀斩 §8」&e*1'
-        - '§b▪ &f签到获得奖励: §7「§e金币§7」&e*1000'
-        - ''
-        - '§b▪ &d每位新进服务器的萌新都可以领取一次'
-    condition:
-      - "{签到天数} <= 0 else '{prefix}§7已经领取过这个礼包了哦~'"
-      - "{签到天数} == 0"
-    action:
-      - "variable.set('萌新豪礼', 1)"
-      - "variable.set('萌新豪礼冷却', 1)"
-      - "title('§8「 §d§l领取成功 §8」','§8「 §a成功领取了 &e萌新七日豪礼 &a第一天 §8」')"
-      # 执行奖励
-      - "command('mm i give %player_name% 奖励物品1')"
-  "第二天":
-    char: "2"
-    entry:
-      "签到状态": "${{签到天数}<=1 ? '§a未签到' : '§c已签到'}"
+      item: "mm 一级治愈药水 1"
+    demand:
+      material:
+        - "mm 精炼小麦 1"
+    reward:
+      material:
+        - "mm 一级治愈药水 1"
+    probability: 0.9
+  "一级瞬疗药水":
+    char: "C"
     display:
-      material: CHEST
-      name: "&r萌新第 &c2 &r天 &7({签到状态}&7)"
-      lore:
-        - ''
-        - '§b▪ &a当前签到日数: &r第 &e{签到天数}  &r天'
-        - ''
-        - '§b▪ &f签到获得奖励: &8「 &c开孔石 &8」&e*8'
-        - '§b▪ &f签到获得奖励: §b「§d息影石&b」&e*16'
-        - ''
-        - '§b▪ &d每位新进服务器的萌新都可以领取一次'
-    condition:
-      - "{签到天数} <= 1 else '{prefix}§7已经领取过这个礼包了哦~'"
-      - "{签到天数} == 1"
-    action:
-      - "variable.set('萌新豪礼', 2)"
-      - "variable.set('萌新豪礼冷却', 1)"
-      - "title('§8「 §d§l领取成功 §8」','§8「 §a成功领取了 &e萌新七日豪礼 &a第二天 §8」')"
-      # 执行奖励
-      - "command('mm i give %player_name% 奖励物品1')"
-  "第三天":
-    char: "3"
-    entry:
-      "签到状态": "${{签到天数}<=2 ? '§a未签到' : '§c已签到'}"
+      item: "mm 一级瞬疗药水 1"
+    demand:
+      material:
+        - "mm 精炼小麦 1"
+    reward:
+      material:
+        - "mm 一级瞬疗药水 1"
+    probability: 0.9
+  "一级暴率合剂":
+    char: "D"
     display:
-      material: CHEST
-      name: "&r萌新第 &c3 &r天 &7({签到状态}&7)"
-      lore:
-        - ''
-        - '§b▪ &a当前签到日数: &r第 &e{签到天数}  &r天'
-        - ''
-        - '§b▪ &f签到获得奖励: &8「 &6强度石&7[&a&o5%&7] &8」&e*20'
-        - '§b▪ &f签到获得奖励: &b[&6稳固石&b]&e*10'
-        - ''
-        - '§b▪ &d每位新进服务器的萌新都可以领取一次'
-    condition:
-      - "{签到天数} <= 2 else '{prefix}§7已经领取过这个礼包了哦~'"
-      - "{签到天数} == 2"
-    action:
-      - "variable.set('萌新豪礼', 3)"
-      - "variable.set('萌新豪礼冷却', 1)"
-      - "title('§8「 §d§l领取成功 §8」','§8「 §a成功领取了 &e萌新七日豪礼 &a第三天 §8」')"
-      # 执行奖励
-      - "command('mm i give %player_name% 奖励物品1')"
-  "第四天":
-    char: "4"
-    entry:
-      "签到状态": "${{签到天数}<=3 ? '§a未签到' : '§c已签到'}"
+      item: "mm 一级暴率合剂 1"
+    demand:
+      material:
+        - "mm 精炼小麦 1"
+    reward:
+      material:
+        - "mm 一级暴率合剂 1"
+    probability: 0.9
+  "一级暴伤合剂":
+    char: "E"
     display:
-      material: CHEST
-      name: "&r萌新第 &c4 &r天 &7({签到状态}&7)"
-      lore:
-        - ''
-        - '§b▪ &a当前签到日数: &r第 &e{签到天数}  &r天'
-        - ''
-        - '§b▪ &f签到获得奖励: &c属性点&e*50'
-        - '§b▪ &f签到获得奖励: &7[ &5遵法核心&d活动祝福 &7]&e*25'
-        - ''
-        - '§b▪ &d每位新进服务器的萌新都可以领取一次'
-    condition:
-      - "{签到天数} <= 3 else '{prefix}§7已经领取过这个礼包了哦~'"
-      - "{签到天数} == 3"
-    action:
-      - "variable.set('萌新豪礼', 4)"
-      - "variable.set('萌新豪礼冷却', 1)"
-      - "title('§8「 §d§l领取成功 §8」','§8「 §a成功领取了 &e萌新七日豪礼 &a第四天 §8」')"
-      # 执行奖励
-      - "command('mm i give %player_name% 奖励物品1')"
-  "第五天":
-    char: "5"
-    entry:
-      "签到状态": "${{签到天数}<=4 ? '§a未签到' : '§c已签到'}"
+      item: "mm 一级暴伤合剂 1"
+    demand:
+      material:
+        - "mm 精炼小麦 1"
+    reward:
+      material:
+        - "mm 一级暴伤合剂 1"
+    probability: 0.9
+  "一级暴躲合剂":
+    char: "F"
     display:
-      material: CHEST
-      name: "&r萌新第 &c4 &r天 &7({签到状态}&7)"
-      lore:
-        - ''
-        - '§b▪ &a当前签到日数: &r第 &e{签到天数}  &r天'
-        - ''
-        - '§b▪ &f签到获得奖励: &c属性点&e*50'
-        - '§b▪ &f签到获得奖励: &7[ &5遵法核心&d活动祝福 &7]&e*25'
-        - ''
-        - '§b▪ &d每位新进服务器的萌新都可以领取一次'
-    condition:
-      - "{签到天数} <= 4 else '{prefix}§7已经领取过这个礼包了哦~'"
-      - "{签到天数} == 4"
-    action:
-      - "variable.set('萌新豪礼', 5)"
-      - "variable.set('萌新豪礼冷却', 1)"
-      - "title('§8「 §d§l领取成功 §8」','§8「 §a成功领取了 &e萌新七日豪礼 &a第五天 §8」')"
-      # 执行奖励
-      - "command('mm i give %player_name% 奖励物品1')"
-  "第六天":
-    char: "6"
-    entry:
-      "签到状态": "${{签到天数}<=5 ? '§a未签到' : '§c已签到'}"
+      item: "mm 一级暴躲合剂 1"
+    demand:
+      material:
+        - "mm 精炼小麦 1"
+    reward:
+      material:
+        - "mm 一级暴躲合剂 1"
+    probability: 0.9
+  "一级暴抗合剂":
+    char: "G"
     display:
-      material: CHEST
-      name: "&r萌新第 &c6 &r天 &7({签到状态}&7)"
-      lore:
-        - ''
-        - '§b▪ &a当前签到日数: &r第 &e{签到天数}  &r天'
-        - ''
-        - '§b▪ &f签到获得奖励: &c属性点&e*50'
-        - '§b▪ &f签到获得奖励: &7[ &5遵法核心&d活动祝福 &7]&e*25'
-        - ''
-        - '§b▪ &d每位新进服务器的萌新都可以领取一次'
-    condition:
-      - "{签到天数} <= 5 else '{prefix}§7已经领取过这个礼包了哦~'"
-      - "{签到天数} == 5"
-    action:
-      - "variable.set('萌新豪礼', 6)"
-      - "variable.set('萌新豪礼冷却', 1)"
-      - "title('§8「 §d§l领取成功 §8」','§8「 §a成功领取了 &e萌新七日豪礼 &a第六天 §8」')"
-      # 执行奖励
-      - "command('mm i give %player_name% 奖励物品1')"
-  "第七天":
-    char: "7"
-    entry:
-      "签到状态": "${{签到天数}<=6 ? '§a未签到' : '§c已签到'}"
-    display:
-      material: CHEST
-      name: "&r萌新第 &c7 &r天 &7({签到状态}&7)"
-      lore:
-        - ''
-        - '§b▪ &a当前签到日数: &r第 &e{签到天数}  &r天'
-        - ''
-        - '§b▪ &f签到获得奖励: &8「 &dVIP经验 &8」&e*50'
-        - ''
-        - '§b▪ &d每位新进服务器的萌新都可以领取一次'
-    condition:
-      - "{签到天数} <= 6 else '{prefix}§7已经领取过这个礼包了哦~'"
-      - "{签到天数} == 6"
-    action:
-      - "variable.set('萌新豪礼', 7)"
-      - "variable.set('萌新豪礼冷却', 1)"
-      - "title('§8「 §d§l领取成功 §8」','§8「 §a成功领取了 &e萌新七日豪礼 &a第七天 §8」')"
-      # 执行奖励
-      - "command('mm i give %player_name% 奖励物品1')"
-# 领取冷却
+      item: "mm 一级暴抗合剂 1"
+    demand:
+      material:
+        - "mm 精炼小麦 1"
+    reward:
+      material:
+        - "mm 一级暴抗合剂 1"
+    probability: 0.9
+# 启用快捷键倍率
+hotkey-multiple: true
+# 全局介绍
+global-desc:
+  # 购买需求
+  - "{demand-desc}"
+  - ""
+  # 购买状态
+  - "{state-desc}"
+button-desc:
+  - "{demand-desc}"
+  - "{state-desc}"
+# 执行function时
 on-execute:
-  condition:
-    - "%variable_info_萌新豪礼冷却% == 0 else '{prefix}§7你今天已经领过了,等明天再来领吧~'"
+  action:
+    - "msg('{prefix}§7配方 ${获取物品名()}§f×{amount} §7合成成功')"
+message:
+  desc.state:
+    enough: " §a点击兑换 §7| §3成功率 §f{probability}%"
+    purchase-limit: "§7已达到购买上限"
+    insufficient: "§c(§l未满足需求§r§c)"
+    condition: "§c(§l未满足条件§r§c)"
