@@ -103,10 +103,10 @@ export default defineConfig({
             {
                 text: '快速上手',
                 collapsed: false,
-                link: '/wiki/春节活动',
+                link: '/wiki/YeePlugins',
                 items: [
                     // {text: '新年贺礼🎆', link: '/wiki/新年贺礼'},
-                    {text: '春节活动🎆', link: '/wiki/春节活动'},
+                    // {text: '春节活动🎆', link: '/wiki/春节活动'},
                     {text: '云端插件', link: '/wiki/YeePlugins'},
                     {text: '推广激励', link: '/wiki/popularize'},
                 ],
@@ -134,20 +134,37 @@ export default defineConfig({
                     {text: '物品库', link: '/wiki/YeeCore/物品库'},
                 ],
             },
-
             {
-                text: '百宝阁',
-                collapsed: false,
+                text: '无尽工艺🎉',
+                collapsed: true,
+                link: '/wiki/plugins/CraftX/intro',
                 items: [
                     {
-                        text: '无尽工艺',
-                        collapsed: true,
+                        text: '插件功能',
                         link: '/wiki/plugins/CraftX/intro',
+                        collapsed: true,
                         items: [
                             {text: '功能模块', link: '/wiki/plugins/CraftX/function/intro'},
                             {text: '变量模块', link: '/wiki/plugins/CraftX/variable/intro'},
                         ],
                     },
+                    {
+                        text: '优秀示例',
+                        link: '/wiki/plugins/CraftX/example',
+                        collapsed: true,
+                        items: [
+                            {text: '功能模块', link: '/wiki/plugins/CraftX/function/intro'},
+                            {text: '变量模块', link: '/wiki/plugins/CraftX/variable/intro'},
+                        ],
+                    },
+                ],
+            },
+
+            {
+                text: '百宝阁',
+                collapsed: false,
+                items: [
+
                     {
                         text: '椰の宝石🔥',
                         link: '/wiki/plugins/YeeGem/intro',
@@ -282,6 +299,11 @@ export default defineConfig({
                 items:
                     [
                         {
+                            text: '交易限制',
+                            collapsed: true,
+                            link: '/wiki/plugins/NoTrade/intro',
+                        },
+                        {
                             text: '椰の虎牙',
                             collapsed: true,
                             link: '/wiki/plugins/YeeHuya/intro',
@@ -303,11 +325,6 @@ export default defineConfig({
                             text: '椰の刮刮乐',
                             collapsed: true,
                             link: '/wiki/plugins/ScratchCard/intro',
-                        },
-                        {
-                            text: '交易限制',
-                            collapsed: true,
-                            link: '/wiki/plugins/NoTrade/intro',
                         },
                     ],
             }

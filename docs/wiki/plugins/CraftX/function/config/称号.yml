@@ -1,0 +1,10 @@
+"称号":
+  name: "称号"
+  # 默认称号
+  default: "&a普通玩家"
+  # 按照条件生效默认值，玩家离线时不生效
+  default-rules:
+    "&bVIP1":
+      - "permission('vip.vip1')"
+    "&bVIP2":
+      - "permission('vip.vip2')"

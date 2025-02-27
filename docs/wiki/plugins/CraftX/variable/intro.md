@@ -1,8 +1,8 @@
 # 变量模块
 
-通过以下两种自定义变量，**CraftX** 为用户提供了完善的变量管理能力，满足不同场景下的使用需求
+通过以下两种变量，**CraftX** 为用户提供了完善的变量管理能力，满足不同场景下的使用需求
 
-## 预设变量
+## 自定义变量
 
 - 配置：`plugins\CraftX\variable`
 - 特点：可配置默认值、范围及定时任务。
@@ -25,6 +25,7 @@
 /variable pay <玩家> <变量名> <数值>              # 数值转账
 /variable add <玩家> <变量名> <数值>              # 增加变量值
 /variable take <玩家> <变量名> <数值>             # 扣除变量值
+/variable remove <玩家> <变量名>                 # 删除变量值
 /variable set <玩家> <变量名> <数据>              # 设置变量值
 /variable info <玩家>                           # 变量详情
 /variable lead <变量> <页数>                     # 变量排行
@@ -43,11 +44,11 @@
 #### 表达式：
 
 ```javascript
-variable.get("摩拉")        // 获取变量值
-variable.add("摩拉", 50)     // 增加变量值
-variable.add("摩拉", 50)     // 扣除变量值
-variable.set("摩拉", 50)     // 设置变量值
-variable.remove("摩拉")     // 删除变量值
+variable.get('摩拉')        // 获取变量值
+variable.add('摩拉', 50)     // 增加变量值
+variable.add('摩拉', 50)     // 扣除变量值
+variable.set('摩拉', 50)     // 设置变量值
+variable.remove('摩拉')     // 删除变量值
 ```
 
 ## 临时变量
@@ -80,8 +81,9 @@ variable.remove("摩拉")     // 删除变量值
 #### 表达式：
 
 ```javascript
-tmpvar.get("摩拉")        // 获取变量值
-tmpvar.add("摩拉", 50)     // 增加变量值
-tmpvar.add("摩拉", 50)     // 扣除变量值
-tmpvar.set("摩拉", 50)     // 设置变量值
+tmpvar.get('摩拉')        // 获取变量值
+tmpvar.add('摩拉', 50)     // 增加变量值
+tmpvar.add('摩拉', 50)     // 扣除变量值
+tmpvar.set('摩拉', 50)     // 设置变量值
+tmpvar.remove('摩拉')     // 删除变量值
 ```
