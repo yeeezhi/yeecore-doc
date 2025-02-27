@@ -1,0 +1,169 @@
+
+
+#          Powered by YeeCore          #
+#        https://www.goodmc.cn/        #
+
+
+
+title: "&c&l   累       充       奖       励"
+layout:
+  - "#########"
+  - "#A B C D#"
+  - "#       #"
+  - "# E F G #"
+  - "#########"
+function:
+  "玻璃板":
+    char: "#"
+    display:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+      lore:
+        - "§f "
+  "20元":
+    char: "A"
+    display:
+      material: CHEST
+      name: "&c&l20元"
+      lore:
+        - " "
+        - " &3奖励列表:"
+        - " &f - 点券 x1000 "
+        - " &f - 四星熔炼石 x4 "
+        - " "
+    condition:
+      - "%variable_info_累充% >= 20 else '{prefix}&7累充金额不足'"
+    action:
+      - "command('points give %player_name% 1000')"
+      - "command('mm i give %player_name% 四星熔炼石 4')"
+    purchase-limit:
+      total: 1
+  "50元":
+    char: "B"
+    display:
+      material: CHEST
+      name: "&c&l50元"
+      lore:
+        - " "
+        - " &3奖励列表:"
+        - " &f - 点券 x2000 "
+        - " &f - 五星熔炼石 x2 "
+        - " "
+    condition:
+      - "%variable_info_累充% >= 50 else '{prefix}&7累充金额不足'"
+    action:
+      - "command('points give %player_name% 2000')"
+      - "command('mm i give %player_name% 五星熔炼石 2')"
+    purchase-limit:
+      total: 1
+  "100元":
+    char: "C"
+    display:
+      material: CHEST
+      name: "&c&l100元"
+      lore:
+        - " "
+        - " &3奖励列表:"
+        - " &f - &7[&c时装&7]&fxxx "
+        - " &f - 六星熔炼石 x2 "
+        - " "
+    condition:
+      - "%variable_info_累充% >= 100 else '{prefix}&7累充金额不足'"
+    action:
+      - "command('mm i give %player_name% 时装xxx 1')"
+      - "command('mm i give %player_name% 六星熔炼石 2')"
+    purchase-limit:
+      total: 1
+  "300元":
+    char: "D"
+    display:
+      material: CHEST
+      name: "&c&l300元"
+      lore:
+        - " "
+        - " &3奖励列表:"
+        - " &f - &7[&c时装&7]&fxxx "
+        - " &f - 七星熔炼石 x2 "
+        - " &f - 三级暴伤宝石 x1 "
+        - " "
+    condition:
+      - "%variable_info_累充% >= 300 else '{prefix}&7累充金额不足'"
+    action:
+      - "command('mm i give %player_name% 时装xxx 1')"
+      - "command('mm i give %player_name% 七星熔炼石 1')"
+      - "command('mm i give %player_name% 三级暴伤宝石 1')"
+    purchase-limit: 
+      total: 1
+  "500元":
+    char: "E"
+    display:
+      material: ENDER_CHEST
+      name: "&c&l500元"
+      lore:
+        - " "
+        - " &3奖励列表:"
+        - " &f - &7[&c时装&7]&fxxx "
+        - " &f - 七星熔炼石 x2 "
+        - " &f - 五级暴伤宝石 x1 "
+        - " "
+    condition:
+      - "%variable_info_累充% >= 500 else '{prefix}&7累充金额不足'"
+    action:
+      - "command('mm i give %player_name% 时装xxx 1')"
+      - "command('mm i give %player_name% 七星熔炼石 2')"
+      - "command('mm i give %player_name% 五级暴伤宝石 1')"
+    purchase-limit: 
+      total: 1
+  "1000元":
+    char: "F"
+    display:
+      material: ENDER_CHEST
+      name: "&c&l1000元"
+      lore:
+        - " "
+        - " &3奖励列表:"
+        - " &f - &7[&c时装&7]&fxxx "
+        - " &f - 八星熔炼石 x4 "
+        - " &f - 九级暴伤宝石 x1 "
+        - " "
+    condition:
+      - "%variable_info_累充% >= 1000 else '{prefix}&7累充金额不足'"
+    action:
+      - "command('mm i give %player_name% 时装xxx 1')"
+      - "command('mm i give %player_name% 八星熔炼石 4')"
+      - "command('mm i give %player_name% 九级暴伤宝石 1')"
+    purchase-limit: 
+      total: 1
+  "1500元":
+    char: "G"
+    display:
+      material: ENDER_CHEST
+      name: "&c&l1500元"
+      lore:
+        - " "
+        - " &3奖励列表:"
+        - " &f - 九星熔炼石 x4 "
+        - " &f - 九级暴伤宝石 x2 "
+        - " &f - 永久VIP x1 "
+        - " "
+    condition:
+      - "%variable_info_累充% >= 1500 else '{prefix}&7累充金额不足'"
+    action:
+      - "command('mm i give %player_name% 九星熔炼石 4')"
+      - "command('mm i give %player_name% 九级暴伤宝石 2')"
+      - "command('mm i give %player_name% 永久VIP 1')"
+    purchase-limit: 
+      total: 1
+# 全局介绍
+global-desc:
+  - "{state-desc}"
+# 领取时执行
+on-execute:
+  action:
+    - ""
+message:
+ desc.state:
+      purchase-limit: " §e已领取该奖励"
+      enough: " &a点击领取该奖励 "
+      condition: " &e充值金额不足 "
+      insufficient: " &e未满足需求 "

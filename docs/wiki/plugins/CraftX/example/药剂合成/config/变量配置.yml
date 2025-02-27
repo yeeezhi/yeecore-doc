@@ -1,0 +1,9 @@
+萌新豪礼:
+  default: 0
+萌新豪礼冷却:
+  default: 0
+  # 定时任务
+  task:
+    冷却重置:
+      cron: "0 0 0 ? * ?"
+      value: "0"

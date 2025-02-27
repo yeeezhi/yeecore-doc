@@ -1,0 +1,93 @@
+
+
+#          Powered by YeeCore          #
+#        https://www.goodmc.cn/        #
+
+
+# 使用说明：
+# 此配置仅提供GUI，刮刮卡物品需搭配gilc等消耗物品以OP身份执行指令打开此界面实现
+#
+title: "&e&l花开富贵"
+layout:
+  - "#########"
+  - "#+++++++#"
+  - "#+++++++#"
+  - "#+++++++#"
+  - "####=####"
+function:
+  "玻璃板":
+    char: "#"
+    display:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+      lore:
+        - "§f "
+  "幸运数字":
+    char: "="
+    display:
+      material: LARGE_FERN
+      name: "&f刮开幸运数字"
+      lore:
+        - " "
+        - " &3奖励:"
+        - " &f - 点券 x1000 "
+        - " "
+        - " &3规则："
+        - " &f - 先刮开幸运数字"
+        - " &f - 再刮奖区域"
+        - " &f - 如果刮奖区域数字与幸运数字相同，则获得奖励！"
+        - " "
+        - "§7祝你好运！"
+        - " "
+    entry:
+      幸运数字: "${tempvar.get('刮刮乐数字')}"
+    action:
+      - "设置物品类型('ROSE_BUSH')"
+      - "设置物品名('&e幸运数字 {幸运数字}')"
+      - "设置数量({幸运数字})"
+  "刮奖区域":
+    char: "+"
+    display:
+      material: WEB
+      name: "&f点击刮开"
+      lore:
+        - " "
+    entry:
+      幸运数字: "${tempvar.get('刮刮乐数字')}"
+      # 0.05是中奖概率(5%)
+      是否中奖: "${random()<0.05}"
+      数字: "${{是否中奖} ? {幸运数字} : random(1,64)}"
+    # 按钮为初始name时才进行处理
+    condition:
+      - "match.name('点击刮开')"
+    action:
+      - "设置物品类型('BROWN_MUSHROOM')"
+      - "设置数量({数字})"
+      - "设置物品名('&3数字 &f{数字}')"
+    rules:
+      # 中奖
+      - condition:
+          - "{是否中奖}"
+        action:
+          - "设置物品类型('RED_MUSHROOM')"
+          - "词条添加('&a已中奖')"
+          - "播放声音('ENTITY_FIREWORK_ROCKET_LAUNCH')"
+          # 给予奖励
+          - "执行指令('points give %player_name% 1000')"
+# 领取时执行
+on-execute:
+  action:
+    - ""
+on-open:
+  # 防止玩家直接执行指令打开刮刮乐页面
+  condition:
+    - "permission('刮刮乐权限')"
+  # 打开页面时赋值幸运数值
+  action:
+    - "tempvar.set('刮刮乐数字',random(1,64))"
+update-inventory: false
+message:
+  desc.state:
+    enough: " &a点击领取该奖励 "
+    condition: " &e未满足条件 "
+    insufficient: " &e未满足需求 "

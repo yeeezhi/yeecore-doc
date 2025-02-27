@@ -1,6 +1,0 @@
-摩拉:
-  name: "摩拉"
-  # 转账条件，支持使用 YeeCore 表达式。 "true" 表示不限制
-  pay-condition: "true"
-成就点:
-  name: "成就点"

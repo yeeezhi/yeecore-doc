@@ -6,6 +6,8 @@
 |--------|------------------------|
 | 玩家变量数据 | `%variable_info_变量名%`  |
 | 变量全服总数 | `%variable_count_变量名%` |
+| 临时变量数据 | `%tempvar_info_变量名%`   |
+| 临时变量总数 | `%tempvar_count_变量名%`  |
 
 ### Function
 

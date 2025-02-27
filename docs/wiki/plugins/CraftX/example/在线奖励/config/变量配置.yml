@@ -1,0 +1,40 @@
+今日在线:
+  default: 0
+  task:
+    # 每分钟增加在线时长
+    时长增加:
+      cron: "0 0/1 * * * ?"
+      value: "n+1"
+      # 离线玩家不执行
+      offline-player: false
+    # 每天十二点重置
+    时长重置:
+      cron: "00 00 00 ? * 1"
+      value: "0"
+本周在线:
+  default: 0
+  task:
+    时长增加:
+      cron: "0 0/1 * * * ?"
+      value: "n+1"
+      offline-player: false
+    时长重置:
+      cron: "0 0 0 ? * 1 *"
+      value: "0"
+本月在线:
+  default: 0
+  task:
+    时长增加:
+      cron: "0 0/1 * * * ?"
+      value: "n+1"
+      offline-player: false
+    时长重置:
+      cron: "0 0 0 1 * ? *"
+      value: "0"
+累计在线:
+  default: 0
+  task:
+    增加时长:
+      cron: "0 0/1 * * * ?"
+      value: "n+1"
+      offline-player: false
