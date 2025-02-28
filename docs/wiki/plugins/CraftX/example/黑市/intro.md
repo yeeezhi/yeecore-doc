@@ -1,9 +1,5 @@
 # 黑市
 
-### 配置下载
-
-[黑市.zip](config/黑市.zip)
-
 ### 效果展示
 
 ![img](img/img.png)

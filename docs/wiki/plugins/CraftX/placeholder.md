@@ -19,5 +19,5 @@
 | 每周限购       | `{purchase-limit-week}`  |
 | 每月限购       | `{purchase-limit-month}` |
 | 累计限购       | `{purchase-limit-total}` |
-| 成功执行(购买)数量 | `{amount}`               |
 | 执行(购买)成功率  | `{probability}`          |
+| 成功执行(购买)数量 | `{amount}`               |

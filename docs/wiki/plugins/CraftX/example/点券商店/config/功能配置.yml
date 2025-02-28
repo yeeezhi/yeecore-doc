@@ -16,232 +16,163 @@ function:
     char: A
     display:
       item: "mm 服主的狗头 1"
+      reward: true
     demand:
-      currency:
-        - "points 3000"
-    reward:
-      material:
-        - "mm 服主的狗头 1"
+      - "points 3000"
   "服主的狗头2":
     char: B
     display:
       item: "mm 服主的狗头2 1"
+      reward: true
     demand:
-      currency:
-        - "points 5000"
-    reward:
-      material:
-        - "mm 服主的狗头2 1"
+      - "points 5000"
   "大量黄金":
     char: D
     display:
       item: "mm 大量黄金 1"
+      reward: true
     demand:
-      currency:
-        - "points 1000"
-    reward:
-      material:
-        - "mm 大量黄金 1"
+      - "points 1000"
   "掉级保护石":
     char: E
     display:
       item: "mm 掉级保护石 1"
+      reward: true
     demand:
-      currency:
-        - "points 2000"
-    reward:
-      material:
-        - "mm 掉级保护石 1"
+      - "points 2000"
   "损坏保护石":
     char: F
     display:
       item: "mm 损坏保护石 1"
+      reward: true
     demand:
-      currency:
-        - "points 3000"
-    reward:
-      material:
-        - "mm 损坏保护石 1"
+      - "points 3000"
   "五星熔炼石":
     char: G
     display:
       item: "mm 五星熔炼石 1"
+      reward: true
     demand:
-      currency:
-        - "points 10000"
-    reward:
-      material:
-        - "mm 五星熔炼石 1"
+      - "points 10000"
   "六星熔炼石":
     char: H
     display:
       item: "mm 六星熔炼石 1"
+      reward: true
     demand:
-      currency:
-        - "points 25000"
-    reward:
-      material:
-        - "mm 六星熔炼石 1"
+      - "points 25000"
   "七星熔炼石":
     char: I
     display:
       item: "mm 七星熔炼石 1"
+      reward: true
     demand:
-      currency:
-        - "points 50000"
-    reward:
-      material:
-        - "mm 七星熔炼石 1"
+      - "points 50000"
   "楼观剑":
     char: J
     display:
       item: "mm 楼观剑 1"
+      reward: true
     demand:
-      currency:
-        - "points 1500"
-    reward:
-      material:
-        - "mm 楼观剑 1"
+      - "points 1500"
   "白楼剑":
     char: K
     display:
       item: "mm 白楼剑 1"
+      reward: true
     demand:
-      currency:
-        - "points 3000"
-    reward:
-      material:
-        - "mm 白楼剑 1"
+      - "points 3000"
   "暗幕次元剑":
     char: N
     display:
       item: "mm 暗幕次元剑 1"
+      reward: true
     demand:
-      currency:
-        - "points 80000"
-    reward:
-      material:
-        - "mm 暗幕次元剑 1"
+      - "points 80000"
   "湮灭之剑":
     char: S
     display:
       item: "mm 湮灭之剑 1"
+      reward: true
     demand:
-      currency:
-        - "points 150000"
-    reward:
-      material:
-        - "mm 湮灭之剑 1"
+      - "points 150000"
   "异星晶剑":
     char: V
     display:
       item: "mm 异星晶剑 1"
+      reward: true
     demand:
-      currency:
-        - "points 25000"
-    reward:
-      material:
-        - "mm 异星晶剑 1"
+      - "points 25000"
   "异星战盔":
     char: W
     display:
       item: "mm 异星战盔 1"
+      reward: true
     demand:
-      currency:
-        - "points 27000"
-    reward:
-      material:
-        - "mm 异星战盔 1"
+      - "points 27000"
   "异星战甲":
     char: X
     display:
       item: "mm 异星战甲 1"
+      reward: true
     demand:
-      currency:
-        - "points 25000"
-    reward:
-      material:
-        - "mm 异星战甲 1"
+      - "points 25000"
   "异星护腿":
     char: Y
     display:
       item: "mm 异星护腿 1"
+      reward: true
     demand:
-      currency:
-        - "points 23000"
-    reward:
-      material:
-        - "mm 异星护腿 1"
+      - "points 23000"
   "异星战靴":
     char: Z
     display:
       item: "mm 异星战靴 1"
+      reward: true
     demand:
-      currency:
-        - "points 23000"
-    reward:
-      material:
-        - "mm 异星战靴 1"
+      - "points 23000"
   "小量点券":
     char: a
     display:
       item: "mm 小量点券 1"
+      reward: true
     demand:
-      currency:
-        - "points 1000"
-    reward:
-      material:
-        - "mm 小量点券 1"
+      - "points 1000"
   "幸运石1":
     char: b
     display:
       item: "mm 幸运石1 1"
+      reward: true
     demand:
-      currency:
-        - "points 1000"
-    reward:
-      material:
-        - "mm 幸运石1 1"
+      - "points 1000"
   "幸运石2":
     char: c
     display:
       item: "mm 幸运石2 1"
+      reward: true
     demand:
-      currency:
-        - "points 2000"
-    reward:
-      material:
-        - "mm 幸运石2 1"
+      - "points 2000"
   "幸运石3":
     char: d
     display:
       item: "mm 幸运石3 1"
+      reward: true
     demand:
-      currency:
-        - "points 3000"
-    reward:
-      material:
-        - "mm 幸运石3 1"
+      - "points 3000"
   "幸运石4":
     char: e
     display:
       item: "mm 幸运石4 1"
+      reward: true
     demand:
-      currency:
-        - "points 4000"
-    reward:
-      material:
-        - "mm 幸运石4 1"
+      - "points 4000"
   "幸运石5":
     char: f
     display:
       item: "mm 幸运石5 1"
+      reward: true
     demand:
-      currency:
-        - "points 5000"
-    reward:
-      material:
-        - "mm 幸运石5 1"
+      - "points 5000"
 # 全局介绍
 global-desc:
   - ""
