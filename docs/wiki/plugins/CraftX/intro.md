@@ -24,7 +24,7 @@
 <details>
 <summary>[点击展开]</summary>
 
-- ✅货币 YeeValue
+- ✅货币 YeeCore
 - ✅货币 LyShop
 - ✅货币 CustomShop
 - ✅货币 NyEconomy
@@ -32,7 +32,3 @@
 - ✅仓库 LyWarehouse
 
 </details>
-
-## 效果展示
-
-![赠送UI.png](img/赠送UI.png)

@@ -92,7 +92,7 @@ function:
       - "command('mm i give %player_name% 时装xxx 1')"
       - "command('mm i give %player_name% 七星熔炼石 1')"
       - "command('mm i give %player_name% 三级暴伤宝石 1')"
-    purchase-limit: 
+    purchase-limit:
       total: 1
   "500元":
     char: "E"
@@ -112,7 +112,7 @@ function:
       - "command('mm i give %player_name% 时装xxx 1')"
       - "command('mm i give %player_name% 七星熔炼石 2')"
       - "command('mm i give %player_name% 五级暴伤宝石 1')"
-    purchase-limit: 
+    purchase-limit:
       total: 1
   "1000元":
     char: "F"
@@ -132,7 +132,7 @@ function:
       - "command('mm i give %player_name% 时装xxx 1')"
       - "command('mm i give %player_name% 八星熔炼石 4')"
       - "command('mm i give %player_name% 九级暴伤宝石 1')"
-    purchase-limit: 
+    purchase-limit:
       total: 1
   "1500元":
     char: "G"
@@ -152,7 +152,7 @@ function:
       - "command('mm i give %player_name% 九星熔炼石 4')"
       - "command('mm i give %player_name% 九级暴伤宝石 2')"
       - "command('mm i give %player_name% 永久VIP 1')"
-    purchase-limit: 
+    purchase-limit:
       total: 1
 # 全局介绍
 global-desc:

@@ -12,7 +12,10 @@ layout:
   - "#########"
 function:
   "玻璃板":
-    char: "#"
+    # 布局槽位配置
+    char: "#"  # 用于标识槽位布局的字符
+    # 按钮位置设置，支持多个槽位，例如：index: 1,2,3
+    index: 1
     display:
       material: BLACK_STAINED_GLASS_PANE
       name: " "
@@ -23,6 +26,8 @@ function:
     display:
       # 支持多物品库 格式："类型 物品ID 数量"
       item: "mm 恶魔士兵核心 1"
+      # 执行成功后将物品作为奖励给予玩家
+      reward: true
       # 物品描述，覆盖下方全局介绍
       # 支持变量 购买需求 {demand-desc} 购买状态 {state-desc}
       desc:
@@ -54,37 +59,33 @@ function:
           break: true
     # 购买需求
     demand:
-      # 所需货币
-      currency:
-        # 金币
-        - "money 200"
-        # 点券
-        - "points 100"
-        # CraftX自定义货币
-        - "摩拉 1000"
-      # 所需材料，支持灵魂空间
-      material:
-        # 物品库材料，详情可阅读插件文档
-        - "mm 恶魔士兵核心 1"
-        # 物品名识别材料
-        - "name 恶魔士兵核心 1"
-        # 物品lore识别材料
-        - "lore 恶魔士兵核心 1"
-      # 是否使用仓库，默认 true
-      # 已支持：SpaceRingPlus,LyWarehouse
-      warehouse-enabled: true
-    # 购买奖励
+      # 物品库材料，详情可阅读插件文档
+      - "mm 恶魔士兵核心 1"
+      # 物品名识别材料
+      - "name 恶魔士兵核心 1"
+      # 物品lore识别材料
+      - "lore 恶魔士兵核心 1"
+      # 金币
+      - "money 200"
+      # 点券
+      - "points 100"
+      # CraftX 货币
+      - "craftx 摩拉 1000"
+      # YeeValue 货币
+      - "yeevalue 测试金币 1000"
+      # LyShop 货币
+      - "lyshop 测试金币 1000"
+      # CustomShop 货币
+      - "cshop 测试金币 1000"
+      # NyEconomy 货币
+      - "nye 测试金币 1000"
+    # 购买奖励,与上方用法相同
     reward:
-      # 奖励物品
-      material:
-        - "mm 恶魔士兵核心 1"
-      # 奖励货币
-      currency:
-        # 用法与上方需求货币相同
-        - "摩拉 1000"
-      # 是否使用仓库，默认 true
-      # 已支持：SpaceRingPlus,LyWarehouse
-      warehouse-enable: true
+      - "mm 恶魔士兵核心 1"
+      - "摩拉 1000"
+    # 是否使用仓库，默认 true
+    # 已支持：SpaceRingPlus,LyWarehouse
+    warehouse-enabled: true
     # 条件
     condition:
       - ""
