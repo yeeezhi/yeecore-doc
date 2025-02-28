@@ -21,14 +21,9 @@
 
 ## 适配插件
 
-<details>
-<summary>[点击展开]</summary>
-
 - ✅货币 YeeCore
 - ✅货币 LyShop
 - ✅货币 CustomShop
 - ✅货币 NyEconomy
 - ✅仓库 SpaceRingPlus
 - ✅仓库 LyWarehouse
-
-</details>
