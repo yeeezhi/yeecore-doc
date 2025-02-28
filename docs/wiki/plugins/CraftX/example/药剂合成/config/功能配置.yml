@@ -15,77 +15,56 @@ function:
     char: "A"
     display:
       item: "mm 精炼小麦 1"
+      reward: true
     demand:
-      material:
-        - "mc WHEAT 10"
-    reward:
-      material:
-        - "mm 精炼小麦 1"
+      - "mc WHEAT 10"
   "一级治愈药水":
     char: "B"
     display:
       item: "mm 一级治愈药水 1"
+      reward: true
     demand:
-      material:
-        - "mm 精炼小麦 1"
-    reward:
-      material:
-        - "mm 一级治愈药水 1"
+      - "mm 精炼小麦 1"
     probability: 0.9
   "一级瞬疗药水":
     char: "C"
     display:
       item: "mm 一级瞬疗药水 1"
+      reward: true
     demand:
-      material:
-        - "mm 精炼小麦 1"
-    reward:
-      material:
-        - "mm 一级瞬疗药水 1"
+      - "mm 精炼小麦 1"
     probability: 0.9
   "一级暴率合剂":
     char: "D"
     display:
       item: "mm 一级暴率合剂 1"
+      reward: true
     demand:
-      material:
-        - "mm 精炼小麦 1"
-    reward:
-      material:
-        - "mm 一级暴率合剂 1"
+      - "mm 精炼小麦 1"
     probability: 0.9
   "一级暴伤合剂":
     char: "E"
     display:
       item: "mm 一级暴伤合剂 1"
+      reward: true
     demand:
-      material:
-        - "mm 精炼小麦 1"
-    reward:
-      material:
-        - "mm 一级暴伤合剂 1"
+      - "mm 精炼小麦 1"
     probability: 0.9
   "一级暴躲合剂":
     char: "F"
     display:
       item: "mm 一级暴躲合剂 1"
+      reward: true
     demand:
-      material:
-        - "mm 精炼小麦 1"
-    reward:
-      material:
-        - "mm 一级暴躲合剂 1"
+      - "mm 精炼小麦 1"
     probability: 0.9
   "一级暴抗合剂":
     char: "G"
     display:
       item: "mm 一级暴抗合剂 1"
+      reward: true
     demand:
-      material:
-        - "mm 精炼小麦 1"
-    reward:
-      material:
-        - "mm 一级暴抗合剂 1"
+      - "mm 精炼小麦 1"
     probability: 0.9
 # 启用快捷键倍率
 hotkey-multiple: true

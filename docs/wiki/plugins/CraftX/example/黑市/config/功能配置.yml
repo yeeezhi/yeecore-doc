@@ -22,218 +22,164 @@ function:
     char: 1
     display:
       item: "mm 湮灭之剑 1"
+      reward: true
     entry:
       "原价": "150000"
     demand:
-      currency:
-        - "points ${折扣价}"
-    reward:
-      material:
-        - "mm 湮灭之剑 1"
+      - "points ${折扣价}"
   "七星熔炼石":
     char: 2
     display:
       item: "mm 七星熔炼石 1"
+      reward: true
     entry:
       "原价": "50000"
     demand:
-      currency:
-        - "points ${折扣价}"
-    reward:
-      material:
-        - "mm 七星熔炼石 1"
+      - "points ${折扣价}"
   "暗幕次元剑":
     char: 3
     display:
       item: "mm 暗幕次元剑 1"
+      reward: true
     entry:
       "原价": "80000"
     demand:
-      currency:
-        - "points ${折扣价}"
-    reward:
-      material:
-        - "mm 暗幕次元剑 1"
+      - "points ${折扣价}"
   "幸运石5":
     char: 4
     display:
       item: "mm 幸运石5 1"
+      reward: true
     entry:
       "原价": "5000"
     demand:
-      currency:
-        - "points ${折扣价}"
-    reward:
-      material:
-        - "mm 幸运石5 1"
+      - "points ${折扣价}"
   "服主的狗头2":
     char: 5
     display:
       item: "mm 服主的狗头2 1"
+      reward: true
     entry:
       "原价": "5000"
     demand:
-      currency:
-        - "points ${折扣价}"
-    reward:
-      material:
-        - "mm 服主的狗头2 1"
+      - "points ${折扣价}"
   "服主的狗头":
     char: a
     display:
       item: "mm 服主的狗头 1"
+      reward: true
     entry:
       "原价": "3000"
     demand:
-      currency:
-        - "points ${折扣价}"
-    reward:
-      material:
-        - "mm 服主的狗头 1"
+      - "points ${折扣价}"
   "掉级保护石":
     char: b
     display:
       item: "mm 掉级保护石 1"
+      reward: true
     entry:
       "原价": "2000"
     demand:
-      currency:
-        - "points ${折扣价}"
-    reward:
-      material:
-        - "mm 掉级保护石 1"
+      - "points ${折扣价}"
   "损坏保护石":
     char: c
     display:
       item: "mm 损坏保护石 1"
+      reward: true
     entry:
       "原价": "3000"
     demand:
-      currency:
-        - "points ${折扣价}"
-    reward:
-      material:
-        - "mm 损坏保护石 1"
+      - "points ${折扣价}"
   "五星熔炼石":
     char: d
     display:
       item: "mm 五星熔炼石 1"
+      reward: true
     entry:
       "原价": "10000"
     demand:
-      currency:
-        - "points ${折扣价}"
-    reward:
-      material:
-        - "mm 五星熔炼石 1"
+      - "points ${折扣价}"
   "六星熔炼石":
     char: e
     display:
       item: "mm 六星熔炼石 1"
+      reward: true
     entry:
       "原价": "25000"
     demand:
-      currency:
-        - "points ${折扣价}"
-    reward:
-      material:
-        - "mm 六星熔炼石 1"
+      - "points ${折扣价}"
   "楼观剑":
     char: f
     display:
       item: "mm 楼观剑 1"
+      reward: true
     entry:
       "原价": "15000"
     demand:
-      currency:
-        - "points ${折扣价}"
-    reward:
-      material:
-        - "mm 楼观剑 1"
+      - "points ${折扣价}"
   "白楼剑":
     char: g
     display:
       item: "mm 白楼剑 1"
+      reward: true
     entry:
       "原价": "3000"
     demand:
-      currency:
-        - "points ${折扣价}"
-    reward:
-      material:
-        - "mm 白楼剑 1"
+      - "points ${折扣价}"
   "异星晶剑":
     char: h
     display:
       item: "mm 异星晶剑 1"
+      reward: true
     entry:
       "原价": "25000"
     demand:
-      currency:
-        - "points ${折扣价}"
-    reward:
-      material:
-        - "mm 异星晶剑 1"
+      - "points ${折扣价}"
   "异星战盔":
     char: i
     display:
       item: "mm 异星战盔 1"
+      reward: true
     entry:
       "原价": "27000"
     demand:
-      currency:
-        - "points ${折扣价}"
-    reward:
-      material:
-        - "mm 异星战盔 1"
+      - "points ${折扣价}"
   "异星战甲":
     char: j
     display:
       item: "mm 异星战甲 1"
+      reward: true
     entry:
       "原价": "25000"
     demand:
-      currency:
-        - "points ${折扣价}"
-    reward:
-      material:
-        - "mm 异星战甲 1"
+      - "points ${折扣价}"
   "异星护腿":
     char: k
     display:
       item: "mm 异星护腿 1"
+      reward: true
     entry:
       "原价": "23000"
     demand:
-      currency:
-        - "points ${折扣价}"
-    reward:
-      material:
-        - "mm 异星护腿 1"
+      - "points ${折扣价}"
   "异星战靴":
     char: l
     display:
       item: "mm 异星战靴 1"
+      reward: true
     entry:
       "原价": "23000"
     demand:
-      currency:
-        - "points ${折扣价}"
-    reward:
-      material:
-        - "mm 异星战靴 1"
+      - "points ${折扣价}"
   "幸运石4":
     char: m
     display:
       item: "mm 幸运石4 1"
+      reward: true
     entry:
       "原价": "4000"
     demand:
-      currency:
-        - "points ${折扣价}"
-    reward:
-      material:
-        - "mm 幸运石4 1"
+      - "points ${折扣价}"
   "刷新黑市":
     char: "*"
     display:
@@ -246,8 +192,7 @@ function:
         - "§f-"
       hide-desc: true
     demand:
-      currency:
-        - "points 1000"
+      - "points 1000"
     action:
       - "variable.remove('黑市折扣')"
       - "variable.remove('黑市布局')"
