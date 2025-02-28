@@ -5,8 +5,8 @@
     时长增加:
       cron: "0 0/1 * * * ?"
       value: "n+1"
-      # 离线玩家不执行
-      offline-player: false
+      # 仅在线玩家执行
+      only-online-player: true
     # 每天十二点重置
     时长重置:
       cron: "00 00 00 ? * 1"
@@ -17,7 +17,7 @@
     时长增加:
       cron: "0 0/1 * * * ?"
       value: "n+1"
-      offline-player: false
+      only-online-player: true
     时长重置:
       cron: "0 0 0 ? * 1 *"
       value: "0"
@@ -27,7 +27,7 @@
     时长增加:
       cron: "0 0/1 * * * ?"
       value: "n+1"
-      offline-player: false
+      only-online-player: true
     时长重置:
       cron: "0 0 0 1 * ? *"
       value: "0"
@@ -37,4 +37,4 @@
     增加时长:
       cron: "0 0/1 * * * ?"
       value: "n+1"
-      offline-player: false
+      only-online-player: true
