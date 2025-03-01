@@ -136,7 +136,7 @@ export default defineConfig({
             },
             {
                 text: '无尽工艺🎉',
-                collapsed: true,
+                collapsed: false,
                 link: '/wiki/plugins/CraftX/intro',
                 items: [
                     {
@@ -148,7 +148,6 @@ export default defineConfig({
                             {text: '变量模块', link: '/wiki/plugins/CraftX/variable/intro'},
                         ],
                     },
-                    {text: '插件变量', link: '/wiki/plugins/CraftX/placeholder'},
                     {
                         text: '优秀示例',
                         collapsed: true,

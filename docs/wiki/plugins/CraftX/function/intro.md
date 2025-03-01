@@ -19,6 +19,7 @@
 ```
 
 
+
 #### 表达式：
 
 ```javascript
@@ -28,3 +29,16 @@ function('配置名-功能名')
 // condition(条件) demand(需求) reward(奖励)，
 function('配置名-功能名','condition,demand,reward')
 ```
+
+#### 内部变量
+
+配置参数或表达式中使用
+
+| 内容         | 变量                       |
+|------------|--------------------------|
+| 每日限购       | `{purchase-limit-day}`   |
+| 每周限购       | `{purchase-limit-week}`  |
+| 每月限购       | `{purchase-limit-month}` |
+| 累计限购       | `{purchase-limit-total}` |
+| 执行(购买)成功率  | `{probability}`          |
+| 成功执行(购买)数量 | `{amount}`               |
