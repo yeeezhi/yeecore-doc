@@ -153,6 +153,7 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {text: '黑市', link: '/wiki/plugins/CraftX/example/黑市/intro'},
+                            {text: '摇钱树', link: '/wiki/plugins/CraftX/example/摇钱树/intro'},
                             {text: '刮刮乐', link: '/wiki/plugins/CraftX/example/刮刮乐/intro'},
                             {text: '在线奖励', link: '/wiki/plugins/CraftX/example/在线奖励/intro'},
                             {text: '累充奖励', link: '/wiki/plugins/CraftX/example/累充奖励/intro'},

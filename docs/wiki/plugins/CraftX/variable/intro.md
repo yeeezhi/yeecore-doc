@@ -36,17 +36,20 @@
 
 #### 变量
 
-```
-%variable_info_变量名%         #玩家变量数据
-%variable_count_变量名%        #变量全服总数
-```
+| 内容     | 变量                     |
+|--------|------------------------|
+| 变量名    | `%variable_name_变量名%`  |
+| 变量数据   | `%variable_info_变量名% ` |
+| 变量最大值  | `%variable_max_变量名%`   |
+| 变量最小值  | `%variable_min_变量名%`   |
+| 变量全服总数 | `%variable_count_变量名%` |
 
 #### 表达式：
 
 ```javascript
 variable.get('摩拉')        // 获取变量值
 variable.add('摩拉', 50)     // 增加变量值
-variable.add('摩拉', 50)     // 扣除变量值
+variable.take('摩拉', 50)     // 扣除变量值
 variable.set('摩拉', 50)     // 设置变量值
 variable.remove('摩拉')     // 删除变量值
 ```
@@ -69,21 +72,19 @@ variable.remove('摩拉')     // 删除变量值
 /tmpvar lead <变量> <页数>          # 变量排行
 ```
 
-
 #### 变量
 
-```
-%tempvar_info_变量名%         #玩家变量数据
-%tempvar_count_变量名%        #变量全服总数
-```
-
+| 内容     | 变量                    |
+|--------|-----------------------|
+| 玩家变量数据 | `%tempvar_info_变量名% ` |
+| 全服变量总数 | `%tempvar_count_变量名%` |
 
 #### 表达式：
 
 ```javascript
 tmpvar.get('摩拉')        // 获取变量值
 tmpvar.add('摩拉', 50)     // 增加变量值
-tmpvar.add('摩拉', 50)     // 扣除变量值
+tmpvar.take('摩拉', 50)     // 扣除变量值
 tmpvar.set('摩拉', 50)     // 设置变量值
 tmpvar.remove('摩拉')     // 删除变量值
 ```
