@@ -132,6 +132,7 @@ export default defineConfig({
                         ],
                     },
                     {text: '物品库', link: '/wiki/YeeCore/物品库'},
+                    {text: '插件变量', link: '/wiki/YeeCore/插件变量'},
                 ],
             },
             {
@@ -153,6 +154,7 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {text: '黑市', link: '/wiki/plugins/CraftX/example/黑市/intro'},
+                            {text: '月卡', link: '/wiki/plugins/CraftX/example/月卡/intro'},
                             {text: '摇钱树', link: '/wiki/plugins/CraftX/example/摇钱树/intro'},
                             {text: '刮刮乐', link: '/wiki/plugins/CraftX/example/刮刮乐/intro'},
                             {text: '在线奖励', link: '/wiki/plugins/CraftX/example/在线奖励/intro'},
