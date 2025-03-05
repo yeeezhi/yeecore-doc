@@ -8,7 +8,6 @@
 
 <<< @/wiki/plugins/CraftX/function/config/完整配置.yml{yaml}
 
-
 :::
 
 #### 指令：
@@ -28,21 +27,31 @@
 
 ```javascript
 // 功能执行
-function('配置名-功能名')                      
+function (
+
+'配置名-功能名'
+)
 // 跳过部分功能,使用,分割
 // condition(条件) demand(需求) reward(奖励)，
-function('配置名-功能名','condition,demand,reward')
+function (
+
+'配置名-功能名', 'condition,demand,reward'
+)
 ```
 
 #### 内部变量
 
 配置参数或表达式中使用
 
-| 内容         | 变量                       |
-|------------|--------------------------|
-| 每日限购       | `{purchase-limit-day}`   |
-| 每周限购       | `{purchase-limit-week}`  |
-| 每月限购       | `{purchase-limit-month}` |
-| 累计限购       | `{purchase-limit-total}` |
-| 执行(购买)成功率  | `{probability}`          |
-| 成功执行(购买)数量 | `{amount}`               |
+| 内容                                                                                           | 变量                       |
+|----------------------------------------------------------------------------------------------|--------------------------|
+| 每日限购                                                                                         | `{purchase-limit-day}`   |
+| 每周限购                                                                                         | `{purchase-limit-week}`  |
+| 每月限购                                                                                         | `{purchase-limit-month}` |
+| 累计限购                                                                                         | `{purchase-limit-total}` |
+| 执行(购买)成功率                                                                                    | `{probability}`          |
+| 成功执行(购买)数量                                                                                   | `{amount}`               |
+| 是否右键点击                                                                                       | `{right-click}`          |
+| 是否左键点击                                                                                       | `{left-click}`           |
+| 是否Shift点击                                                                                    | `{shift-click}`          |
+| [物品栏点击动作](https://bukkit.windit.net/javadoc/org/bukkit/event/inventory/InventoryAction.html) | `{inventory-action}`     |
