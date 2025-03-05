@@ -1,6 +1,21 @@
 摩拉:
   name: "摩拉"
+  default: 0
   # 转账条件，支持使用 YeeCore 表达式。 "true" 表示不限制
-  pay-condition: "true"
+  pay-condition: true
+绑定点券:
+  default: 0
+  pay-condition: true
+  # 绑定货币
+  bind: "points"
+绑定金币:
+  default: 0
+  pay-condition: true
+  bind: "points"
+绑定摩拉:
+  default: 0
+  pay-condition: true
+  bind: "摩拉"
 成就点:
   name: "成就点"
+  default: 0
