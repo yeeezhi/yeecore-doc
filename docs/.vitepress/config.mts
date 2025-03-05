@@ -153,6 +153,7 @@ export default defineConfig({
                         text: '优秀示例',
                         collapsed: true,
                         items: [
+                            {text: '货币', link: '/wiki/plugins/CraftX/example/货币/intro'},
                             {text: '黑市', link: '/wiki/plugins/CraftX/example/黑市/intro'},
                             {text: '月卡', link: '/wiki/plugins/CraftX/example/月卡/intro'},
                             {text: '摇钱树', link: '/wiki/plugins/CraftX/example/摇钱树/intro'},

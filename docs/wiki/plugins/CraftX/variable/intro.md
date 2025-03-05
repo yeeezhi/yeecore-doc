@@ -55,44 +55,6 @@ variable.remove('摩拉')     // 删除变量值
 variable.has('摩拉', 1000)     // 是否拥有指定数量
 ```
 
-#### 绑定货币
-
-CraftX 变量支持绑定 Vault、PlayerPoints 或其他变量。当其他插件适配或使用表达式操作变量时，若余额不足，则使用绑定货币补足。
-
-变量配置
-
-```yaml
-绑定点券:
-  default: 0
-  # 允许转账
-  pay-condition: true
-  # 绑定 PlayerPoints
-  bind: "points"
-绑定摩拉:
-  default: 0
-  pay-condition: true
-  # 绑定其它变量
-  bind: "摩拉"
-```
-
-错误示例
-
-```yaml
-condition:
-  - variable.get('绑定点券')>2000
-action:
-  - variable.take('绑定点券',2000)
-```
-
-正确示例
-
-```yaml
-condition:
-  - variable.has('绑定点券',2000)
-action:
-  - variable.take('绑定点券',2000)
-```
-
 ## 临时变量
 
 - 特点：无需预设参数等创建工作，直接通过指令或表达式动态操作，支持数据过期时间。
