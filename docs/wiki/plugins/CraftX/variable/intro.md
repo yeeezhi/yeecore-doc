@@ -64,13 +64,13 @@ variable.has('摩拉', 1000)     // 是否拥有指定数量
 #### 指令：
 
 ```
-/tmpvar get <玩家> <变量名>         # 获取变量值
-/tmpvar add <玩家> <变量名> <数值>   # 增加变量值
-/tmpvar take <玩家> <变量名> <数值>  # 扣除变量值
-/tmpvar set <玩家> <变量名> <数据>   # 设置变量值
-/tmpvar remove <玩家> <变量名> <数据># 删除变量值
-/tmpvar info <玩家>                # 变量详情
-/tmpvar lead <变量> <页数>          # 变量排行
+/tempvar get <玩家> <变量名>         # 获取变量值
+/tempvar add <玩家> <变量名> <数值>   # 增加变量值
+/tempvar take <玩家> <变量名> <数值>  # 扣除变量值
+/tempvar set <玩家> <变量名> <数据>   # 设置变量值
+/tempvar remove <玩家> <变量名> <数据># 删除变量值
+/tempvar info <玩家>                # 变量详情
+/tempvar lead <变量> <页数>          # 变量排行
 ```
 
 #### 变量
@@ -83,9 +83,9 @@ variable.has('摩拉', 1000)     // 是否拥有指定数量
 #### 表达式：
 
 ```javascript
-tmpvar.get('摩拉')        // 获取变量值
-tmpvar.add('摩拉', 50)     // 增加变量值
-tmpvar.take('摩拉', 50)     // 扣除变量值
-tmpvar.set('摩拉', 50)     // 设置变量值
-tmpvar.remove('摩拉')     // 删除变量值
+tempvar.get('摩拉')        // 获取变量值
+tempvar.add('摩拉', 50)     // 增加变量值
+tempvar.take('摩拉', 50)     // 扣除变量值
+tempvar.set('摩拉', 50)     // 设置变量值
+tempvar.remove('摩拉')     // 删除变量值
 ```

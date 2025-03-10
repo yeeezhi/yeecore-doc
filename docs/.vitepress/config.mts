@@ -237,6 +237,9 @@ export default defineConfig({
                         text: '椰の饰品',
                         link: '/wiki/plugins/YeeJewelry/intro',
                         collapsed: true,
+                        items: [
+                            {text: '插件变量', link: '/wiki/plugins/YeeJewelry/placeholder'},
+                        ],
                     },
                     {
                         text: '椰の排行',
