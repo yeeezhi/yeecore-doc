@@ -1,35 +1,34 @@
-摇钱树等级:
+许愿树等级:
   default: 1
-摇钱树浇水次数:
+许愿树浇水次数:
   default: 0
-摇钱树升级所需:
+许愿树升级所需:
   default: 999
   # 请按照降序排序配置
   default-rules:
     # 三级及以上成长所需
     "15":
-      - "variable.get('摇钱树等级')>=3"
+      - "variable.get('许愿树等级')>=3"
     # 二级及以上成长所需
     "10":
-      - "variable.get('摇钱树等级')>=2"
-
+      - "variable.get('许愿树等级')>=2"
     # 一级及以上成长所需
     "5":
-      - "variable.get('摇钱树等级')>=1"
-摇钱树浇水价格:
+      - "variable.get('许愿树等级')>=1"
+许愿树浇水价格:
   default: 999999999
   # 请按照降序排序配置
   default-rules:
     # 三级及以上点券价格
     "1200":
-      - "variable.get('摇钱树等级')>=3"
+      - "variable.get('许愿树等级')>=3"
     # 二级及以上点券价格
     "1000":
-      - "variable.get('摇钱树等级')>=2"
+      - "variable.get('许愿树等级')>=2"
     # 一级及以上点券价格
     "500":
-      - "variable.get('摇钱树等级')>=1"
-摇钱树冷却:
+      - "variable.get('许愿树等级')>=1"
+许愿树冷却:
   default: 0
   task:
     冷却重置:
