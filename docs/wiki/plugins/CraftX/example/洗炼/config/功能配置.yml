@@ -1,0 +1,155 @@
+
+
+#          Powered by YeeCore          #
+#        https://www.goodmc.cn/        #
+
+
+
+title: "&3在线奖励"
+layout:
+  - "#########"
+  - "#       #"
+  - "# 1 2 3 #"
+  - "# 4 5 6 #"
+  - "#       #"
+  - "####I####"
+function:
+  玻璃板:
+    char: "#"
+    display:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+      lore:
+        - "§f "
+  个人信息:
+    char: "I"
+    display:
+      material: PLAYER_HEAD
+      name: "&3个人信息"
+      lore:
+        - " "
+        - " &7今日在线: &f%variable_info_今日在线%分钟"
+        - " &7累计在线: &f%variable_info_累计在线%分钟"
+        - " "
+  30分钟:
+    char: "1"
+    display:
+      material: CHEST
+      name: "&a30分钟"
+      lore:
+        - " "
+        - " &3奖励列表:"
+        - " &f - 二星熔炼石 x2 "
+        - " &f - 20%幸运石 x1  "
+        - " "
+    condition:
+      - "%variable_info_今日在线% >= 30 else '{prefix}&7在线时长不足'"
+    action:
+      - "command('mm i give %player% 二星熔炼石 4')"
+      - "command('mm i give %player% 幸运石2 1')"
+    purchase-limit:
+      day: 1
+  60分钟:
+    char: "2"
+    display:
+      material: CHEST
+      name: "&a60分钟"
+      lore:
+        - " "
+        - " &3奖励列表:"
+        - " &f - 二星熔炼石 x6 "
+        - " &f - 30%幸运石 x1  "
+        - " "
+    condition:
+      - "%variable_info_今日在线% >= 60 else '{prefix}&7在线时长不足'"
+    action:
+      - "command('mm i give %player% 二星熔炼石 6')"
+      - "command('mm i give %player% 幸运石3 1')"
+    purchase-limit:
+      day: 1
+  120分钟:
+    char: "3"
+    display:
+      material: CHEST
+      name: "&a120分钟"
+      lore:
+        - " "
+        - " &3奖励列表:"
+        - " &f - 三星熔炼石 x8 "
+        - " &f - 掉级保护石 x1  "
+        - " "
+    condition:
+      - "%variable_info_今日在线% >= 120 else '{prefix}&7在线时长不足'"
+    action:
+      - "command('mm i give %player% 三星熔炼石 8')"
+      - "command('mm i give %player% 掉级保护石 1')"
+    purchase-limit:
+      day: 1
+  240分钟:
+    char: "4"
+    display:
+      material: CHEST
+      name: "&a240分钟"
+      lore:
+        - " "
+        - " &3奖励列表:"
+        - " &f - 四星熔炼石 x8 "
+        - " &f - 点券 x125 "
+        - " "
+    condition:
+      - "%variable_info_今日在线% >= 240 else '{prefix}&7在线时长不足'"
+    action:
+      - "command('mm i give %player% 四星熔炼石 8')"
+      - "command('mm i give %player% 点券碎片-125')"
+    purchase-limit:
+      day: 1
+  360分钟:
+    char: "5"
+    display:
+      material: CHEST
+      name: "&a360分钟"
+      lore:
+        - " "
+        - " &3奖励列表:"
+        - " &f - 五星熔炼石 x2 "
+        - " &f - 点券 x125 "
+        - " "
+    condition:
+      - "%variable_info_今日在线% >= 360 else '{prefix}&7在线时长不足'"
+    action:
+      - "command('mm i give %player% 五星熔炼石 2')"
+      - "command('mm i give %player% 点券碎片-125')"
+    purchase-limit:
+      day: 1
+  720分钟:
+    char: "6"
+    display:
+      material: CHEST
+      name: "&a720分钟"
+      lore:
+        - " "
+        - " &3奖励列表:"
+        - " &f - 金币抽奖钥匙 x5 "
+        - " &f - 点券抽奖钥匙 x1 "
+        - " "
+    condition:
+      - "%variable_info_今日在线% >= 720 else '{prefix}&7在线时长不足'"
+    action:
+      - "command('mm i give %player% 金币抽奖钥匙 5')"
+      - "command('mm i give %player% 点券抽奖钥匙')"
+    purchase-limit:
+      day: 1
+# 全局介绍
+global-desc:
+  - "{state-desc}"
+# 领取时执行
+on-execute:
+  action:
+    - "msg('{prefix}§a领取成功')"
+message:
+  purchase-limit_false: "§7已领取该奖励"
+  desc.state:
+    purchase-limit: " §e已领取该奖励"
+    enough: " &a点击领取该奖励 "
+    condition: " &e在线时长不足 "
+    insufficient: " &e未满足需求 "
