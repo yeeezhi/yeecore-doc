@@ -149,6 +149,7 @@ export default defineConfig({
                             {text: '变量模块', link: '/wiki/plugins/CraftX/variable/intro'},
                         ],
                     },
+                    {text: '龙核&萌芽', link: '/wiki/plugins/CraftX/ui/intro'},
                     {
                         text: '优秀示例',
                         collapsed: true,

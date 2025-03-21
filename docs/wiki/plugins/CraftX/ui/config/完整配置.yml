@@ -1,0 +1,191 @@
+#          Powered by YeeCore          #
+#        https://www.goodmc.cn/        #
+
+
+
+title: "§3默认界面"
+layout:
+  - "#########"
+  - "#       #"
+  - "#  ABC  #"
+  - "#       #"
+  - "#########"
+function:
+  "玻璃板":
+    # 布局槽位配置
+    char: "#"  # 用于标识槽位布局的字符
+    # 按钮位置设置，支持多个槽位，例如：index: 1,2,3
+    index: 1
+    display:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+      lore:
+        - "§f "
+  "物品库示例":
+    char: "A"
+    display:
+      # 支持多物品库 格式："类型 物品ID 数量"
+      item: "mm 恶魔士兵核心 1"
+      # 执行成功后将物品作为奖励给予玩家
+      reward: true
+      # 物品描述，覆盖下方全局介绍
+      # 支持变量 购买需求 {demand-desc} 购买状态 {state-desc}
+      desc:
+        - ""
+        - "§a物品描述"
+      # 隐藏描述，默认false
+      hide-desc: false
+  "测试按钮":
+    char: "B"
+    display:
+      material: CLOCK
+      name: "§a测试按钮"
+      lore:
+        - "§f"
+      # 物品显示条件
+      condition:
+        - ""
+      # 按照条件覆盖上方的物品参数
+      rules:
+        # 条件
+        - condition:
+            - "false"
+          name: "§a测试按钮2"
+        - condition:
+            - "false"
+          material: BOOK
+          name: "§a测试按钮3"
+          # 满足此规则后，后续的规则将不再生效，默认false
+          break: true
+    # 购买需求
+    demand:
+      # 物品库材料，详情可阅读插件文档
+      - "mm 恶魔士兵核心 1"
+      # 物品名识别材料
+      - "name 恶魔士兵核心 1"
+      # 物品lore识别材料
+      - "lore 恶魔士兵核心 1"
+      # 金币
+      - "money 200"
+      # 点券
+      - "points 100"
+      # CraftX 货币
+      - "craftx 摩拉 1000"
+      # YeeValue 货币
+      - "yeevalue 测试金币 1000"
+      # LyShop 货币
+      - "lyshop 测试金币 1000"
+      # CustomShop 货币
+      - "cshop 测试金币 1000"
+      # NyEconomy 货币
+      - "nye 测试金币 1000"
+    # 购买奖励,与上方用法相同
+    reward:
+      - "mm 恶魔士兵核心 1"
+      - "摩拉 1000"
+    # 是否使用仓库，默认 true
+    # 已支持：SpaceRingPlus,LyWarehouse
+    warehouse-enabled: true
+    # 条件
+    condition:
+      - ""
+    # 动作
+    action:
+      - command('tell %player_name% Hello')
+    # 动作规则
+    rules:
+      - condition:
+          - ""
+        action:
+          - ""
+    # 仅执行一次的动作，适用于模块多次运行时只触发一次的情况
+    only-action:
+      - "msg('{prefix}§7购买成功')"
+    # 仅执行一次的动作规则
+    only-rules:
+      - condition:
+          - ""
+        action:
+          - ""
+    # 商品限购
+    purchase-limit:
+      # 日限购
+      day: 1
+      # 周限购
+      week: 10
+      # 月限购
+      month: 30
+      # 累计限购
+      total: 64
+    # 执行(购买)成功率
+    probability: 1.0
+    # 异步执行，默认关闭
+    async: false
+# 启用快捷键倍率,默认关闭
+hotkey-multiple: true
+# 全局介绍
+global-desc:
+  # 购买需求
+  - "{demand-desc}"
+  # 购买状态
+  - "{state-desc}"
+# 龙核UI介绍文本
+# 获取：方法.取物品NBT(方法.取物品('container_1','CraftX.button')
+button-desc:
+  - "{demand-desc}"
+  - "{state-desc}"
+# 打开GUI时
+on-open:
+  # 条件
+  condition:
+    - ""
+  # 动作
+  action:
+    - msg('{prefix}§7界面已打开')
+  # 动作规则
+  rules:
+    - condition:
+        - ""
+      action:
+        - ""
+# 点击GUI时
+on-click:
+  # 条件
+  condition:
+    - ""
+  # 动作
+  action:
+    - ""
+  # 动作规则
+  rules:
+    - condition:
+        - ""
+      action:
+        - ""
+# 执行function时
+on-execute:
+  # 条件
+  condition:
+    - ""
+  # 动作
+  action:
+    - "msg('{prefix}§7配方 ${获取物品名()}§f×{amount} §7合成成功')"
+  # 动作规则
+  rules:
+    - condition:
+        - ""
+      action:
+        - ""
+# 关闭GUI时
+on-close:
+  # 执行动作
+  action:
+    - msg('{prefix}§7界面已关闭')
+  # 动作规则
+  rules:
+    - condition:
+        - ""
+      action:
+        - ""
+# 更新GUI,默认开启
+update-inventory: true

@@ -29,15 +29,22 @@
 /cx function 点券商店-观楼剑 <玩家> condition,demand,reward
 ```
 
+:::
 
 #### 表达式：
 
-```
+```js
 // 功能执行
-function('配置名-功能名')
+function (
+
+'配置名-功能名'
+)
 // 跳过部分功能,使用,分割
 // condition(条件) demand(需求) reward(奖励)，
-function('配置名-功能名', 'condition,demand,reward')
+function (
+
+'配置名-功能名', 'condition,demand,reward'
+)
 ```
 
 #### 内部变量
@@ -50,8 +57,8 @@ function('配置名-功能名', 'condition,demand,reward')
 | 每周限购                                                                                         | `{purchase-limit-week}`  |
 | 每月限购                                                                                         | `{purchase-limit-month}` |
 | 累计限购                                                                                         | `{purchase-limit-total}` |
-| 执行(购买)成功率                                                                                    | `{probability}`          |
-| 成功执行(购买)数量                                                                                   | `{amount}`               |
+| 成功率                                                                                          | `{probability}`          |
+| 执行次数                                                                                         | `{amount}`               |
 | 是否右键点击                                                                                       | `{right-click}`          |
 | 是否左键点击                                                                                       | `{left-click}`           |
 | 是否Shift点击                                                                                    | `{shift-click}`          |
