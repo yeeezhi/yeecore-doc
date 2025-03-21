@@ -93,3 +93,4 @@
 | 每月限购   | `craftx_按钮_purchase-limit-month` |
 | 累计限购   | `craftx_按钮_purchase-limit-total` | 
 | NBT信息  | `craftx_按钮_nbt_节点`               |
+| GUI尺寸  | `craftx_gui-size`                |
