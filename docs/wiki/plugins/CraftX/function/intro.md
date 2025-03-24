@@ -19,8 +19,6 @@
 
 使用 /cx function 指令来执行（或购买）特定的功能模块。例如，若要购买 点券商店-观楼剑，可使用以下指令：
 
-::: code-group
-
 ```
 /cx function 点券商店-观楼剑 <玩家>
 # 执行次数
@@ -29,22 +27,14 @@
 /cx function 点券商店-观楼剑 <玩家> condition,demand,reward
 ```
 
-:::
-
 #### 表达式：
 
-```js
+```yaml
 // 功能执行
-function (
-
-'配置名-功能名'
-)
+function ('配置名-功能名')
 // 跳过部分功能,使用,分割
 // condition(条件) demand(需求) reward(奖励)，
-function (
-
-'配置名-功能名', 'condition,demand,reward'
-)
+function ('配置名-功能名', 'condition,demand,reward')
 ```
 
 #### 内部变量
@@ -53,6 +43,8 @@ function (
 
 | 内容                                                                                           | 变量                       |
 |----------------------------------------------------------------------------------------------|--------------------------|
+| 配置文件名                                                                                        | `{configName}`           |
+| 功能(按钮)名                                                                                      | `{functionName}`         |
 | 每日限购                                                                                         | `{purchase-limit-day}`   |
 | 每周限购                                                                                         | `{purchase-limit-week}`  |
 | 每月限购                                                                                         | `{purchase-limit-month}` |

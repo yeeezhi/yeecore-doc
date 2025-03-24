@@ -23,20 +23,24 @@
 
 ## 适配插件
 
-- ✅龙核 DragonCore
-- ✅萌芽 GermPlugin
-- ✅核心 YeeCore
-- ✅变量 Aboleth
-- ✅变量 AbolethPlus
-- ✅货币 LyShop
-- ✅货币 CustomShop
-- ✅货币 NyEconomy
-- ✅仓库 SpaceRingPlus
-- ✅仓库 LyWarehouse
-- ✅物品库 MythicMobs
-- ✅物品库 SX-Attribute
-- ✅物品库 SX-Item
-- ✅物品库 NeigeItems
-- ✅物品库 AzureFlow
-- ✅物品库 MMOItems
-- ✅物品库 OriginAttribute
+::: details **点击查看**
+
+**核心**
+
+- `YeeCore` · `GermPlugin` · `DragonCore`
+
+**仓库**
+
+- `SpaceRingPlus` · `LyWarehouse`
+
+**货币**
+
+- `LyShop` · `CustomShop` · `NyEconomy` · `Aboleth` · `AbolethPlus`
+
+**物品库**
+
+- `MythicMobs` · `SX-Attribute` · `SX-Item` · `NeigeItems`
+- `AzureFlow` · `MMOItems` · `CraftEngine` · `Oraxen`
+- `ItemsAdder` · `PxRpg` · `Zaphkiel` · `OriginAttribute`
+
+:::
