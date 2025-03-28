@@ -149,20 +149,23 @@ export default defineConfig({
                             {text: '变量模块', link: '/wiki/plugins/CraftX/variable/intro'},
                         ],
                     },
-                    {text: '龙核&萌芽', link: '/wiki/plugins/CraftX/ui/intro'},
+                    {text: '龙核&萌芽', link: '/wiki/plugins/CraftX/龙核&萌芽'},
                     {
                         text: '优秀示例',
                         collapsed: true,
                         items: [
                             {text: '货币', link: '/wiki/plugins/CraftX/example/货币/intro'},
                             {text: '洗炼', link: '/wiki/plugins/CraftX/example/洗炼/intro'},
-                            {text: '强化', link: '/wiki/plugins/CraftX/example/强化/intro'},
+                            {
+                                text: '强化',
+                                collapsed: true,
+                                items: [{text: '基础值', link: '/wiki/plugins/CraftX/example/强化/基础值/intro'}]
+                            },
                             {text: '黑市', link: '/wiki/plugins/CraftX/example/黑市/intro'},
                             {text: '月卡', link: '/wiki/plugins/CraftX/example/月卡/intro'},
                             {text: '许愿树', link: '/wiki/plugins/CraftX/example/许愿树/intro'},
                             {text: '刮刮乐', link: '/wiki/plugins/CraftX/example/刮刮乐/intro'},
                             {text: '玩家面板', link: '/wiki/plugins/CraftX/example/玩家面板/intro'},
-                            {text: '在线奖励', link: '/wiki/plugins/CraftX/example/在线奖励/intro'},
                             {text: '在线奖励', link: '/wiki/plugins/CraftX/example/在线奖励/intro'},
                             {text: '累充奖励', link: '/wiki/plugins/CraftX/example/累充奖励/intro'},
                             {text: '点券商店', link: '/wiki/plugins/CraftX/example/点券商店/intro'},

@@ -56,7 +56,8 @@ function:
       幸运数字: "${tempvar.get('刮刮乐数字')}"
       # 0.05是中奖概率(5%)
       是否中奖: "${random()<0.05}"
-      数字: "${{是否中奖} ? {幸运数字} : random(1,64)}"
+      # 当前数字 = (幸运数字+随机1-63)%64  保证 当前数字≠幸运数字
+      数字: "${{是否中奖} ? {幸运数字} : ({幸运数字}+random(1,64))%64}"
     # 按钮为初始name时才进行处理
     condition:
       - "match.name('点击刮开')"
@@ -74,14 +75,11 @@ function:
           - "播放声音('ENTITY_FIREWORK_ROCKET_LAUNCH')"
           # 给予奖励
           - "执行指令('points give %player_name% 1000')"
-# 领取时执行
-on-execute:
-  action:
-    - ""
-on-open:
-  # 防止玩家直接执行指令打开刮刮乐页面
+# 防止玩家直接执行指令打开刮刮乐页面
+on-command:
   condition:
     - "permission('刮刮乐权限')"
+on-open:
   # 打开页面时赋值幸运数值
   action:
     - "tempvar.set('刮刮乐数字',random(1,64))"

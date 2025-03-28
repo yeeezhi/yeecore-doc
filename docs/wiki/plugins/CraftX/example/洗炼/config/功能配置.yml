@@ -5,151 +5,293 @@
 
 
 
-title: "&3在线奖励"
+title: "§3洗炼页面"
 layout:
   - "#########"
   - "#       #"
-  - "# 1 2 3 #"
-  - "# 4 5 6 #"
+  - "# A   B #"
   - "#       #"
-  - "####I####"
+  - "#1234567#"
+# 变量库
+entry:
+  "物品目标": "${物品目标('chest', '20')}"
+  # int() 用于将获取到的字符串转数值类型,若获取的NBT为空(不存在)时转数值，结果为0
+  洗炼0: "§8「§9☆§8」§c洗炼失败，无属性加成"
+  洗炼1: "§8「§9☆§8」§9暴击几率： §a1% §8[&d◆◇◇◇◇§8]"
+  洗炼2: "§8「§9☆§8」§9暴击几率： §a1% §8[&d◆◇◇◇◇§8]"
+  洗炼3: "§8「§9☆§8」§9暴击几率： §a2% §8[&d◆◆◇◇◇§8]"
+  洗炼4: "§8「§9☆§8」§9暴击几率： §a3% §8[&d◆◆◆◇◇§8]"
+  洗炼5: "§8「§9☆§8」§9暴击几率： §a4% §8[&d◆◆◆◆◇§8]"
+  洗炼6: "§8「§9☆§8」§9暴击几率： §a5% §8[&d◆◆◆◆◆§8]"
+  洗炼7: "§8「§9☆§8」§9吸血几率： §a1% §8[&d◆◇◇◇◇§8]"
+  洗炼8: "§8「§9☆§8」§9吸血几率： §a2% §8[&d◆◆◇◇◇§8]"
+  洗炼9: "§8「§9☆§8」§9吸血几率： §a3% §8[&d◆◆◆◇◇§8]"
+  洗炼10: "§8「§9☆§8」§9吸血几率： §a4% §8[&d◆◆◆◆◇§8]"
+  洗炼11: "§8「§9☆§8」§9吸血几率： §a5% §8[&d◆◆◆◆◆§8]"
+  洗炼12: "§8「§9☆§8」§9暴击伤害： §a10% §8[&d◆◇◇◇◇§8]"
+  洗炼13: "§8「§9☆§8」§9暴击伤害： §a20% §8[&d◆◆◇◇◇§8]"
+  洗炼14: "§8「§9☆§8」§9暴击伤害： §a30% §8[&d◆◆◆◇◇§8]"
+  洗炼15: "§8「§9☆§8」§9暴击伤害： §a40% §8[&d◆◆◆◆◇§8]"
+  洗炼16: "§8「§9☆§8」§9暴击伤害： §a50% §8[&d◆◆◆◆◆§8]"
+  洗炼17: "§8「§9☆§8」§9攻击加成： §a1% §8[&d◆◇◇◇◇§8]"
+  洗炼18: "§8「§9☆§8」§9攻击加成： §a2% §8[&d◆◆◇◇◇§8]"
+  洗炼19: "§8「§9☆§8」§9攻击加成： §a3% §8[&d◆◆◆◇◇§8]"
+  洗炼20: "§8「§9☆§8」§9攻击加成： §a4% §8[&d◆◆◆◆◇§8]"
+  洗炼21: "§8「§9☆§8」§9攻击加成： §a5% §8[&d◆◆◆◆◆§8]"
+  # §洗§炼 是隐藏字符，用于洗炼词条定位
+  洗炼词条1: "§洗§炼{洗炼${random(22)}}"
+  洗炼词条2: "§洗§炼{洗炼${random(22)}}"
+  洗炼词条3: "§洗§炼{洗炼${random(22)}}"
+  洗炼词条4: "§洗§炼{洗炼${random(22)}}"
 function:
-  玻璃板:
+  "槽位":
+    char: "A"
+    display:
+      material: ORANGE_STAINED_GLASS_PANE
+      name: "§f槽位 (请放入装备)"
+    slot:
+      match:
+        - "match.lore('洗炼')"
+      # 物品取出时重置锁词条数据
+      take:
+        action:
+          - "tempvar.set('洗炼-锁1',0)"
+          - "tempvar.set('洗炼-锁2',0)"
+          - "tempvar.set('洗炼-锁3',0)"
+          - "tempvar.set('洗炼-锁4',0)"
+          - "tempvar.set('洗炼-锁5',0)"
+          - "tempvar.set('洗炼-锁6',0)"
+          - "tempvar.set('洗炼-锁7',0)"
+  "洗炼":
+    char: "B"
+    display:
+      material: ANVIL
+      name: "§f点击洗炼"
+      lore:
+        - ""
+      desc:
+        - "&3洗炼需求"
+        - "{demand-desc}"
+    entry:
+      "初始定位": "${词条定位('可洗炼',1)}"
+      "词条1定位": "${词条定位('§洗§炼',1)}"
+      "词条2定位": "${词条定位('§洗§炼',2)}"
+      "词条3定位": "${词条定位('§洗§炼',3)}"
+      "词条4定位": "${词条定位('§洗§炼',4)}"
+      "洗炼次数-索引": "${词条定位('洗炼次数')}"
+      "洗炼次数-词条": "${词条获取({洗炼次数-索引})}"
+      "洗炼次数": "${数值解析('{洗炼次数-词条}','num1')}"
+    # 洗炼需求
+    demand:
+      - "points 1000"
+      # 每锁一个词条需要一个锁定石
+      - "mm 锁定石 ${%tempvar_info_洗炼-锁1%+%tempvar_info_洗炼-锁2%+%tempvar_info_洗炼-锁3%+%tempvar_info_洗炼-锁4%+%tempvar_info_洗炼-锁5%+%tempvar_info_洗炼-锁6%+%tempvar_info_洗炼-锁7%}"
+    # 判断装备槽
+    condition:
+      - "match.lore('洗炼') else '{prefix}§7请放入装备'"
+    rules:
+      # 初次洗炼
+      - condition:
+          - "{初始定位}>-1"
+        action:
+          - "词条设置('§8§m-------§8「§d 洗炼 §8」§8§m-------',{初始定位})"
+          - "词条添加('§3洗炼次数: §f1/20',{初始定位}+1)"
+          - "词条添加('{洗炼词条1}',{初始定位}+2)"
+          - "词条添加('{洗炼词条2}',{初始定位}+3)"
+          - "词条添加('{洗炼词条3}',{初始定位}+4)"
+          - "词条添加('{洗炼词条4}',{初始定位}+5)"
+          - "msg('{prefix}§7洗炼成功')"
+        break: true
+      # 洗炼上限
+      - condition:
+          - "{洗炼次数}>=20"
+        action:
+          - "msg('{prefix}§7已达洗炼上限')"
+        break: true
+      # 二次洗炼
+      - condition:
+          - "{洗炼次数}>0"
+        action:
+          - "词条设置(数值操作('{洗炼次数-词条}','num1=n+1'),{洗炼次数-索引})"
+          - "{词条1定位}>-1 && tempvar.get('洗炼-锁1')==0 && 词条设置('{洗炼词条1}',{词条1定位})"
+          - "{词条2定位}>-1 && tempvar.get('洗炼-锁2')==0 && 词条设置('{洗炼词条2}',{词条2定位})"
+          - "{词条3定位}>-1 && tempvar.get('洗炼-锁3')==0 && 词条设置('{洗炼词条3}',{词条3定位})"
+          - "{词条4定位}>-1 && tempvar.get('洗炼-锁4')==0 && 词条设置('{洗炼词条4}',{词条4定位})"
+          - "msg('{prefix}§7洗炼成功')"
+        break: true
+  "玻璃板":
     char: "#"
     display:
       material: BLACK_STAINED_GLASS_PANE
       name: " "
-      lore:
-        - "§f "
-  个人信息:
-    char: "I"
-    display:
-      material: PLAYER_HEAD
-      name: "&3个人信息"
-      lore:
-        - " "
-        - " &7今日在线: &f%variable_info_今日在线%分钟"
-        - " &7累计在线: &f%variable_info_累计在线%分钟"
-        - " "
-  30分钟:
+  "锁词条1":
     char: "1"
+    entry:
+      "词条定位": "${词条定位('§洗§炼',1)}"
+      "洗炼词条": "${词条获取({词条定位})}"
     display:
-      material: CHEST
-      name: "&a30分钟"
-      lore:
-        - " "
-        - " &3奖励列表:"
-        - " &f - 二星熔炼石 x2 "
-        - " &f - 20%幸运石 x1  "
-        - " "
-    condition:
-      - "%variable_info_今日在线% >= 30 else '{prefix}&7在线时长不足'"
+      material: GLASS_PANE
+      name: "§f(无)"
+      rules:
+        - condition:
+            - "{词条定位}>=0&&tempvar.get('洗炼-锁1')==1"
+          material: LIME_STAINED_GLASS_PANE
+          name: "§f[§a锁§f] {洗炼词条}"
+          break: true
+        - condition:
+            - "{词条定位}>=0"
+          material: RED_STAINED_GLASS_PANE
+          name: "§f[§c锁§f] {洗炼词条}"
+    # 锁定切换
     action:
-      - "command('mm i give %player% 二星熔炼石 4')"
-      - "command('mm i give %player% 幸运石2 1')"
-    purchase-limit:
-      day: 1
-  60分钟:
+      - "tempvar.set('洗炼-锁1',tempvar.get('洗炼-锁1')==0 ? 1 : 0)"
+  "锁词条2":
     char: "2"
+    entry:
+      "词条定位": "${词条定位('§洗§炼',2)}"
+      "洗炼词条": "${词条获取({词条定位})}"
     display:
-      material: CHEST
-      name: "&a60分钟"
-      lore:
-        - " "
-        - " &3奖励列表:"
-        - " &f - 二星熔炼石 x6 "
-        - " &f - 30%幸运石 x1  "
-        - " "
-    condition:
-      - "%variable_info_今日在线% >= 60 else '{prefix}&7在线时长不足'"
+      material: GLASS_PANE
+      name: "§f(无)"
+      rules:
+        - condition:
+            - "{词条定位}>=0&&tempvar.get('洗炼-锁2')==1"
+          material: LIME_STAINED_GLASS_PANE
+          name: "§f[§a锁§f] {洗炼词条}"
+          break: true
+        - condition:
+            - "{词条定位}>=0"
+          material: RED_STAINED_GLASS_PANE
+          name: "§f[§c锁§f] {洗炼词条}"
     action:
-      - "command('mm i give %player% 二星熔炼石 6')"
-      - "command('mm i give %player% 幸运石3 1')"
-    purchase-limit:
-      day: 1
-  120分钟:
+      - "tempvar.set('洗炼-锁2',tempvar.get('洗炼-锁2')==0 ? 1 : 0)"
+  "锁词条3":
     char: "3"
+    entry:
+      "词条定位": "${词条定位('§洗§炼',3)}"
+      "洗炼词条": "${词条获取({词条定位})}"
     display:
-      material: CHEST
-      name: "&a120分钟"
-      lore:
-        - " "
-        - " &3奖励列表:"
-        - " &f - 三星熔炼石 x8 "
-        - " &f - 掉级保护石 x1  "
-        - " "
-    condition:
-      - "%variable_info_今日在线% >= 120 else '{prefix}&7在线时长不足'"
+      material: GLASS_PANE
+      name: "§f(无)"
+      rules:
+        - condition:
+            - "{词条定位}>=0&&tempvar.get('洗炼-锁3')==1"
+          material: LIME_STAINED_GLASS_PANE
+          name: "§f[§a锁§f] {洗炼词条}"
+          break: true
+        - condition:
+            - "{词条定位}>=0"
+          material: RED_STAINED_GLASS_PANE
+          name: "§f[§c锁§f] {洗炼词条}"
     action:
-      - "command('mm i give %player% 三星熔炼石 8')"
-      - "command('mm i give %player% 掉级保护石 1')"
-    purchase-limit:
-      day: 1
-  240分钟:
+      - "tempvar.set('洗炼-锁3',tempvar.get('洗炼-锁3')==0 ? 1 : 0)"
+  "锁词条4":
     char: "4"
+    entry:
+      "词条定位": "${词条定位('§洗§炼',4)}"
+      "洗炼词条": "${词条获取({词条定位})}"
     display:
-      material: CHEST
-      name: "&a240分钟"
-      lore:
-        - " "
-        - " &3奖励列表:"
-        - " &f - 四星熔炼石 x8 "
-        - " &f - 点券 x125 "
-        - " "
-    condition:
-      - "%variable_info_今日在线% >= 240 else '{prefix}&7在线时长不足'"
+      material: GLASS_PANE
+      name: "§f(无)"
+      rules:
+        - condition:
+            - "{词条定位}>=0&&tempvar.get('洗炼-锁4')==1"
+          material: LIME_STAINED_GLASS_PANE
+          name: "§f[§a锁§f] {洗炼词条}"
+          break: true
+        - condition:
+            - "{词条定位}>=0"
+          material: RED_STAINED_GLASS_PANE
+          name: "§f[§c锁§f] {洗炼词条}"
     action:
-      - "command('mm i give %player% 四星熔炼石 8')"
-      - "command('mm i give %player% 点券碎片-125')"
-    purchase-limit:
-      day: 1
-  360分钟:
+      - "tempvar.set('洗炼-锁4',tempvar.get('洗炼-锁4')==0 ? 1 : 0)"
+  "锁词条5":
     char: "5"
+    entry:
+      "词条定位": "${词条定位('§洗§炼',5)}"
+      "洗炼词条": "${词条获取({词条定位})}"
     display:
-      material: CHEST
-      name: "&a360分钟"
-      lore:
-        - " "
-        - " &3奖励列表:"
-        - " &f - 五星熔炼石 x2 "
-        - " &f - 点券 x125 "
-        - " "
-    condition:
-      - "%variable_info_今日在线% >= 360 else '{prefix}&7在线时长不足'"
+      material: GLASS_PANE
+      name: "§f(无)"
+      rules:
+        - condition:
+            - "{词条定位}>=0&&tempvar.get('洗炼-锁5')==1"
+          material: LIME_STAINED_GLASS_PANE
+          name: "§f[§a锁§f] {洗炼词条}"
+          break: true
+        - condition:
+            - "{词条定位}>=0"
+          material: RED_STAINED_GLASS_PANE
+          name: "§f[§c锁§f] {洗炼词条}"
     action:
-      - "command('mm i give %player% 五星熔炼石 2')"
-      - "command('mm i give %player% 点券碎片-125')"
-    purchase-limit:
-      day: 1
-  720分钟:
+      - "tempvar.set('洗炼-锁5',tempvar.get('洗炼-锁5')==0 ? 1 : 0)"
+  "锁词条6":
     char: "6"
+    entry:
+      "词条定位": "${词条定位('§洗§炼',6)}"
+      "洗炼词条": "${词条获取({词条定位})}"
     display:
-      material: CHEST
-      name: "&a720分钟"
-      lore:
-        - " "
-        - " &3奖励列表:"
-        - " &f - 金币抽奖钥匙 x5 "
-        - " &f - 点券抽奖钥匙 x1 "
-        - " "
-    condition:
-      - "%variable_info_今日在线% >= 720 else '{prefix}&7在线时长不足'"
+      material: GLASS_PANE
+      name: "§f(无)"
+      rules:
+        - condition:
+            - "{词条定位}>=0&&tempvar.get('洗炼-锁6')==1"
+          material: LIME_STAINED_GLASS_PANE
+          name: "§f[§a锁§f] {洗炼词条}"
+          break: true
+        - condition:
+            - "{词条定位}>=0"
+          material: RED_STAINED_GLASS_PANE
+          name: "§f[§c锁§f] {洗炼词条}"
     action:
-      - "command('mm i give %player% 金币抽奖钥匙 5')"
-      - "command('mm i give %player% 点券抽奖钥匙')"
-    purchase-limit:
-      day: 1
-# 全局介绍
-global-desc:
-  - "{state-desc}"
-# 领取时执行
-on-execute:
+      - "tempvar.set('洗炼-锁6',tempvar.get('洗炼-锁6')==0 ? 1 : 0)"
+  "锁词条7":
+    char: "7"
+    entry:
+      "词条定位": "${词条定位('§洗§炼',7)}"
+      "洗炼词条": "${词条获取({词条定位})}"
+    display:
+      material: GLASS_PANE
+      name: "§f(无)"
+      rules:
+        - condition:
+            - "{词条定位}>=0&&tempvar.get('洗炼-锁7')==1"
+          material: LIME_STAINED_GLASS_PANE
+          name: "§f[§a锁§f] {洗炼词条}"
+          break: true
+        - condition:
+            - "{词条定位}>=0"
+          material: RED_STAINED_GLASS_PANE
+          name: "§f[§c锁§f] {洗炼词条}"
+    action:
+      - "tempvar.set('洗炼-锁7',tempvar.get('洗炼-锁7')==0 ? 1 : 0)"
+on-open:
+  # 打开页面重置锁词条数据
   action:
-    - "msg('{prefix}§a领取成功')"
+    - "tempvar.set('洗炼-锁1',0)"
+    - "tempvar.set('洗炼-锁2',0)"
+    - "tempvar.set('洗炼-锁3',0)"
+    - "tempvar.set('洗炼-锁4',0)"
+    - "tempvar.set('洗炼-锁5',0)"
+    - "tempvar.set('洗炼-锁6',0)"
+    - "tempvar.set('洗炼-锁7',0)"
 message:
-  purchase-limit_false: "§7已领取该奖励"
-  desc.state:
-    purchase-limit: " §e已领取该奖励"
-    enough: " &a点击领取该奖励 "
-    condition: " &e在线时长不足 "
-    insufficient: " &e未满足需求 "
+  slot_match_false: "§7物品无法洗炼"
+  money_false: "§7没有足够的金币进行洗炼"
+  points_false: "§7没有足够的点券进行洗炼"
+  variable_false: "§7没有足够的{0}§7进行洗炼"
+  material_false: "§7没有足够的 §r{0} §7进行洗炼"
+  purchase-limit_false: "§7已达到购买上限"
+  desc:
+    icon:
+      enough: §a✔§r
+      insufficient: §c✘§r
+    demand:
+      item: '§7[%icon%§7] §f%name% §r× %demand%'
+      money: '§7[%icon%§7] §f金币 §r× %demand%'
+      points: '§7[%icon%§7] §f点券 §r× %demand%'
+      currency: '§7[%icon%§7] §f%name% §r× %demand%'
+    state:
+      enough: "§3点击洗炼 §7[§a✔§7]"
+      insufficient: "§3点击洗炼 §7[§c✘§7]"
+      condition: "§c洗炼条件不足"
