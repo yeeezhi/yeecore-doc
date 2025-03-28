@@ -159,7 +159,10 @@ export default defineConfig({
                             {
                                 text: '强化',
                                 collapsed: true,
-                                items: [{text: '基础值', link: '/wiki/plugins/CraftX/example/强化/基础值/intro'}]
+                                items: [{
+                                    text: '基础值',
+                                    link: '/wiki/plugins/CraftX/example/强化/基础值/intro'
+                                }, {text: '附加值', link: '/wiki/plugins/CraftX/example/强化/附加值/intro'}]
                             },
                             {text: '黑市', link: '/wiki/plugins/CraftX/example/黑市/intro'},
                             {text: '月卡', link: '/wiki/plugins/CraftX/example/月卡/intro'},
