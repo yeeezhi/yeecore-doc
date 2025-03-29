@@ -41,6 +41,6 @@
 
 - `MythicMobs` · `SX-Attribute` · `SX-Item` · `NeigeItems`
 - `AzureFlow` · `MMOItems` · `CraftEngine` · `Oraxen`
-- `ItemsAdder` · `PxRpg` · `Zaphkiel` · `OriginAttribute`
+- `ItemsAdder` · `PxRpg` · `Zaphkiel` · `OriginAttribute` · `RedmiAssyLib`
 
 :::
