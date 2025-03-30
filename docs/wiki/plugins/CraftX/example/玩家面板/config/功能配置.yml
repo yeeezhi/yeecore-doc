@@ -1,0 +1,138 @@
+
+
+#          Powered by YeeCore          #
+#        https://www.goodmc.cn/        #
+
+# 配置由用户 2932102935 提供
+title: "&c&l玩家面板"
+layout:
+  - "####A####"
+  - "# D  IJH#"
+  - "#BEC    #"
+  - "# F  KLM#"
+  - "# G     #"
+  - "#########"
+function:
+  "玻璃板":
+    char: "#"
+    display:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+      lore:
+        - "§f "
+  "头颅":
+    char: "A"
+    display:
+      material: PLAYER_HEAD
+      # 头颅皮肤，仅在物品类型为头颅时生效，支持变量与表达式
+      skull: "%player_name%"
+      name: "§a%player_name%"
+  "主武器":
+    char: "B"
+    display:
+      # 从指定目标读取物品（支持以下格式）
+      # 背包槽位：container_0，箱子(GUI)槽位：chest_0
+      # 主手：container_mainhand，副手：container_offhand
+      # 头盔：container_helmet，胸甲：container_chestplate
+      # 护腿：container_leggings，靴子：container_boots
+      # DragonCore_戒指槽，GermPlugin_戒指槽
+      # YeeJewelry_饰品背包#戒指，LyInventory_饰品背包#戒指
+      identity: "container_mainhand"
+      # 目标路径物品不存在时显示的占位物品
+      material: ARMOR_STAND
+      name: "§f主武器 (未装备)"
+  "副武器":
+    char: "C"
+    display:
+      identity: "container_offhand"
+      material: ARMOR_STAND
+      name: "§f副武器 (未装备)"
+  "头盔":
+    char: "D"
+    display:
+      identity: "container_helmet"
+      material: ARMOR_STAND
+      name: "§f头盔 (未装备)"
+  "胸甲":
+    char: "E"
+    display:
+      identity: "container_chestplate"
+      material: ARMOR_STAND
+      name: "§f胸甲 (未装备)"
+  "护腿":
+    char: "F"
+    display:
+      identity: "container_leggings"
+      material: ARMOR_STAND
+      name: "§f护腿 (未装备)"
+  "靴子":
+    char: "G"
+    display:
+      identity: "container_boots"
+      material: ARMOR_STAND
+      name: "§f靴子 (未装备)"
+  "戒指":
+    char: "H"
+    display:
+      identity: "DragonCore_戒指槽位"
+      material: RED_STAINED_GLASS_PANE
+      name: "§f戒指 (未装备)"
+  "项链":
+    char: "I"
+    display:
+      identity: "DragonCore_项链槽位"
+      material: RED_STAINED_GLASS_PANE
+      name: "§f项链 (未装备)"
+  "拳套":
+    char: "J"
+    display:
+      identity: "DragonCore_拳套槽位"
+      material: RED_STAINED_GLASS_PANE
+      name: "§f拳套 (未装备)"
+  "攻击属性":
+    char: "K"
+    display:
+      material: IRON_SWORD
+      name: "&6攻击属性"
+      lore:
+        - "&a物理伤害: &f%ap_attack%"
+        - "&6真实伤害: &f%ap_real_attack%"
+        - " "
+        - "&c暴击几率: &f%ap_crit:max%&8&l%"
+        - "&c暴击倍率: &f%ap_crit_rate:max%&8&l%"
+        - "&c吸血几率: &f%ap_vampire:max%&8&l%"
+        - "&c吸血倍率: &f%ap_vampire_rate:max%&8&l%"
+        - " "
+        - "&3命中: &f%ap_hit:max%&8&l%"
+        - "&3破甲: &f%ap_sunder_armor:max%&8&l%"
+        - "&6护甲穿透: &f%ap_see_through:max%&8&l%"
+  "防御属性":
+    char: "L"
+    display:
+      material: IRON_CHESTPLATE
+      name: "&3防御属性"
+      lore:
+        - "&a生命上限: &f%ap_health:max%&8&l%"
+        - " "
+        - "&a护甲值: &f%ap_armor:max%&8&l%"
+        - "&a物理防御: &f%ap_defense%"
+        - " "
+        - "&c暴击抗性: &f%ap_crit_resist:max%&8&l%"
+        - "&c吸血抗性: &f%ap_vampire_resist:max%&8&l%"
+        - " "
+        - "&6反弹几率: &f%ap_reflection:max%&8&l%"
+        - "&6反弹伤害: &f%ap_reflection_rate:max%&8&l%"
+        - "&6闪避几率: &f%ap_dodge:max%&8&l%"
+  "其他属性":
+    char: "M"
+    display:
+      material: BOOK
+      name: "&7其他属性"
+      lore:
+        - "&a物品暴率: &f%ap_dljc:max%"
+        - "&a掉率倍率: &f%ap_dlbl:max%"
+        - "&a生命恢复: &f%ap_restore%"
+        - "&a灵魂恢复: &f%ap_restore_ratio:max%&8&l%"
+        - " "
+        - "&6移速加成: &f%ap_moving:max%&8&l%"
+        - "&6经验加成: &f%ap_exp_addition:max%&8&l%"

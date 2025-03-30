@@ -25,13 +25,13 @@
 
 ::: details **点击查看**
 
-**核心**
-
-- `YeeCore` · `GermPlugin` · `DragonCore`
-
 **仓库**
 
 - `SpaceRingPlus` · `LyWarehouse`
+
+**槽位**
+
+- · `GermPlugin` · `DragonCore` · `YeeJewelry` · `LyInventory`
 
 **货币**
 
