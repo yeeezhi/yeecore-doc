@@ -35,7 +35,8 @@
 
 **货币**
 
-- `LyShop` · `CustomShop` · `NyEconomy` · `Aboleth` · `AbolethPlus`
+- `Vault` · `PlayerPoints` · `YeeValue` · `LyShop`
+- `CustomShop` · `NyEconomy` · `Aboleth` · `AbolethPlus`
 
 **物品库**
 
