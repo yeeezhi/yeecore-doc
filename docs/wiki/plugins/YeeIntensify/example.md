@@ -14,7 +14,7 @@
     - "§8「§6※§8」§7暴击伤害: §a2%"
   guarantees: 10
   # 基础概率10%,每累计一次保底统计就增加5%概率
-  probability: ${0.1+{current-guarantees}*0.05}
+  probability: 0.1+{current-guarantees}*0.05
 ```
 
 ## 满足权限权限生效成功率
@@ -30,5 +30,5 @@
     - "§8「§6※§8」§7伤害加成: §a2%"
     - "§8「§6※§8」§7暴击伤害: §a2%"
   # 满足权限返回20%成功率，不满足返回10%
-  probability: ${permission('vip.vip1')?0.2:0.1}
+  probability: permission('vip.vip1')?0.2:0.1
 ```
