@@ -1,3 +1,5 @@
+
+
 #          Powered by YeeCore          #
 #        https://www.goodmc.cn/        #
 
@@ -7,9 +9,15 @@ title: "§3默认界面"
 layout:
   - "#########"
   - "#       #"
-  - "#  ABC  #"
+  - "# ABCDE #"
   - "#       #"
   - "#########"
+# 导入变量库，对应路径：plugins\CraftX\entry\测试变量库.yml，方便在配置中直接引用预设变量
+import-entry:
+  - "测试变量库"
+# 变量库，在配置中通过 `{测试变量}` 引用该变量，自动替换为对应的值
+entry:
+  "测试变量": "1.0"
 function:
   "玻璃板":
     # 布局槽位配置
@@ -21,27 +29,20 @@ function:
       name: " "
       lore:
         - "§f "
-  "物品库示例":
-    char: "A"
-    display:
-      # 支持多物品库 格式："类型 物品ID 数量"
-      item: "mm 恶魔士兵核心 1"
-      # 执行成功后将物品作为奖励给予玩家
-      reward: true
-      # 物品描述，覆盖下方全局介绍
-      # 支持变量 购买需求 {demand-desc} 购买状态 {state-desc}
-      desc:
-        - ""
-        - "§a物品描述"
-      # 隐藏描述，默认false
-      hide-desc: false
   "测试按钮":
-    char: "B"
+    char: "A"
     display:
       material: CLOCK
       name: "§a测试按钮"
       lore:
         - "§f"
+      nbt:
+        "测试节点.1": "123"
+        "测试节点.2":
+          - "123456"
+          - "123445"
+      # 界面刷新或交互时是否自动更新（默认true）
+      update: true
       # 物品显示条件
       condition:
         - ""
@@ -79,12 +80,31 @@ function:
       - "cshop 测试金币 1000"
       # NyEconomy 货币
       - "nye 测试金币 1000"
+      # Aboleth 货币
+      - "aboe 测试金币 1000"
+      # AbolethPlus 货币
+      - "abp 测试金币 1000"
+    # 需求规则，满足条件时增加额外需求
+    demand-rules:
+      - condition:
+          - "%player_level% > 10"
+        demand:
+          - "points 100"
+        # 满足此规则后，后续的规则将不再生效，默认false
+        break: true
     # 购买奖励,与上方用法相同
     reward:
       - "mm 恶魔士兵核心 1"
       - "摩拉 1000"
-    # 是否使用仓库，默认 true
-    # 已支持：SpaceRingPlus,LyWarehouse
+    # 奖励规则，满足条件时增加额外奖励
+    reward-rules:
+      - condition:
+          - "%player_level% > 10"
+        reward:
+          - "points 100"
+        # 满足此规则后，后续的规则将不再生效，默认false
+        break: true
+    # 是否使用仓库，默认为全局仓库全局开关
     warehouse-enabled: true
     # 条件
     condition:
@@ -98,6 +118,27 @@ function:
           - ""
         action:
           - ""
+        # 权重随机执行动作
+        random:
+          # 权重
+          - weight: 10
+            # 条件（不满足时不参与权重随机）
+            condition:
+              - ""
+            # 动作
+            action:
+              - "执行指令('mm i give %player_name% 奖励1')"
+          - weight: 10
+            action:
+              - "执行指令('mm i give %player_name% 奖励2')"
+          - weight: 10
+            action:
+              - "执行指令('mm i give %player_name% 奖励3')"
+          - weight: 10
+            action:
+              - "执行指令('mm i give %player_name% 奖励4')"
+        # 中断循环，不执行后面的动作规则。默认false
+        break: false
     # 仅执行一次的动作，适用于模块多次运行时只触发一次的情况
     only-action:
       - "msg('{prefix}§7购买成功')"
@@ -121,19 +162,86 @@ function:
     probability: 1.0
     # 异步执行，默认关闭
     async: false
-# 启用快捷键倍率,默认关闭
-hotkey-multiple: true
+  "物品库示例":
+    char: "B"
+    display:
+      # 支持多物品库 格式："类型 物品ID 数量"
+      item: "mm 恶魔士兵核心 1"
+      # 执行成功后将物品作为奖励给予玩家
+      reward: true
+      # 物品描述，覆盖下方全局介绍
+      # 支持变量 购买需求 {demand-desc} 购买状态 {state-desc}
+      desc:
+        - ""
+        - "§a物品描述"
+      # 隐藏描述，默认false
+      hide-desc: false
+  "头颅示例":
+    char: "C"
+    display:
+      material: PLAYER_HEAD
+      # 头颅皮肤，仅在物品类型为头颅时生效，支持变量与表达式
+      skull: "%player_name%"
+      name: "§f头颅示例"
+      lore:
+        - "§f"
+  "物品目标示例":
+    char: "D"
+    display:
+      # 从指定目标读取物品（支持以下格式）
+      # 背包槽位：container_0，箱子(GUI)槽位：chest_0
+      # 主手：container_mainhand，副手：container_offhand
+      # 头盔：container_helmet，胸甲：container_chestplate
+      # 护腿：container_leggings，靴子：container_boots
+      # DragonCore_戒指槽，GermPlugin_戒指槽
+      # YeeJewelry_饰品背包#戒指，LyInventory_饰品背包#戒指
+      identity: "YeeJewelry_饰品背包#戒指"
+      # 目标路径物品不存在时显示的占位物品
+      material: RED_STAINED_GLASS_PANE
+      name: "§f戒指槽 (未使用)"
+  "槽位示例":
+    char: "E"
+    display:
+      material: RED_STAINED_GLASS_PANE
+      name: "§f槽位示例"
+    # 槽位功能
+    slot:
+      # 放入物品限制，满足任意条件即可，删除即不限制
+      match:
+        - "match.lore('可强化')"
+      # 使用条件，不满足时无法使用槽位
+      condition:
+        - ""
+      # 放入后执行动作
+      action:
+        - ""
+      # 取出后执行
+      take:
+        # 动作
+        action:
+          - ""
+        # 条件
+        # 由于槽位存储功能未更新，且关闭 GUI 时物品会自动返回槽位，该参数暂时无效
+        condition:
+          - ""
+      # 允许放入堆叠物品，默认false
+      stack: false
 # 全局介绍
 global-desc:
-  # 购买需求
+  # 需求信息
   - "{demand-desc}"
+  # 奖励信息
+  - "{reward-desc}"
+  # 限购状态
+  - "{purchase-limit-desc}"
   # 购买状态
   - "{state-desc}"
-# 龙核UI介绍文本
-# 获取：方法.取物品NBT(方法.取物品('container_1','CraftX.button')
-button-desc:
-  - "{demand-desc}"
-  - "{state-desc}"
+# 支持物品形式展示货币（龙核、萌芽）
+# 金币 money 、点券 money 其他 `类型-货币名` 如 cshop-成就点
+currency-display:
+  "money":
+    material: GOLD_INGOT
+    name: "§f%amount% §e金币"
 # 打开GUI时
 on-open:
   # 条件
@@ -187,5 +295,16 @@ on-close:
         - ""
       action:
         - ""
+# 当玩家执行 open、function指令时
+on-command:
+  # 执行条件
+  condition:
+    - ""
 # 更新GUI,默认开启
 update-inventory: true
+# 是否全局默认使用仓库，默认为 false
+# 从仓库获取需求物，奖励物品自动存入仓库
+# 已支持：SpaceRingPlus、LyWarehouse
+warehouse-enabled: false
+# 启用快捷键倍率,默认关闭
+hotkey-multiple: true
