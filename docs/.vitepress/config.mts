@@ -127,8 +127,15 @@ export default defineConfig({
                             {text: '数值', link: '/wiki/YeeCore/expression/数值'},
                             {text: '文本', link: '/wiki/YeeCore/expression/文本'},
                             {text: '日期', link: '/wiki/YeeCore/expression/日期'},
-                            {text: '物品', link: '/wiki/YeeCore/expression/物品'},
-                            {text: '操作器', link: '/wiki/YeeCore/expression/操作器'},
+                            {
+                                text: '物品',
+                                collapsed: true,
+                                items: [
+                                    {text: '基础', link: '/wiki/YeeCore/expression/物品/基础'},
+                                    {text: '数值', link: '/wiki/YeeCore/expression/物品/数值'},
+                                    {text: '更多', link: '/wiki/YeeCore/expression/物品/更多'},
+                                ],
+                            },
                             {text: '其它', link: '/wiki/YeeCore/expression/其它'},
                         ],
                     },
