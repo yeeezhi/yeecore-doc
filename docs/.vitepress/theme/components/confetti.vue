@@ -14,11 +14,11 @@ confetti({
 // var animationEnd = Date.now() + duration;
 // var skew = 1;
 
-// function randomInRange(min, max) {
+// 功能模块 randomInRange(min, max) {
 //     return Math.random() * (max - min) + min;
 // }
 
-// (function frame() {
+// (功能模块 frame() {
 //     var timeLeft = animationEnd - Date.now();
 //     var ticks = Math.max(200, 500 * (timeLeft / duration));
 //     skew = Math.max(0.8, skew - 0.001);

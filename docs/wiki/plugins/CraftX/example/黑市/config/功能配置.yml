@@ -9,13 +9,13 @@ title: "                  §c§l黑市"
 layout:
   - "         "
   - "         "
-  - " ${variable.get('黑市布局')} "
+  - " ${变量模块.get('黑市布局')} "
   - "         "
   - "    *    "
 entry:
-  "折扣": "${variable.get('黑市折扣')}"
+  "折扣": "${变量模块.get('黑市折扣')}"
   # 优惠=1.0-折扣
-  "优惠": "${取整((1-variable.get('黑市折扣'))*100)}"
+  "优惠": "${取整((1-变量模块.get('黑市折扣'))*100)}"
   "折扣价": "{{原价}*{折扣}}"
 function:
   "湮灭之剑":
@@ -194,8 +194,8 @@ function:
     demand:
       - "points 1000"
     action:
-      - "variable.remove('黑市折扣')"
-      - "variable.remove('黑市布局')"
+      - "变量模块.remove('黑市折扣')"
+      - "变量模块.remove('黑市布局')"
 # 全局介绍
 global-desc:
   - ""

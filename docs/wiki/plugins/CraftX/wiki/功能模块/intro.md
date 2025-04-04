@@ -6,7 +6,7 @@
 
 ::: details **完整配置.yml**
 
-<<< @/wiki/plugins/CraftX/function/config/完整配置.yml{yaml}
+<<< @/wiki/plugins/CraftX/wiki/功能模块/config/完整配置.yml{yaml}
 
 :::
 
@@ -31,10 +31,10 @@
 
 ```yaml
 // 功能执行
-function ('配置名-功能名')
+功能模块 ('配置名-功能名')
 // 跳过部分功能,使用,分割
 // condition(条件) demand(需求) reward(奖励)，
-function ('配置名-功能名', 'condition,demand,reward')
+功能模块 ('配置名-功能名', 'condition,demand,reward')
 ```
 
 #### 内部变量

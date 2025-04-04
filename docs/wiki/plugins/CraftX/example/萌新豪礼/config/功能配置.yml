@@ -39,8 +39,8 @@ function:
       - "{签到天数} <= 0 else '{prefix}§7已经领取过这个礼包了哦~'"
       - "{签到天数} == 0"
     action:
-      - "variable.set('萌新豪礼', 1)"
-      - "variable.set('萌新豪礼冷却', 1)"
+      - "变量模块.set('萌新豪礼', 1)"
+      - "变量模块.set('萌新豪礼冷却', 1)"
       - "title('§8「 §d§l领取成功 §8」','§8「 §a成功领取了 &e萌新七日豪礼 &a第一天 §8」')"
       # 执行奖励
       - "command('mm i give %player_name% 奖励物品1')"
@@ -63,8 +63,8 @@ function:
       - "{签到天数} <= 1 else '{prefix}§7已经领取过这个礼包了哦~'"
       - "{签到天数} == 1"
     action:
-      - "variable.set('萌新豪礼', 2)"
-      - "variable.set('萌新豪礼冷却', 1)"
+      - "变量模块.set('萌新豪礼', 2)"
+      - "变量模块.set('萌新豪礼冷却', 1)"
       - "title('§8「 §d§l领取成功 §8」','§8「 §a成功领取了 &e萌新七日豪礼 &a第二天 §8」')"
       # 执行奖励
       - "command('mm i give %player_name% 奖励物品1')"
@@ -87,8 +87,8 @@ function:
       - "{签到天数} <= 2 else '{prefix}§7已经领取过这个礼包了哦~'"
       - "{签到天数} == 2"
     action:
-      - "variable.set('萌新豪礼', 3)"
-      - "variable.set('萌新豪礼冷却', 1)"
+      - "变量模块.set('萌新豪礼', 3)"
+      - "变量模块.set('萌新豪礼冷却', 1)"
       - "title('§8「 §d§l领取成功 §8」','§8「 §a成功领取了 &e萌新七日豪礼 &a第三天 §8」')"
       # 执行奖励
       - "command('mm i give %player_name% 奖励物品1')"
@@ -111,8 +111,8 @@ function:
       - "{签到天数} <= 3 else '{prefix}§7已经领取过这个礼包了哦~'"
       - "{签到天数} == 3"
     action:
-      - "variable.set('萌新豪礼', 4)"
-      - "variable.set('萌新豪礼冷却', 1)"
+      - "变量模块.set('萌新豪礼', 4)"
+      - "变量模块.set('萌新豪礼冷却', 1)"
       - "title('§8「 §d§l领取成功 §8」','§8「 §a成功领取了 &e萌新七日豪礼 &a第四天 §8」')"
       # 执行奖励
       - "command('mm i give %player_name% 奖励物品1')"
@@ -135,8 +135,8 @@ function:
       - "{签到天数} <= 4 else '{prefix}§7已经领取过这个礼包了哦~'"
       - "{签到天数} == 4"
     action:
-      - "variable.set('萌新豪礼', 5)"
-      - "variable.set('萌新豪礼冷却', 1)"
+      - "变量模块.set('萌新豪礼', 5)"
+      - "变量模块.set('萌新豪礼冷却', 1)"
       - "title('§8「 §d§l领取成功 §8」','§8「 §a成功领取了 &e萌新七日豪礼 &a第五天 §8」')"
       # 执行奖励
       - "command('mm i give %player_name% 奖励物品1')"
@@ -159,8 +159,8 @@ function:
       - "{签到天数} <= 5 else '{prefix}§7已经领取过这个礼包了哦~'"
       - "{签到天数} == 5"
     action:
-      - "variable.set('萌新豪礼', 6)"
-      - "variable.set('萌新豪礼冷却', 1)"
+      - "变量模块.set('萌新豪礼', 6)"
+      - "变量模块.set('萌新豪礼冷却', 1)"
       - "title('§8「 §d§l领取成功 §8」','§8「 §a成功领取了 &e萌新七日豪礼 &a第六天 §8」')"
       # 执行奖励
       - "command('mm i give %player_name% 奖励物品1')"
@@ -182,8 +182,8 @@ function:
       - "{签到天数} <= 6 else '{prefix}§7已经领取过这个礼包了哦~'"
       - "{签到天数} == 6"
     action:
-      - "variable.set('萌新豪礼', 7)"
-      - "variable.set('萌新豪礼冷却', 1)"
+      - "变量模块.set('萌新豪礼', 7)"
+      - "变量模块.set('萌新豪礼冷却', 1)"
       - "title('§8「 §d§l领取成功 §8」','§8「 §a成功领取了 &e萌新七日豪礼 &a第七天 §8」')"
       # 执行奖励
       - "command('mm i give %player_name% 奖励物品1')"

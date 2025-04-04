@@ -30,18 +30,18 @@ CraftX 变量支持绑定 Vault、PlayerPoints 或其他变量。优先使用绑
 
 ```yaml
 condition:
-  - variable.get('绑定点券')>2000
+  - 变量模块.get('绑定点券')>2000
 action:
-  - variable.take('绑定点券',2000)
+  - 变量模块.take('绑定点券',2000)
 ```
 
 正确示例
 
 ```yaml
 condition:
-  - variable.has('绑定点券',2000)
+  - 变量模块.has('绑定点券',2000)
 action:
-  - variable.take('绑定点券',2000)
+  - 变量模块.take('绑定点券',2000)
 ```
 
 ### 经济桥

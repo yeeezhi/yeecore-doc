@@ -12,10 +12,10 @@
 
 ::: code-group
 
-<<< @/wiki/plugins/CraftX/variable/config/货币.yml{yaml}
-<<< @/wiki/plugins/CraftX/variable/config/体力.yml{yaml}
-<<< @/wiki/plugins/CraftX/variable/config/称号.yml{yaml}
-<<< @/wiki/plugins/CraftX/variable/config/统计.yml{yaml}
+<<< @/wiki/plugins/CraftX/wiki/变量模块/config/货币.yml{yaml}
+<<< @/wiki/plugins/CraftX/wiki/变量模块/config/体力.yml{yaml}
+<<< @/wiki/plugins/CraftX/wiki/变量模块/config/称号.yml{yaml}
+<<< @/wiki/plugins/CraftX/wiki/变量模块/config/统计.yml{yaml}
 
 :::
 

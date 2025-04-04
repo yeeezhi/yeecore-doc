@@ -149,20 +149,15 @@ export default defineConfig({
                 link: '/wiki/plugins/CraftX/intro',
                 items: [
                     {
-                        text: '插件功能',
+                        text: '使用说明',
                         link: '/wiki/plugins/CraftX/intro',
                         collapsed: true,
                         items: [
-                            {text: '功能模块', link: '/wiki/plugins/CraftX/function/intro'},
-                            {text: '变量模块', link: '/wiki/plugins/CraftX/variable/intro'},
-                        ],
-                    },
-                    {
-                        text: '使用说明',
-                        collapsed: true,
-                        items: [
-                            {text: '变量库', link: '/wiki/plugins/CraftX/wiki/变量库'},
-                            {text: '龙核&萌芽', link: '/wiki/plugins/CraftX/wiki/龙核&萌芽'},
+                            {text: '功能模块', link: '/wiki/plugins/CraftX/wiki/功能模块/intro'},
+                            {text: '变量模块', link: '/wiki/plugins/CraftX/wiki/变量模块/intro'},
+                            {text: '物品处理', link: '/wiki/plugins/CraftX/wiki/物品处理/intro'},
+                            {text: '变量库', link: '/wiki/plugins/CraftX/wiki/变量库/intro'},
+                            {text: '龙核&萌芽', link: '/wiki/plugins/CraftX/wiki/龙核&萌芽/intro'},
                         ],
                     },
                     {
