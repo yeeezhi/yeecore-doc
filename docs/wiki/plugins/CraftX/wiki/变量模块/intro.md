@@ -47,12 +47,12 @@
 #### 表达式：
 
 ```javascript
-variable.get('摩拉')        // 获取变量值
+variable.get('摩拉')         // 获取变量值
 variable.add('摩拉', 50)     // 增加变量值
-variable.take('摩拉', 50)     // 扣除变量值
+variable.take('摩拉', 50)    // 扣除变量值
 variable.set('摩拉', 50)     // 设置变量值
-variable.remove('摩拉')     // 删除变量值
-variable.has('摩拉', 1000)     // 是否拥有指定数量
+variable.remove('摩拉')      // 删除变量值
+variable.has('摩拉', 1000)   // 是否拥有指定数量
 ```
 
 ## 临时变量
@@ -64,13 +64,13 @@ variable.has('摩拉', 1000)     // 是否拥有指定数量
 #### 指令：
 
 ```
-/tempvar get <玩家> <变量名>         # 获取变量值
-/tempvar add <玩家> <变量名> <数值>   # 增加变量值
-/tempvar take <玩家> <变量名> <数值>  # 扣除变量值
-/tempvar set <玩家> <变量名> <数据>   # 设置变量值
-/tempvar remove <玩家> <变量名> <数据># 删除变量值
-/tempvar info <玩家>                # 变量详情
-/tempvar lead <变量> <页数>          # 变量排行
+/tempvar get <玩家> <变量名>                     # 获取变量值
+/tempvar add <玩家> <变量名> <数值> <时间(可选)>   # 增加变量值
+/tempvar take <玩家> <变量名> <数值> <时间(可选)>  # 扣除变量值
+/tempvar set <玩家> <变量名> <数据> <时间(可选)>   # 设置变量值
+/tempvar remove <玩家> <变量名> <数据>            # 删除变量值
+/tempvar info <玩家>                            # 变量详情
+/tempvar lead <变量> <页数>                      # 变量排行
 ```
 
 #### 变量
@@ -83,9 +83,12 @@ variable.has('摩拉', 1000)     // 是否拥有指定数量
 #### 表达式：
 
 ```javascript
-tempvar.get('摩拉')        // 获取变量值
-tempvar.add('摩拉', 50)     // 增加变量值
-tempvar.take('摩拉', 50)     // 扣除变量值
-tempvar.set('摩拉', 50)     // 设置变量值
-tempvar.remove('摩拉')     // 删除变量值
+tempvar.get('摩拉')                 // 获取变量值
+tempvar.add('摩拉', 50)             // 增加变量值
+tempvar.take('摩拉', 50)            // 扣除变量值
+tempvar.remove('摩拉')              // 删除变量值
+tempvar.set('摩拉', 50)             // 设置变量值
+tempvar.set('冷却组1', 1, 10000)    // 设置临时变量值，单位: 毫秒
+tempvar.expire('冷却组1')           // 剩余到期时间，单位: 毫秒
+tempvar.expire('冷却组1', 100000)   // 设置到期时间，单位: 毫秒
 ```

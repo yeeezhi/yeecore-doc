@@ -13,11 +13,14 @@
 #### 指令：
 
 ```
-/cx open <页面> <玩家>              # 功能页面
-/cx function <功能> <玩家>          # 执行功能
+/cx open <页面> <玩家>                      # 功能页面
+/cx function <功能> <玩家>                  # 执行功能
+/cxc reload                                # 重载配置文件
+/cxc cache                                 # 清理内存、Redis缓存
+/cxc purchase-limit <玩家> <配置名> <功能名>  # 清理限购
 ```
 
-使用 /cx function 指令来执行（或购买）特定的功能模块。例如，若要购买 点券商店-观楼剑，可使用以下指令：
+使用 /cx function 指令来执行（或购买）特定的功能模块。例如，购买 点券商店-观楼剑，可使用以下指令：
 
 ```
 /cx function 点券商店-观楼剑 <玩家>
@@ -25,6 +28,17 @@
 /cx function 点券商店-观楼剑-10 <玩家>
 # 跳过部分功能,使用,分割
 /cx function 点券商店-观楼剑 <玩家> condition,demand,reward
+```
+
+使用 /cxc purchase-limit 指令清理玩家限购数据
+
+```
+# 清理玩家所有限购数据
+/cxc purchase-limit <玩家> 
+# 清理玩家点券商店限购数据
+/cxc purchase-limit <玩家> 点券商店 
+# 清理玩家观楼剑限购数据
+/cxc purchase-limit <玩家> 点券商店 观楼剑
 ```
 
 #### 表达式：
