@@ -45,10 +45,10 @@
 
 ```yaml
 // 功能执行
-功能模块 ('配置名-功能名')
+function('配置名-功能名')
 // 跳过部分功能,使用,分割
 // condition(条件) demand(需求) reward(奖励)，
-功能模块 ('配置名-功能名', 'condition,demand,reward')
+function('配置名-功能名', 'condition,demand,reward')
 ```
 
 #### 内部变量
