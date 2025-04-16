@@ -1,6 +1,6 @@
 # 货币
 
-### 绑定货币
+## 绑定货币
 
 CraftX 变量支持绑定 Vault、PlayerPoints 或其他变量。优先使用绑定货币，若余额不足，则使用金币或点券补足。
 
@@ -44,7 +44,7 @@ action:
   - 变量模块.take('绑定点券',2000)
 ```
 
-### 经济桥
+## 经济桥
 
 CraftX 变量支持桥接 Vault、PlayerPoints 或其他货币变量。实现同步操作或读取指定货币。
 
@@ -70,7 +70,7 @@ CraftX 变量支持桥接 Vault、PlayerPoints 或其他货币变量。实现同
   bind: "摩拉"
 ```
 
-### 配置文件
+## 配置文件
 
 ::: code-group
 

@@ -1,11 +1,11 @@
 # 萌新豪礼
 
-### 效果展示
+## 效果展示
 
 ![img](img/img_1.png)
 ![img_1](img/img.png)
 
-### 配置文件
+## 配置文件
 
 ::: code-group
 

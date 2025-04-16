@@ -1,0 +1,408 @@
+
+# 配置由用户 2818317400 提供
+
+title: "§e轮盘抽奖"
+layout:
+  - "##CDEFG##"
+  - "##B###H##"
+  - "##9#A#1##"
+  - "##8###2##"
+  - "##76543#M"
+# 变量库，在配置中通过 `{测试变量}` 引用该变量，自动替换为对应的值
+entry: [ ]
+function:
+  "玻璃板":
+    # 布局槽位配置
+    char: "#"  # 用于标识槽位布局的字符
+    # 按钮位置设置，支持多个槽位，例如：index: 1,2,3
+    index: 1
+    display:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+      lore:
+        - "§f "
+  "重置按钮":
+    # 布局槽位配置
+    char: "M"  # 用于标识槽位布局的字符
+    display:
+      material: BOOK_AND_QUILL
+      name: "点击进行转盘重置"
+    #若是想玩家随时重置删除次条件即可
+    condition:
+      - "%tempvar_info_抽奖进度% == 17"
+    action:
+      - "声音('ENTITY_EXPERIENCE_ORB_PICKUP')"
+      - "tempvar.set('奖励1',0)"
+      - "tempvar.set('奖励2',0)"
+      - "tempvar.set('奖励3',0)"
+      - "tempvar.set('奖励4',0)"
+      - "tempvar.set('奖励5',0)"
+      - "tempvar.set('奖励6',0)"
+      - "tempvar.set('奖励7',0)"
+      - "tempvar.set('奖励8',0)"
+      - "tempvar.set('奖励9',0)"
+      - "tempvar.set('奖励B',0)"
+      - "tempvar.set('奖励C',0)"
+      - "tempvar.set('奖励D',0)"
+      - "tempvar.set('奖励E',0)"
+      - "tempvar.set('奖励F',0)"
+      - "tempvar.set('奖励G',0)"
+      - "tempvar.set('奖励H',0)"
+      - "tempvar.set('奖励I',0)"
+      - "tempvar.set('抽奖进度',0)"
+      #单独重置玩家 奖品的指令 /tempvar remove id 奖励1
+  "层数A":
+    char: "A"
+    display:
+      material: END_CRYSTAL
+      name: "§e点击抽奖"
+      lore:
+        - '&f玩家转盘次数:'
+        - '&f- &f%tempvar_info_抽奖进度%'
+        - ''
+        - '&f消耗钥匙'
+        - '{demand-desc}'
+    demand:
+      - ''
+    demand-rules:
+      #更改次数按照这个 >= 次数 继续写就好了
+      - condition:
+          - "%tempvar_info_抽奖进度%>=0"
+        demand:
+          - "points 1000"
+      - condition:
+          - "%tempvar_info_抽奖进度%>=1"
+        demand:
+          - "points 2000"
+      - condition:
+          - "%tempvar_info_抽奖进度%>=2"
+        demand:
+          - "points 1000"
+      - condition:
+          - "%tempvar_info_抽奖进度%>=3"
+        demand:
+          - "points 1000"
+        # 满足此规则后，后续的规则将不再生效，默认false
+        break: true
+    condition:
+      - "%tempvar_info_抽奖进度% < 17 else '&7[&6系统&7] &c奖品已抽完'"
+    rules:
+      - condition:
+          - ""
+        action:
+          - "tempvar.add('抽奖进度',1)"
+          - "声音('ENTITY_PLAYER_LEVELUP')"
+        random:
+          #修改每个物品的数量
+          - weight: 10
+            condition:
+              - "%tempvar_info_奖励1%<=1"
+            action:
+              - "执行指令('ni give %player_name% 劣质铁锭')"
+              #获奖后的全服公告
+              - bc('&7[&6系统&7] ')
+              - "tempvar.set('奖励1',2)"
+          - weight: 10
+            condition:
+              - "%tempvar_info_奖励2%<=1"
+            action:
+              - "执行指令('ni give %player_name% 劣质铁锭')"
+              - "tempvar.set('奖励2',2)"
+          - weight: 10
+            condition:
+              - "%tempvar_info_奖励3%<=1"
+            action:
+              - "执行指令('ni give %player_name% 劣质铁锭')"
+              - "tempvar.set('奖励3',2)"
+          - weight: 10
+            condition:
+              - "%tempvar_info_奖励4%<=1"
+            action:
+              - "执行指令('ni give %player_name% 劣质铁锭')"
+              - "tempvar.set('奖励4',2)"
+          - weight: 10
+            condition:
+              - "%tempvar_info_奖励5%<=1"
+            action:
+              - "执行指令('ni give %player_name% 劣质铁锭')"
+              - "tempvar.set('奖励5',2)"
+          - weight: 10
+            condition:
+              - "%tempvar_info_奖励6%<=1"
+            action:
+              - "执行指令('ni give %player_name% 劣质铁锭')"
+              - "tempvar.set('奖励6',2)"
+          - weight: 10
+            condition:
+              - "%tempvar_info_奖励7%<=1"
+            action:
+              - "执行指令('ni give %player_name% 劣质铁锭')"
+              - "tempvar.set('奖励7',2)"
+          - weight: 10
+            condition:
+              - "%tempvar_info_奖励8%<=1"
+            action:
+              - "执行指令('ni give %player_name% 劣质铁锭')"
+              - "tempvar.set('奖励8',2)"
+          - weight: 10
+            condition:
+              - "%tempvar_info_奖励9%<=1"
+            action:
+              - "执行指令('ni give %player_name% 劣质铁锭')"
+              - "tempvar.set('奖励9',2)"
+          - weight: 10
+            condition:
+              - "%tempvar_info_奖励B%<=1"
+            action:
+              - "执行指令('ni give %player_name% 劣质铁锭')"
+              - "tempvar.set('奖励B',2)"
+          - weight: 10
+            condition:
+              - "%tempvar_info_奖励C%<=1"
+            action:
+              - "执行指令('ni give %player_name% 劣质铁锭')"
+              - "tempvar.set('奖励C',2)"
+          - weight: 10
+            condition:
+              - "%tempvar_info_奖励D%<=1"
+            action:
+              - "执行指令('ni give %player_name% 劣质铁锭')"
+              - "tempvar.set('奖励D',2)"
+          - weight: 10
+            condition:
+              - "%tempvar_info_奖励E%<=1"
+            action:
+              - "执行指令('ni give %player_name% 劣质铁锭')"
+              - "tempvar.set('奖励E',2)"
+          - weight: 10
+            condition:
+              - "%tempvar_info_奖励F%<=1"
+            action:
+              - "执行指令('ni give %player_name% 劣质铁锭')"
+              - "tempvar.set('奖励F',2)"
+          - weight: 10
+            condition:
+              - "%tempvar_info_奖励G%<=1"
+            action:
+              - "执行指令('ni give %player_name% 劣质铁锭')"
+              - "tempvar.set('奖励G',2)"
+          - weight: 10
+            condition:
+              - "%tempvar_info_奖励H%<=1"
+            action:
+              - "执行指令('ni give %player_name% 劣质铁锭')"
+              - "tempvar.set('奖励H',2)"
+          - weight: 10
+            condition:
+              - "%tempvar_info_奖励I%<=1"
+            action:
+              - "执行指令('ni give %player_name% 劣质铁锭')"
+              - "tempvar.set('奖励I',2)"
+  "奖励1":
+    char: "1"
+    display:
+      rules:
+        - condition:
+            - "%tempvar_info_奖励1%<=1"
+          item: ni 劣质铁锭 1
+          break: true
+        - condition:
+            - "%tempvar_info_奖励1%>=1"
+          material: RED_STAINED_GLASS_PANE
+          name: "§c已抽取奖励"
+      #中奖概率的写法自己自定义
+      desc:
+        - ""
+        - "§a中奖概率: 20%"
+  "奖励2":
+    char: "2"
+    display:
+      rules:
+        - condition:
+            - "%tempvar_info_奖励2%<=1"
+          item: ni 劣质铁锭 1
+          break: true
+        - condition:
+            - "%tempvar_info_奖励2%>=1"
+          material: RED_STAINED_GLASS_PANE
+          name: "§c已抽取奖励"
+  "奖励3":
+    char: "3"
+    display:
+      rules:
+        - condition:
+            - "%tempvar_info_奖励3%<=1"
+          item: ni 劣质铁锭 1
+          break: true
+        - condition:
+            - "%tempvar_info_奖励3%>=1"
+          material: RED_STAINED_GLASS_PANE
+          name: "§c已抽取奖励"
+  "奖励4":
+    char: "4"
+    display:
+      rules:
+        - condition:
+            - "%tempvar_info_奖励4%<=1"
+          item: ni 劣质铁锭 1
+          break: true
+        - condition:
+            - "%tempvar_info_奖励4%>=1"
+          material: RED_STAINED_GLASS_PANE
+          name: "§c已抽取奖励"
+  "奖励5":
+    char: "5"
+    display:
+      rules:
+        - condition:
+            - "%tempvar_info_奖励5%<=1"
+          item: ni 劣质铁锭 1
+          break: true
+        - condition:
+            - "%tempvar_info_奖励5%>=1"
+          material: RED_STAINED_GLASS_PANE
+          name: "§c已抽取奖励"
+  "奖励6":
+    char: "6"
+    display:
+      rules:
+        - condition:
+            - "%tempvar_info_奖励6%<=1"
+          item: ni 劣质铁锭 1
+          break: true
+        - condition:
+            - "%tempvar_info_奖励6%>=1"
+          material: RED_STAINED_GLASS_PANE
+          name: "§c已抽取奖励"
+  "奖励7":
+    char: "7"
+    display:
+      rules:
+        - condition:
+            - "%tempvar_info_奖励7%<=1"
+          item: ni 劣质铁锭 1
+          break: true
+        - condition:
+            - "%tempvar_info_奖励7%>=1"
+          material: RED_STAINED_GLASS_PANE
+          name: "§c已抽取奖励"
+  "奖励8":
+    char: "8"
+    display:
+      rules:
+        - condition:
+            - "%tempvar_info_奖励8%<=1"
+          item: ni 劣质铁锭 1
+          break: true
+        - condition:
+            - "%tempvar_info_奖励8%>=1"
+          material: RED_STAINED_GLASS_PANE
+          name: "§c已抽取奖励"
+  "奖励9":
+    char: "9"
+    display:
+      rules:
+        - condition:
+            - "%tempvar_info_奖励9%<=1"
+          item: ni 劣质铁锭 1
+          break: true
+        - condition:
+            - "%tempvar_info_奖励9%>=1"
+          material: RED_STAINED_GLASS_PANE
+          name: "§c已抽取奖励"
+  "奖励B":
+    char: "B"
+    display:
+      rules:
+        - condition:
+            - "%tempvar_info_奖励B%<=1"
+          item: ni 劣质铁锭 1
+          break: true
+        - condition:
+            - "%tempvar_info_奖励B%>=1"
+          material: RED_STAINED_GLASS_PANE
+          name: "§c已抽取奖励"
+  "奖励C":
+    char: "C"
+    display:
+      rules:
+        - condition:
+            - "%tempvar_info_奖励C%<=1"
+          item: ni 劣质铁锭 1
+          break: true
+        - condition:
+            - "%tempvar_info_奖励C%>=1"
+          material: RED_STAINED_GLASS_PANE
+          name: "§c已抽取奖励"
+  "奖励D":
+    char: "D"
+    display:
+      rules:
+        - condition:
+            - "%tempvar_info_奖励D%<=1"
+          item: ni 劣质铁锭 1
+          break: true
+        - condition:
+            - "%tempvar_info_奖励D%>=1"
+          material: RED_STAINED_GLASS_PANE
+          name: "§c已抽取奖励"
+  "奖励E":
+    char: "E"
+    display:
+      rules:
+        - condition:
+            - "%tempvar_info_奖励E%<=1"
+          item: ni 劣质铁锭 1
+          break: true
+        - condition:
+            - "%tempvar_info_奖励E%>=1"
+          material: RED_STAINED_GLASS_PANE
+          name: "§c已抽取奖励"
+  "奖励F":
+    char: "F"
+    display:
+      rules:
+        - condition:
+            - "%tempvar_info_奖励F%<=1"
+          item: ni 劣质铁锭 1
+          break: true
+        - condition:
+            - "%tempvar_info_奖励F%>=1"
+          material: RED_STAINED_GLASS_PANE
+          name: "§c已抽取奖励"
+  "奖励G":
+    char: "G"
+    display:
+      rules:
+        - condition:
+            - "%tempvar_info_奖励G%<=1"
+          item: ni 劣质铁锭 1
+          break: true
+        - condition:
+            - "%tempvar_info_奖励G%>=1"
+          material: RED_STAINED_GLASS_PANE
+          name: "§c已抽取奖励"
+  "奖励H":
+    char: "H"
+    display:
+      rules:
+        - condition:
+            - "%tempvar_info_奖励H%<=1"
+          item: ni 劣质铁锭 1
+          break: true
+        - condition:
+            - "%tempvar_info_奖励H%>=1"
+          material: RED_STAINED_GLASS_PANE
+          name: "§c已抽取奖励"
+  "奖励I":
+    char: "I"
+    display:
+      rules:
+        - condition:
+            - "%tempvar_info_奖励I%<=1"
+          item: ni 劣质铁锭 1
+          break: true
+        - condition:
+            - "%tempvar_info_奖励I%>=1"
+          material: RED_STAINED_GLASS_PANE
+          name: "§c已抽取奖励"

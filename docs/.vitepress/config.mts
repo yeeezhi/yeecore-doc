@@ -175,6 +175,14 @@ export default defineConfig({
                                     {text: '仿原神', link: '/wiki/plugins/CraftX/example/强化/仿原神/intro'}
                                 ]
                             },
+                            {
+                                text: '抽奖',
+                                collapsed: true,
+                                items: [
+                                    {text: '转盘抽奖', link: '/wiki/plugins/CraftX/example/抽奖/转盘抽奖/intro'},
+                                    {text: '宝塔抽奖', link: '/wiki/plugins/CraftX/example/抽奖/宝塔抽奖/intro'},
+                                ]
+                            },
                             {text: '黑市', link: '/wiki/plugins/CraftX/example/黑市/intro'},
                             {text: '月卡', link: '/wiki/plugins/CraftX/example/月卡/intro'},
                             {text: '许愿树', link: '/wiki/plugins/CraftX/example/许愿树/intro'},

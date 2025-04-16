@@ -1,0 +1,5 @@
+"抽奖层数":
+  name: "抽奖层数"
+  default: 1
+  max: 5
+  min: 1

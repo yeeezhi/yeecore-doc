@@ -1,0 +1,352 @@
+
+
+#该配置由 超级大魔王 制作 有需要定制请加+1176434518#
+
+entry:
+  "层数": "%variable_info_抽奖层数%"
+  "抽奖": "${取整(random(7-{层数})+1)}"
+  "掉下层数": "${取整({层数}-1)}"
+  "增加层数": "${取整({层数}+1)}"
+
+
+title: "&c宝塔抽奖"
+layout:
+  - "5RS     5"
+  - "4OPQ    4"
+  - "3LMNO   3"
+  - "2GHIJK  2"
+  - "1ABCDEF 1"
+  - "####+###-"
+function:
+  "抽奖按钮":
+    char: "+"
+    display:
+      material: ENCHANTMENT_TABLE
+      name: "抽奖按钮"
+      lore:
+        - '&f◈ 介绍:'
+        - "§b▪ &7欢迎来到宝塔抽奖"
+        - ''
+        - '§8➥ §f左键&a单抽'
+    rules:
+      - condition:
+          - "{left-click}"
+          - "points.look() >= 1000 else '{prefix}§7点券数量不满足'"
+        action:
+          - "points.take(1000)"
+          - "function('宝塔抽奖-{层数}层{抽奖}', 'condition')"
+  "介绍":
+    char: "-"
+    display:
+      material: BOOK
+      name: "抽奖按钮"
+      lore:
+        - '&f◈ 介绍:'
+        - "§b▪ &7绿色玻璃板亮起则表示当前层数"
+        - "§b▪ &7每次抽奖将在当前层数随机抽取奖品"
+        - "§b▪ &7抽到最右边物品时,则奖励晋升一层"
+        - "§b▪ &7抽到其他物品时,则掉落一层"
+        - "§b▪ &7抽取到最终奖品时,返回一层"
+  "1层1":
+    char: "A"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')" #防止玩家拿出来
+        action:
+          - "msg('{prefix}&7已是塔底,无处可落……但机缘未散,再试一次吧！1')"
+          - "variable.take('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+
+  "1层2":
+    char: "B"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "msg('{prefix}&7已是塔底,无处可落……但机缘未散,再试一次吧！2')"
+          - "variable.take('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+  "1层3":
+    char: "C"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "msg('{prefix}&7已是塔底,无处可落……但机缘未散,再试一次吧！3')"
+          - "variable.take('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+  "1层4":
+    char: "D"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "msg('{prefix}&7已是塔底,无处可落……但机缘未散,再试一次吧！4')"
+          - "variable.take('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+  "1层5":
+    char: "E"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "msg('{prefix}&7已是塔底,无处可落……但机缘未散,再试一次吧！5')"
+          - "variable.take('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+  "1层6":
+    char: "F"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "command('bc &7塔顶梵音回荡,天梯应召而现！%player_name%道心通明,已踏入{增加层数}层')"
+          - "variable.add('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+
+
+
+  "2层1":
+    char: "G"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "msg('{prefix}&7风云突变,足下阶梯轰然崩塌！少侠不慎跌落至{掉下层数}层')"
+          - "variable.take('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+  "2层2":
+    char: "H"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "msg('{prefix}&7风云突变,足下阶梯轰然崩塌！少侠不慎跌落至{掉下层数}层')"
+          - "variable.take('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+  "2层3":
+    char: "I"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "msg('{prefix}&7风云突变,足下阶梯轰然崩塌！少侠不慎跌落至{掉下层数}层')"
+          - "variable.take('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+  "2层4":
+    char: "J"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "msg('{prefix}&7风云突变,足下阶梯轰然崩塌！少侠不慎跌落至{掉下层数}层')"
+          - "variable.take('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+  "2层5":
+    char: "K"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "command('bc &7塔顶梵音回荡,天梯应召而现！%player_name%道心通明,已踏入{增加层数}层')"
+          - "variable.add('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+
+
+
+  "3层1":
+    char: "L"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "msg('{prefix}&7风云突变,足下阶梯轰然崩塌！少侠不慎跌落至{掉下层数}层')"
+          - "variable.take('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+  "3层2":
+    char: "M"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "msg('{prefix}&7风云突变,足下阶梯轰然崩塌！少侠不慎跌落至{掉下层数}层')"
+          - "variable.take('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+  "3层3":
+    char: "N"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "msg('{prefix}&7风云突变,足下阶梯轰然崩塌！少侠不慎跌落至{掉下层数}层')"
+          - "variable.take('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+  "3层4":
+    char: "O"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "command('bc &7塔顶梵音回荡,天梯应召而现！%player_name%道心通明,已踏入{增加层数}层')"
+          - "variable.add('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+
+
+
+
+
+  "4层1":
+    char: "P"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "msg('{prefix}&7风云突变,足下阶梯轰然崩塌！少侠不慎跌落至{掉下层数}层')"
+          - "variable.take('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+  "4层2":
+    char: "Q"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "msg('{prefix}&7风云突变,足下阶梯轰然崩塌！少侠不慎跌落至{掉下层数}层')"
+          - "variable.take('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+  "4层3":
+    char: "R"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "command('bc &7塔顶梵音回荡,天梯应召而现！%player_name%道心通明,已踏入{增加层数}层')"
+          - "variable.add('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+
+
+
+
+  "5层1":
+    char: "S"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "msg('{prefix}&7风云突变,足下阶梯轰然崩塌！少侠不慎跌落至{掉下层数}层')"
+          - "variable.take('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+  "5层2":
+    char: "T"
+    display:
+      item: "ni 测试物品 1"
+    rules:
+      - condition:
+          - "permission('AAA')"
+        action:
+          - "command('bc &c恭喜%player_name%登顶宝塔，参透轮回真谛！所有机缘重置，重返起点')"
+          - "variable.set('抽奖层数', 1)"
+          - "物品给予('ni','测试物品',1)"
+
+
+
+
+
+  "玻璃板":
+    char: "#"
+    display:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+      lore:
+        - "§f "
+  "玻璃板层数1":
+    char: "1"
+    display:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+      lore:
+        - "§f "
+      rules:
+        - condition:
+            - "%variable_info_抽奖层数% >= 1"
+          material: lime_STAINED_GLASS_PANE
+  "玻璃板层数2":
+    char: "2"
+    display:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+      lore:
+        - "§f "
+      rules:
+        - condition:
+            - "%variable_info_抽奖层数% >= 2"
+          material: lime_STAINED_GLASS_PANE
+  "玻璃板层数3":
+    char: "3"
+    display:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+      lore:
+        - "§f "
+      rules:
+        - condition:
+            - "%variable_info_抽奖层数% >= 3"
+          material: lime_STAINED_GLASS_PANE
+  "玻璃板层数4":
+    char: "4"
+    display:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+      lore:
+        - "§f "
+      rules:
+        - condition:
+            - "%variable_info_抽奖层数% >= 4"
+          material: lime_STAINED_GLASS_PANE
+  "玻璃板层数5":
+    char: "5"
+    display:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+      lore:
+        - "§f "
+      rules:
+        - condition:
+            - "%variable_info_抽奖层数% >= 5"
+          material: lime_STAINED_GLASS_PANE
