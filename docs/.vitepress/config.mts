@@ -164,15 +164,13 @@ export default defineConfig({
                         text: '优秀示例',
                         collapsed: true,
                         items: [
-                            {text: '货币', link: '/wiki/plugins/CraftX/example/货币/intro'},
-                            {text: '洗炼', link: '/wiki/plugins/CraftX/example/洗炼/intro'},
                             {
                                 text: '强化',
                                 collapsed: true,
                                 items: [
                                     {text: '基础值', link: '/wiki/plugins/CraftX/example/强化/基础值/intro'},
                                     {text: '附加值', link: '/wiki/plugins/CraftX/example/强化/附加值/intro'},
-                                    {text: '仿原神', link: '/wiki/plugins/CraftX/example/强化/仿原神/intro'}
+                                    {text: '仿原神', link: '/wiki/plugins/CraftX/example/强化/仿原神/intro'},
                                 ]
                             },
                             {
@@ -184,18 +182,36 @@ export default defineConfig({
                                     {text: '飞行棋抽奖', link: '/wiki/plugins/CraftX/example/抽奖/飞行棋抽奖/intro'},
                                 ]
                             },
-                            {text: '黑市', link: '/wiki/plugins/CraftX/example/黑市/intro'},
-                            {text: '月卡', link: '/wiki/plugins/CraftX/example/月卡/intro'},
-                            {text: '分解', link: '/wiki/plugins/CraftX/example/分解/intro'},
+                            {
+                                text: '商店',
+                                collapsed: true,
+                                items: [
+                                    {text: '黑市', link: '/wiki/plugins/CraftX/example/黑市/intro'},
+                                    {text: '点券商店', link: '/wiki/plugins/CraftX/example/点券商店/intro'}
+                                ]
+                            },
+                            {
+                                text: '礼包',
+                                collapsed: true,
+                                items: [
+                                    {text: '月卡', link: '/wiki/plugins/CraftX/example/礼包/月卡/intro'},
+                                    {text: '萌新豪礼', link: '/wiki/plugins/CraftX/example/礼包/萌新豪礼/intro'},
+                                    {text: '在线奖励', link: '/wiki/plugins/CraftX/example/礼包/在线奖励/intro'},
+                                    {text: '累充奖励', link: '/wiki/plugins/CraftX/example/礼包/累充奖励/intro'},
+                                    {
+                                        text: '新玩家签到冲级奖励',
+                                        link: '/wiki/plugins/CraftX/example/礼包/新玩家签到冲级奖励/intro'
+                                    },
+                                ]
+                            },
                             {text: '许愿树', link: '/wiki/plugins/CraftX/example/许愿树/intro'},
+                            {text: '货币', link: '/wiki/plugins/CraftX/example/货币/intro'},
+                            {text: '洗炼', link: '/wiki/plugins/CraftX/example/洗炼/intro'},
+                            {text: '分解', link: '/wiki/plugins/CraftX/example/分解/intro'},
                             {text: '刮刮乐', link: '/wiki/plugins/CraftX/example/刮刮乐/intro'},
                             {text: '物品鉴定', link: '/wiki/plugins/CraftX/example/物品鉴定/intro'},
                             {text: '玩家面板', link: '/wiki/plugins/CraftX/example/玩家面板/intro'},
-                            {text: '在线奖励', link: '/wiki/plugins/CraftX/example/在线奖励/intro'},
-                            {text: '累充奖励', link: '/wiki/plugins/CraftX/example/累充奖励/intro'},
-                            {text: '点券商店', link: '/wiki/plugins/CraftX/example/点券商店/intro'},
                             {text: '药剂合成', link: '/wiki/plugins/CraftX/example/药剂合成/intro'},
-                            {text: '萌新豪礼', link: '/wiki/plugins/CraftX/example/萌新豪礼/intro'},
                         ],
                     },
 

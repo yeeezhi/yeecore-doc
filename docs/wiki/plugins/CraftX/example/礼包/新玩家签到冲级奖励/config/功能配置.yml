@@ -1,0 +1,169 @@
+
+
+# 配置由用户 1322942653 提供
+
+
+title: "§3新玩家冲级奖励(限时)"
+layout:
+  - "#########"
+  - "#   m @ #"
+  - "# ABCDE #"
+  - "#       #"
+  - "#########"
+entry:
+  "当前等级": "%player_level%"
+  "加入时间": "%player_first_join_date%"
+
+
+  "当前时间": "%server_time_d/L/y%"
+  "每日在线时间(分钟)": "variable.get('今日在线')"
+  "萌新每日签到标记": "variable.get('萌新每日签到标记')"
+  "JoinY": "${数值解析('{加入时间}','num3')}"
+  "JoinM": "${数值解析('{加入时间}','num1')}"
+  "JoinD": "${数值解析('{加入时间}','num2')}"
+  "NowY": "${数值解析('{当前时间}','num3')}"
+  "NowM": "${数值解析('{当前时间}','num2')}"
+  "NowD": "${数值解析('{当前时间}','num1')}"
+  "FreshPeriod": "${365*({NowY}-2000-{JoinY})+({NowM}-{JoinM})*30+{NowD}-{JoinD}}"
+  "萌新冲级奖励标记": "variable.get('萌新冲级奖励标记')"
+function:
+  "玻璃板":
+    char: "#"
+    display:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+      lore:
+        - "§f "
+  "是否为新手玩家":
+
+    char: "m"
+    display:
+      material: PLAYER_HEAD
+      name: "§e回归奖励资格验证"
+      lore:
+        - "§f 点击查询自己加入时间 "
+        - " &d当前状态:&5${{FreshPeriod} <= 14 ? '§a萌新' : '§c老鸟'}"
+    condition:
+      - cooldown.check('是否为新手玩家', '{prefix}§7冷却剩余时间 §f{time}')
+    action:
+      - "msg('{prefix}&a你加入服务器的时间是:{加入时间}')"
+      - cooldown.set('是否为新手玩家', 30)
+
+  "萌新每日签到奖励":
+    char: "@"
+    display:
+      material: GOLDEN_APPLE
+      name: "&e萌新每日签到奖励"
+      #lore: "&e每日累计在线12小时即可领取"
+      rules:
+        - condition:
+
+            - "{FreshPeriod} > 14"
+          material: Dirt
+          name: "§a你已不在是萌新"
+          lore: "&a去探索更多的未知吧"
+        - condition:
+            - "{萌新每日签到标记}==1"
+            - "{FreshPeriod} <= 14"
+          material: STORAGE_MINECART
+          name: "§a可领取回归每日在线奖励"
+          lore: "&a可获得筋斗云"
+        - condition:
+            - "{萌新每日签到标记}!=1"
+            - "{FreshPeriod} <= 14"
+          material: MINECART
+          name: "§c今日回归在线奖励已领取"
+          lore: "&a已领取"
+    condition:
+      - "{萌新每日签到标记}==1"
+      - "{FreshPeriod} <= 14"
+    action:
+      - "variable.set('萌新每日签到标记',0)"
+      - "执行指令('mm i give %player_name% 211')"
+      #demand-rules:
+      #- condition:
+      #      - "{每日在线时间(分钟)}>=5"
+      #     - "{回归每日在线状态标记}==1"
+      #demand:
+      #  - "craftx 回归每日在线状态标记 1"
+  "萌新冲级奖励1":
+    char: "A"
+    display:
+      material: STORAGE_MINECART
+      name: "&e萌新冲级奖励(10级)"
+      lore:
+        - "&e达到指定等级可以获得奖励"
+        - "&e你的等级:{当前等级}"
+        - "&e请按顺序领取"
+      rules:
+        - condition:
+
+            - "{FreshPeriod} > 14"
+          material: Dirt
+          name: "§a你已不在是萌新"
+          lore: "&a去探索更多的未知吧"
+        - condition:
+            - "{当前等级}>=10"
+            - "{萌新冲级奖励标记}==1"
+            - "{FreshPeriod} <= 14"
+          material: STORAGE_MINECART
+          name: "§a可领取"
+          lore: "&a可获得筋斗云"
+        - condition:
+            - "{萌新冲级奖励标记}!=1"
+            - "{FreshPeriod} <= 14"
+          material: MINECART
+          name: "§c已领取"
+
+    condition:
+      - "{当前等级}>=10"
+      - "{萌新冲级奖励标记}==1"
+      - "{FreshPeriod} <= 14"
+    action:
+      - "variable.set('萌新冲级奖励标记',2)"
+      - "执行指令('mm i give %player_name% 211')"
+  "萌新冲级奖励2":
+    char: "B"
+    display:
+      material: STORAGE_MINECART
+      name: "&e萌新冲级奖励(20级)"
+      lore:
+        - "&e达到指定等级可以获得奖励"
+        - "&e你的等级:{当前等级}"
+        - "&e请按顺序领取"
+      rules:
+        - condition:
+
+            - "{FreshPeriod} > 14"
+          material: Dirt
+          name: "§a你已不在是萌新"
+          lore: "&a去探索更多的未知吧"
+        - condition:
+            - "{当前等级}>=20"
+            - "{萌新冲级奖励标记}==2"
+            - "{FreshPeriod} <= 14"
+          material: STORAGE_MINECART
+          name: "§a可领取"
+          lore: "&a可获得筋斗云"
+        - condition:
+            - "{萌新冲级奖励标记}!=2"
+            - "{FreshPeriod} <= 14"
+          material: MINECART
+          name: "§c已领取"
+
+    condition:
+      - "{当前等级}>=10"
+      - "{萌新冲级奖励标记}==1"
+      - "{FreshPeriod} <= 14"
+    action:
+      - "variable.set('萌新冲级奖励标记',3)"
+      - "执行指令('mm i give %player_name% 211')"
+     
+     
+
+     
+
+
+       
+  
+
