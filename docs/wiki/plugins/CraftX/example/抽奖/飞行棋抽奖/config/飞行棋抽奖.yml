@@ -1,0 +1,698 @@
+
+
+# 配置由用户 3012235075 提供
+
+
+
+title: "&c&n飞行棋抽奖"
+
+
+
+layout:
+  - "#########"
+  - "XABCDEFG#"
+  - "#H Q W I#"
+  - "#J  1  K#"
+  - "#LMNPOUZ#"
+  - "######R##"
+entry:
+  保底1: "绿玄晶" #创建一个保底变量用来随机传入下方- addItem('mm',"{保底}",1)
+  保底2: "蓝玄晶"
+  保底3: "紫玄晶"
+  保底4: "仙阳炎"
+  保底奖励: "{保底${random(4)+1}}"
+  #随机事件
+  事件1: "var add %player_name% 幸运值 10"
+  事件2: "eco give %player_name% 10000"
+  特殊事件: "${文本.权重随机('{事件1}', 50, '{事件2}', 50)}"
+  随机前进: "${random(1, 3)}"
+  随机幸运值: "${random(1, 3)}"
+  随机事件: "${random(0, 1)}" #这里指定随机事件是否触发
+function:
+  "玻璃板":
+    char: "#"
+    display:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+      lore:
+        - "&c当前保底进度:&e%variable_info_幸运值%"
+        - "&c当前总前进步数:&e%variable_info_前进步数%"
+        - "&c是否启动:&e%variable_info_是否启动%"
+        - ""
+  "x":
+    char: "X"
+    display:
+      material: PLAYER_HEAD
+      skull: "%player_name%"
+      name: "&c起始位置"
+      lore:
+        - "§b▪ &a您当前在起点"
+        - "§b▪ &a在右下角点击按钮开始前进"
+      rules:
+        - condition:
+            - "%variable_info_是否启动% > 0"
+          material: BARRIER
+          name: "&c您已经开始了本轮"
+          lore:
+            - "§b▪ &a尝试继续抽奖前进吧"
+            - "§b▪ &a在右下角点击按钮开始前进"
+  "1":
+    char: "1"
+    display:
+      material: ender_pearl
+      name: "&c重新开始"
+      lore:
+        - "§b▪ &a点击此处将清除本轮位置数据，重新开始"
+        - "§b▪ &a需要消耗金币"
+    condition:
+      - "%variable_info_是否启动% > 0 else '&7[&a抽奖系统&7] &f你还没有抽奖过，无法为你重置本轮'"
+    demand:
+      - "money 100"
+    action:
+      - sound('portal.travel')
+      - variable.set('是否启动', 0)
+      - variable.set('前进步数', 0)
+      - variable.set('特殊事件', 0)
+      - variable.set('A', 0)
+      - variable.set('B', 0)
+      - variable.set('C', 0)
+      - variable.set('D', 0)
+      - variable.set('E', 0)
+      - variable.set('F', 0)
+      - variable.set('G', 0)
+      - variable.set('H', 0)
+      - variable.set('I', 0)
+      - variable.set('J', 0)
+      - variable.set('K', 0)
+      - variable.set('L', 0)
+      - variable.set('M', 0)
+      - variable.set('N', 0)
+      - variable.set('O', 0)
+      - variable.set('P', 0)
+      - variable.set('U', 0)
+      - variable.set('Z', 0)
+  "Q":
+    char: "Q"
+    display:
+      material: CHEST
+      name: "&d保底奖励领取"
+      lore:
+        - "§b▪ &a您当前幸运值:&e%variable_info_幸运值%"
+        - "§b▪ &a领取保底将会清除&e100&b幸运值"
+        - "§b▪ &a保底奖励将会在四件大奖中随机获得一个"
+    condition:
+      - "%variable_info_幸运值% >= 100 else '&7[&a抽奖系统&7] &f您的幸运值不满足获取保底的要求'"
+    action:
+      - sound('firework.twinkle')
+      - variable.take('幸运值', 100)
+      - addItem('mm',"{保底奖励}",1)
+      - 执行指令('op:bc &7[&a抽奖通报&7] &f玩家 &e%player_name% &f刚刚在 &e飞行棋抽奖 &f中获得了一个 &a&n{保底奖励} &f保底奖励')
+  "w":
+    char: "W"
+    display:
+      material: MAP
+      name: "&a获奖记录"
+      lore:
+        - "§b▪ &a您当前获取过的奖励数量: &e%variable_info_领取记录% &a项"
+        - "§b▪ &a点击打开获奖记录界面"
+        - "§b▪ &a你可以在此查看您获得过哪些奖池内物品"
+    condition:
+      - "%variable_info_首次抽奖记录% > 0 else '&7[&a抽奖系统&7] &f你还没有抽奖过，无法为你提供抽奖记录查询'"
+    action:
+      - sound('note_pling')
+      - addItem('mm',"{保底奖励}",1)
+      - close()
+      - 消息('&7[&a抽奖系统&7] &f正在查询您的抽奖记录，请稍等........')
+      - delay(3000)
+      - 执行指令('op:cx open 抽奖记录查询 %player_name%')
+  "R":
+    char: "R"
+    display:
+      material: COMPASS
+      name: "&d开始抽奖"
+      lore:
+        - "§b▪ &a每次抽奖将随机前进&e1~3&a步"
+        - "§b▪ &a具体顺序您可以查看对应位置箭头"
+        - "§b▪ &a每次抽奖获得&e1~2&b幸运值"
+        - "§b▪ &a目前已经存在的特殊事件:"
+        - "§b▪ &e&n金币狂潮&7-&a额外获得&e1000金币"
+        - "§b▪ &b&n天选之子&7-&a额外获得&e10&b幸运值"
+    demand:
+      - "money 100"
+    action:
+      - variable.add('前进步数', {随机前进})
+      - variable.add('是否启动', 1)
+      - variable.add('幸运值', {随机幸运值})
+      - variable.add('特殊事件', {随机事件})
+      - sound('note_pling')
+    rules:
+      - condition:
+          - "%variable_info_首次抽奖记录% == 0"
+        action:
+          - variable.set('首次抽奖记录', 1)
+      - condition:
+          - "%variable_info_前进步数% > 18"
+        action:
+          - sound('portal.travel')
+          - variable.set('是否启动', 0)
+          - variable.set('前进步数', 0)
+          - variable.set('特殊事件', 0)
+          - variable.set('A', 0)
+          - variable.set('B', 0)
+          - variable.set('C', 0)
+          - variable.set('D', 0)
+          - variable.set('E', 0)
+          - variable.set('F', 0)
+          - variable.set('G', 0)
+          - variable.set('H', 0)
+          - variable.set('I', 0)
+          - variable.set('J', 0)
+          - variable.set('K', 0)
+          - variable.set('L', 0)
+          - variable.set('M', 0)
+          - variable.set('N', 0)
+          - variable.set('O', 0)
+          - variable.set('P', 0)
+          - variable.set('U', 0)
+          - variable.set('Z', 0)
+          - close()
+          - 消息('&7[&a抽奖系统&7] &f本轮已结束')
+  "A":
+    char: "A"
+    display:
+      rules:
+        - condition:
+            - "%variable_info_前进步数% >= 0"
+          material: CHEST
+          name: "&cA&e奖励物品"
+          lore:
+            - ""
+            - "§b▪ §a本轮获取次数:&e%variable_info_A%"
+            - "§b▪ &d存在特殊事件"
+        - condition:
+            - "%variable_info_前进步数% == 1 && %variable_info_A% == 0"
+          material: PLAYER_HEAD
+          skull: "%player_name%"
+          name: "&f%player_name%&7[&e努力前进版&7] &a&l→"
+          lore:
+            - "§b▪ &a点击领取该奖励"
+    rules:
+      - condition:
+          - "%variable_info_前进步数% == 1 && %variable_info_A% == 0"
+        action:
+          - variable.add('A', 1)
+          - variable.add('A获取记录', 1)
+          - variable.add('领取记录', 1)
+          - addItem('mm',"A",1)
+          - 执行指令('op:{特殊事件}')
+      - condition:
+          - "%variable_info_特殊事件% == 1"
+        action:
+          - variable.take('特殊事件', 1)
+          - 执行指令('op:{特殊事件}')
+  "B":
+    char: "B"
+    display:
+      rules:
+        - condition:
+            - "%variable_info_前进步数% >= 0"
+          material: CHEST
+          name: "&cB&e奖励物品"
+          lore:
+            - ""
+            - "§b▪ §a本轮获取次数:&e%variable_info_B%"
+        - condition:
+            - "%variable_info_前进步数% == 2 && %variable_info_B% == 0"
+          material: PLAYER_HEAD
+          skull: "%player_name%"
+          name: "&f%player_name%&7[&e拼搏奋进版&7] &a&l→"
+          lore:
+            - "§b▪ &a点击领取该奖励"
+    rules:
+      - condition:
+          - "%variable_info_前进步数% == 2 && %variable_info_B% == 0"
+        action:
+          - variable.add('B', 1)
+          - variable.add('领取记录', 1)
+          - variable.add('B获取记录', 1)
+          - addItem('mm',"B",1)
+          - variable.set('特殊事件', 0)
+  "C":
+    char: "C"
+    display:
+      rules:
+        - condition:
+            - "%variable_info_前进步数% >= 0"
+          material: CHEST
+          name: "&cC&e奖励物品"
+          lore:
+            - ""
+            - "§b▪ §a本轮获取次数:&e%variable_info_C%"
+        - condition:
+            - "%variable_info_前进步数% == 3 && %variable_info_C% == 0"
+          material: PLAYER_HEAD
+          skull: "%player_name%"
+          name: "&f%player_name%&7[&e勇往直前版&7] &a&l→"
+          lore:
+            - "§b▪ &a点击领取该奖励"
+    rules:
+      - condition:
+          - "%variable_info_前进步数% == 3 && %variable_info_C% == 0"
+        action:
+          - variable.add('C', 1)
+          - variable.add('领取记录', 1)
+          - variable.add('C获取记录', 1)
+          - addItem('mm',"C",1)
+          - variable.set('特殊事件', 0)
+  "D":
+    char: "D"
+    display:
+      rules:
+        - condition:
+            - "%variable_info_前进步数% >= 0"
+          material: CHEST
+          name: "&cD&e奖励物品"
+          lore:
+            - ""
+            - "§b▪ §a本轮获取次数:&e%variable_info_D%"
+        - condition:
+            - "%variable_info_前进步数% == 4 && %variable_info_D% == 0"
+          material: PLAYER_HEAD
+          skull: "%player_name%"
+          name: "&f%player_name%&7[&e坚持不懈版&7] &a&l→"
+          lore:
+            - "§b▪ &a点击领取该奖励"
+    rules:
+      - condition:
+          - "%variable_info_前进步数% == 4 && %variable_info_D% == 0"
+        action:
+          - variable.add('D', 1)
+          - variable.add('领取记录', 1)
+          - variable.add('D获取记录', 1)
+          - addItem('mm',"D",1)
+          - variable.set('特殊事件', 0)
+  "E":
+    char: "E"
+    display:
+      rules:
+        - condition:
+            - "%variable_info_前进步数% >= 0"
+          material: CHEST
+          name: "&cE&e奖励物品"
+          lore:
+            - ""
+            - "§b▪ §a本轮获取次数:&e%variable_info_E%"
+            - "§b▪ &d存在特殊事件"
+        - condition:
+            - "%variable_info_前进步数% == 5 && %variable_info_E% == 0"
+          material: PLAYER_HEAD
+          skull: "%player_name%"
+          name: "&f%player_name%&7[&e全力以赴版&7] &a&l→"
+          lore:
+            - "§b▪ &a点击领取该奖励"
+    rules:
+      - condition:
+          - "%variable_info_前进步数% == 5 && %variable_info_E% == 0"
+        action:
+          - variable.add('E', 1)
+          - variable.add('领取记录', 1)
+          - variable.add('E获取记录', 1)
+          - addItem('mm',"E",1)
+          - variable.set('特殊事件', 0)
+      - condition:
+          - "%variable_info_特殊事件% == 1"
+        action:
+          - variable.take('特殊事件', 1)
+          - 执行指令('op:{特殊事件}')
+  "F":
+    char: "F"
+    display:
+      rules:
+        - condition:
+            - "%variable_info_前进步数% >= 0"
+          material: CHEST
+          name: "&cF&e奖励物品"
+          lore:
+            - ""
+            - "§b▪ §a本轮获取次数:&e%variable_info_F%"
+        - condition:
+            - "%variable_info_前进步数% == 6 && %variable_info_F% == 0"
+          material: PLAYER_HEAD
+          skull: "%player_name%"
+          name: "&f%player_name%&7[&e砥砺前行版&7] &a&l→"
+          lore:
+            - "§b▪ &a点击领取该奖励"
+    rules:
+      - condition:
+          - "%variable_info_前进步数% == 6 && %variable_info_F% == 0"
+        action:
+          - variable.add('F', 1)
+          - variable.add('领取记录', 1)
+          - variable.add('F获取记录', 1)
+          - addItem('mm',"F",1)
+          - variable.set('特殊事件', 0)
+  "G":
+    char: "G"
+    display:
+      rules:
+        - condition:
+            - "%variable_info_前进步数% >= 0"
+          material: CHEST
+          name: "&cG&e奖励物品"
+          lore:
+            - ""
+            - "§b▪ §a本轮获取次数:&e%variable_info_G%"
+        - condition:
+            - "%variable_info_前进步数% == 7 && %variable_info_G% == 0"
+          material: PLAYER_HEAD
+          skull: "%player_name%"
+          name: "&f%player_name%&7[&e奋勇争先版&7] &a&l↓"
+          lore:
+            - "§b▪ &a点击领取该奖励"
+    rules:
+      - condition:
+          - "%variable_info_前进步数% == 7 && %variable_info_G% == 0"
+        action:
+          - variable.add('G', 1)
+          - variable.add('领取记录', 1)
+          - variable.add('G获取记录', 1)
+          - addItem('mm',"G",1)
+          - variable.set('特殊事件', 0)
+  "I":
+    char: "I"
+    display:
+      rules:
+        - condition:
+            - "%variable_info_前进步数% >= 0"
+          material: CHEST
+          name: "&cI&e奖励物品"
+          lore:
+            - ""
+            - "§b▪ §a本轮获取次数:&e%variable_info_I%"
+        - condition:
+            - "%variable_info_前进步数% == 8 && %variable_info_I% == 0"
+          material: PLAYER_HEAD
+          skull: "%player_name%"
+          name: "&f%player_name%&7[&e突破自我版&7] &a&l↓"
+          lore:
+            - "§b▪ &a点击领取该奖励"
+    rules:
+      - condition:
+          - "%variable_info_前进步数% == 8 && %variable_info_I% == 0"
+        action:
+          - variable.add('I', 1)
+          - variable.add('领取记录', 1)
+          - variable.add('I获取记录', 1)
+          - addItem('mm',"I",1)
+          - variable.set('特殊事件', 0)
+  "K":
+    char: "K"
+    display:
+      rules:
+        - condition:
+            - "%variable_info_前进步数% >= 0"
+          material: CHEST
+          name: "&cK&e奖励物品"
+          lore:
+            - ""
+            - "§b▪ §a本轮获取次数:&e%variable_info_K%"
+        - condition:
+            - "%variable_info_前进步数% == 9 && %variable_info_K% == 0"
+          material: PLAYER_HEAD
+          skull: "%player_name%"
+          name: "&f%player_name%&7[&e精益求精版&7] &a&l↓"
+          lore:
+            - "§b▪ &a点击领取该奖励"
+    rules:
+      - condition:
+          - "%variable_info_前进步数% == 9 && %variable_info_K% == 0"
+        action:
+          - variable.add('K', 1)
+          - variable.add('领取记录', 1)
+          - variable.add('K获取记录', 1)
+          - addItem('mm',"K",1)
+          - variable.set('特殊事件', 0)
+  "Z":
+    char: "Z"
+    display:
+      rules:
+        - condition:
+            - "%variable_info_前进步数% >= 0"
+          material: CHEST
+          name: "&cZ&e奖励物品"
+          lore:
+            - ""
+            - "§b▪ §a本轮获取次数:&e%variable_info_Z%"
+        - condition:
+            - "%variable_info_前进步数% == 10 && %variable_info_Z% == 0"
+          material: PLAYER_HEAD
+          skull: "%player_name%"
+          name: "&f%player_name%&7[&e梦想成真版&7] &a&l←"
+          lore:
+            - "§b▪ &a点击领取该奖励"
+    rules:
+      - condition:
+          - "%variable_info_前进步数% == 10 && %variable_info_Z% == 0"
+        action:
+          - variable.add('Z', 1)
+          - variable.add('领取记录', 1)
+          - variable.add('Z获取记录', 1)
+          - addItem('mm',"Z",1)
+          - variable.set('特殊事件', 0)
+  "U":
+    char: "U"
+    display:
+      rules:
+        - condition:
+            - "%variable_info_前进步数% >= 0"
+          material: CHEST
+          name: "&cU&e奖励物品"
+          lore:
+            - ""
+            - "§b▪ §a本轮获取次数:&e%variable_info_U%"
+        - condition:
+            - "%variable_info_前进步数% == 11 && %variable_info_U% == 0"
+          material: PLAYER_HEAD
+          skull: "%player_name%"
+          name: "&f%player_name%&7[&e扬帆远航版&7] &a&l←"
+          lore:
+            - "§b▪ &a点击领取该奖励"
+    rules:
+      - condition:
+          - "%variable_info_前进步数% == 11 && %variable_info_U% == 0"
+        action:
+          - variable.add('U', 1)
+          - variable.add('领取记录', 1)
+          - variable.add('U获取记录', 1)
+          - addItem('mm',"U",1)
+          - variable.set('特殊事件', 0)
+  "O":
+    char: "O"
+    display:
+      rules:
+        - condition:
+            - "%variable_info_前进步数% >= 0"
+          material: CHEST
+          name: "&cO&e奖励物品"
+          lore:
+            - ""
+            - "§b▪ §a本轮获取次数:&e%variable_info_O%"
+        - condition:
+            - "%variable_info_前进步数% == 12 && %variable_info_O% == 0"
+          material: PLAYER_HEAD
+          skull: "%player_name%"
+          name: "&f%player_name%&7[&e铸就传奇版&7] &a&l←"
+          lore:
+            - "§b▪ &a点击领取该奖励"
+    rules:
+      - condition:
+          - "%variable_info_前进步数% == 12 && %variable_info_O% == 0"
+        action:
+          - variable.add('O', 1)
+          - variable.add('领取记录', 1)
+          - variable.add('O获取记录', 1)
+          - addItem('mm',"O",1)
+          - variable.set('特殊事件', 0)
+  "P":
+    char: "P"
+    display:
+      rules:
+        - condition:
+            - "%variable_info_前进步数% >= 0"
+          material: CHEST
+          name: "&cP&e奖励物品"
+          lore:
+            - ""
+            - "§b▪ §a本轮获取次数:&e%variable_info_P%"
+        - condition:
+            - "%variable_info_前进步数% == 13 && %variable_info_P% == 0"
+          material: PLAYER_HEAD
+          skull: "%player_name%"
+          name: "&f%player_name%&7[&e荣耀启程版&7] &a&l←"
+          lore:
+            - "§b▪ &a点击领取该奖励"
+    rules:
+      - condition:
+          - "%variable_info_前进步数% == 13 && %variable_info_P% == 0"
+        action:
+          - variable.add('P', 1)
+          - variable.add('领取记录', 1)
+          - variable.add('P获取记录', 1)
+          - addItem('mm',"P",1)
+          - variable.set('特殊事件', 0)
+  "N":
+    char: "N"
+    display:
+      rules:
+        - condition:
+            - "%variable_info_前进步数% >= 0"
+          material: CHEST
+          name: "&cN&e奖励物品"
+          lore:
+            - ""
+            - "§b▪ §a本轮获取次数:&e%variable_info_N%"
+            - "§b▪ &d存在特殊事件"
+        - condition:
+            - "%variable_info_前进步数% == 14 && %variable_info_N% == 0"
+          material: PLAYER_HEAD
+          skull: "%player_name%"
+          name: "&f%player_name%&7[&e再创辉煌版&7] &a&l←"
+          lore:
+            - "§b▪ &a点击领取该奖励"
+    rules:
+      - condition:
+          - "%variable_info_前进步数% == 14 && %variable_info_N% == 0"
+        action:
+          - variable.add('N', 1)
+          - variable.add('领取记录', 1)
+          - variable.add('N获取记录', 1)
+          - addItem('mm',"N",1)
+          - variable.set('特殊事件', 0)
+      - condition:
+          - "%variable_info_特殊事件% == 1"
+        action:
+          - variable.take('特殊事件', 1)
+          - 执行指令('op:{特殊事件}')
+  "M":
+    char: "M"
+    display:
+      rules:
+        - condition:
+            - "%variable_info_前进步数% >= 0"
+          material: CHEST
+          name: "&cM&e奖励物品"
+          lore:
+            - ""
+            - "§b▪ §a本轮获取次数:&e%variable_info_M%"
+        - condition:
+            - "%variable_info_前进步数% == 15 && %variable_info_M% == 0"
+          material: PLAYER_HEAD
+          skull: "%player_name%"
+          name: "&f%player_name%&7[&e永不止步版&7] &a&l←"
+          lore:
+            - "§b▪ &a点击领取该奖励"
+    rules:
+      - condition:
+          - "%variable_info_前进步数% == 15 && %variable_info_M% == 0"
+        action:
+          - variable.add('M', 1)
+          - variable.add('领取记录', 1)
+          - variable.add('M获取记录', 1)
+          - addItem('mm',"M",1)
+          - variable.set('特殊事件', 0)
+  "L":
+    char: "L"
+    display:
+      rules:
+        - condition:
+            - "%variable_info_前进步数% >= 0"
+          material: CHEST
+          name: "&cL&e奖励物品"
+          lore:
+            - ""
+            - "§b▪ §a本轮获取次数:&e%variable_info_L%"
+        - condition:
+            - "%variable_info_前进步数% == 16 && %variable_info_L% == 0"
+          material: PLAYER_HEAD
+          skull: "%player_name%"
+          name: "&f%player_name%&7[&e追求卓越版&7] &a&l↑"
+          lore:
+            - "§b▪ &a点击领取该奖励"
+    rules:
+      - condition:
+          - "%variable_info_前进步数% == 16 && %variable_info_L% == 0"
+        action:
+          - variable.add('L', 1)
+          - variable.add('领取记录', 1)
+          - variable.add('L获取记录', 1)
+          - addItem('mm',"L",1)
+          - variable.set('特殊事件', 0)
+  "J":
+    char: "J"
+    display:
+      rules:
+        - condition:
+            - "%variable_info_前进步数% >= 0"
+          material: CHEST
+          name: "&cJ&e奖励物品"
+          lore:
+            - ""
+            - "§b▪ §a本轮获取次数:&e%variable_info_J%"
+        - condition:
+            - "%variable_info_前进步数% == 17 && %variable_info_J% == 0"
+          material: PLAYER_HEAD
+          skull: "%player_name%"
+          name: "&f%player_name%&7[&e超越极限版&7] &a&l↑"
+          lore:
+            - "§b▪ &a点击领取该奖励"
+    rules:
+      - condition:
+          - "%variable_info_前进步数% == 17 && %variable_info_J% == 0"
+        action:
+          - variable.add('J', 1)
+          - variable.add('领取记录', 1)
+          - variable.add('J获取记录', 1)
+          - addItem('mm',"J",1)
+          - variable.set('特殊事件', 0)
+  "H":
+    char: "H"
+    display:
+      rules:
+        - condition:
+            - "%variable_info_前进步数% >= 0"
+          material: CHEST
+          name: "&cH&e奖励物品"
+          lore:
+            - ""
+            - "§b▪ §a本轮获取次数:&e%variable_info_H%"
+        - condition:
+            - "%variable_info_前进步数% == 18 && %variable_info_H% == 0"
+          material: PLAYER_HEAD
+          skull: "%player_name%"
+          name: "&f%player_name%&7[&e锐意进取版&7] &a&l↑"
+          lore:
+            - "§b▪ &a点击领取该奖励"
+    rules:
+      - condition:
+          - "%variable_info_前进步数% == 18 && %variable_info_H% == 0"
+        action:
+          - variable.add('H', 1)
+          - variable.add('领取记录', 1)
+          - variable.add('H获取记录', 1)
+          - addItem('mm',"H",1)
+          - variable.set('特殊事件', 0)
+
+
+
+message:
+  money_false: "§7你没有足够的金币进行抽奖"
+  desc:
+    icon:
+      enough: §a✔§r
+      insufficient: §c✘§r
+    demand:
+      money: '§7[%icon%§7] §f金币 §r× %demand%'
+    state:
+      enough: "§3点击合成 §7[§a✔§7]"
+      insufficient: "§3点击合成 §7[§c✘§7]"
+      condition: "&7[&a抽奖系统&7] §c领取条件不足"

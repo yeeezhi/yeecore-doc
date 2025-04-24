@@ -181,10 +181,12 @@ export default defineConfig({
                                 items: [
                                     {text: '转盘抽奖', link: '/wiki/plugins/CraftX/example/抽奖/转盘抽奖/intro'},
                                     {text: '宝塔抽奖', link: '/wiki/plugins/CraftX/example/抽奖/宝塔抽奖/intro'},
+                                    {text: '飞行棋抽奖', link: '/wiki/plugins/CraftX/example/抽奖/飞行棋抽奖/intro'},
                                 ]
                             },
                             {text: '黑市', link: '/wiki/plugins/CraftX/example/黑市/intro'},
                             {text: '月卡', link: '/wiki/plugins/CraftX/example/月卡/intro'},
+                            {text: '分解', link: '/wiki/plugins/CraftX/example/分解/intro'},
                             {text: '许愿树', link: '/wiki/plugins/CraftX/example/许愿树/intro'},
                             {text: '刮刮乐', link: '/wiki/plugins/CraftX/example/刮刮乐/intro'},
                             {text: '物品鉴定', link: '/wiki/plugins/CraftX/example/物品鉴定/intro'},
@@ -196,6 +198,8 @@ export default defineConfig({
                             {text: '萌新豪礼', link: '/wiki/plugins/CraftX/example/萌新豪礼/intro'},
                         ],
                     },
+
+                    {text: '资源投稿', link: '/wiki/plugins/CraftX/contribution'},
                 ],
             },
 

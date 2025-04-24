@@ -1,0 +1,282 @@
+
+
+# 配置由用户 3012235075 提供
+
+
+
+title: "&c&n简易分解"
+
+layout:
+  - "#########"
+  - "#A##B##C#"
+  - "####R####"
+  - "#########"
+entry:
+  分解物品名: "&a绿玄晶"
+  分解奖励: "下阶装备核心"
+  分解物品名2: "&b蓝玄晶"
+  分解奖励2: "下阶装备核心"
+  分解一次分解类型: "name" #物品检测类型，你也可以指定
+  分解十次分解类型: "name"
+  分解一组分解类型: "name"
+  分解是否精确识别: "true"
+  vip: "%tempvar_info_vip%"
+  概率: "0.5" #只做演示
+    #概率增幅: |-
+    # if({vip}>=1){
+    #   return 2;
+    # }
+  # return 1;
+  v增幅: |-
+    if({vip}>=1){
+      return 1;
+    }
+    return 0;
+  分解一次增幅: "${{v增幅}+1}" #不需要vip增幅改成统一+0就行了
+  分解十次增幅: "${{v增幅}+10}"
+  分解一组增幅: "${{v增幅}+64}"
+on-open:
+  rules:
+    - condition:
+        - ""
+      action:
+        - 消息('&7[&a分解系统&7] &f您打开了分解界面')
+    - condition:
+        - "permission('vip') then '&7[&a合成系统&7] &f您是尊贵的&evip&f,&f您分解可以获得额外&a+1&f材料获取'"
+      action:
+        - "tempvar.set('vip',1)"
+on-close:
+  action:
+    - ""
+  rules:
+    - condition:
+        - ""
+      action:
+        - "tempvar.set('A是否放入',0)"
+        - "tempvar.set('B是否放入',0)"
+        - "tempvar.set('C是否放入',0)"
+function:
+  "玻璃板":
+    char: "#"
+    display:
+      material: BLACK_STAINED_GLASS_PANE
+      name: "&c调试变量"
+      lore:
+        - "&f分解槽位是否放入了材料：%tempvar_info_是否放入%"
+        - "&fA分解槽位是否放入了材料：%tempvar_info_A是否放入%"
+        - "&fB分解槽位是否放入了材料：%tempvar_info_B是否放入%"
+        - "&fC分解槽位是否放入了材料：%tempvar_info_C是否放入%"
+  "R":
+    char: "R"
+    display:
+      material: ANVIL
+      name: "§c开始分解"
+      lore:
+        - "&f放入需要分解的物品在指定分解次数槽位"
+        - "&f如果需要分解多次，请将材料放入其他槽位"
+        - "&f点击此处开始分解"
+    condition:
+      "%tempvar_info_A是否放入% != 0 || %tempvar_info_B是否放入% != 0 || %tempvar_info_C是否放入% != 0 else '&7[&a分解系统&7] &c你没有放入任何可分解的材料'"
+    rules:
+      - condition:
+          - 物品目标('chest', '10')
+          - "%tempvar_info_B是否放入% == 0 && %tempvar_info_C是否放入% == 0" #判断是否单次分解
+        action:
+          - "function('cx分解-H')"
+      - condition:
+          - 物品目标('chest', '13')
+          - "%tempvar_info_A是否放入% == 0 && %tempvar_info_C是否放入% == 0" #判断是否为十次分解
+        action:
+          - "function('cx分解-I')"
+      - condition:
+          - 物品目标('chest', '16')
+          - "%tempvar_info_A是否放入% == 0 && %tempvar_info_B是否放入% == 0" #判断是否为十次分解
+        action:
+          - "function('cx分解-J')"
+
+  "A":
+    char: "A"
+    display:
+      material: ORANGE_STAINED_GLASS_PANE
+      name: "§c分解一次"
+      lore:
+        - "&f放入需要分解的物品在此槽位，点击分解即可分解一次"
+        - "&f如果需要分解多次，请将材料放入其他槽位"
+    slot:
+      match:
+        - "match.name('&a绿玄晶',true)"
+        - "match.name('&b蓝玄晶',true)"
+        - "match.name('&d紫玄晶',true)"
+      condition:
+        - "%tempvar_info_B是否放入% == 0 && %tempvar_info_C是否放入% == 0 else '&7[&a分解系统&7] &f无法放置分解材料，因为你已经放置了其他在别的槽位'"
+      action:
+        - "sound('note_pling')"
+        - "tempvar.add('A是否放入',1)"
+      take:
+        action:
+          - "tempvar.set('A是否放入',0)"
+          - "sound('note_pling')"
+        condition:
+          - ""
+  "B":
+    char: "B"
+    display:
+      material: ORANGE_STAINED_GLASS_PANE
+      name: "§c分解&a10&c次"
+      lore:
+        - "&f分解操作详情:"
+        - "&f放入你需要分解的物品到上方任意槽位&7(&a必须要放入，用来指定你要分解什么物品&7)"
+        - "&f快速分解您&e背包&7/&a灵魂空间&7/&e离渊仓库&f的物品"
+        - "&f物品优先级：&a灵魂空间&7>&6离渊仓库&7>&e背包"
+    slot:
+      match:
+        - "match.name('&a绿玄晶',true)"
+        - "match.name('&b蓝玄晶',true)"
+        - "match.name('&d紫玄晶',true)"
+      condition:
+        - "%tempvar_info_A是否放入% == 0 && %tempvar_info_C是否放入% == 0 else '&7[&a分解系统&7] &f无法放置分解材料，因为你已经放置了其他在别的槽位'"
+      action:
+        - "sound('note_pling')"
+        - "tempvar.add('B是否放入',1)"
+      take:
+        action:
+          - "tempvar.set('B是否放入',0)"
+          - "sound('note_pling')"
+        condition:
+          - ""
+  "C":
+    char: "C"
+    display:
+      material: ORANGE_STAINED_GLASS_PANE
+      name: "§c分解&a64&c次"
+      lore:
+        - "&f分解操作详情:"
+        - "&f放入你需要分解的物品到上方任意槽位&7(&a必须要放入，用来指定你要分解什么物品&7)"
+        - "&f点击铁砧快速分解您&e背包&7/&a灵魂空间&7/&e离渊仓库&f的物品"
+        - "&dVIP&f可以额外获得&a+1&7(自定义)&f分解物品增幅"
+        - "&f物品优先级：&a灵魂空间&7>&6离渊仓库&7>&e背包"
+    slot:
+      match:
+        - "match.name('&a绿玄晶',true)"
+        - "match.name('&b蓝玄晶',true)"
+        - "match.name('&d紫玄晶',true)"
+      condition:
+        - "%tempvar_info_A是否放入% == 0 && %tempvar_info_B是否放入% == 0 else '&7[&a分解系统&7] &f无法放置分解材料，因为你已经放置了其他在别的槽位'"
+      action:
+        - "sound('note_pling')"
+        - "tempvar.add('C是否放入',1)"
+      take:
+        action:
+          - "tempvar.set('C是否放入',0)"
+          - "sound('note_pling')"
+        condition:
+          - ""
+
+
+
+
+
+
+
+
+
+
+  "H":
+    char: "H"
+    display:
+      material:
+      name: "§c单次分解"
+      lore:
+        - "&f您可以复制粘贴此槽位用来写自己需要的分解条件"
+    rules:
+      - condition:
+          - 物品目标('chest', '10')
+          - "match.{分解一次分解类型}('{分解物品名}',{分解是否精确识别})" #示例匹配完整物品名，如果需要更多可以继续加规则，继续增加变量即可
+          - "%tempvar_info_B是否放入% == 0 && %tempvar_info_C是否放入% == 0" #判断是否单次分解
+        action:
+          - 物品目标('chest', '10')
+          - 扣除数量(1)
+          - addItem('mm','{分解奖励}',{分解一次增幅})
+          - 消息('&7[&a分解系统&7] &f分解完成')
+          - "tempvar.set('A是否放入',0)"
+        break: true
+      #比如我想单次分解的物品还有一个蓝玄晶，就现在最开始变量增加这两个 {任意你想要物品变量}，    {任意你想要物品库id变量} 即可
+      #这样或许能够方便你修改？或许
+      - condition:
+          - 物品目标('chest', '10')
+          - "match.{分解一次分解类型}('{分解物品名2}',{分解是否精确识别})" #示例匹配完整物品名，如果需要更多可以继续加规则，继续增加变量即可
+          - "%tempvar_info_B是否放入% == 0 && %tempvar_info_C是否放入% == 0" #判断是否单次分解
+        action:
+          - 物品目标('chest', '10')
+          - 扣除数量(1)
+          - addItem('mm','{分解奖励2}',{分解一次增幅})
+          - 消息('&7[&a分解系统&7] &f分解完成')
+          - "tempvar.set('A是否放入',0)"
+        break: true
+
+  "I":
+    char: "I"
+    display:
+      material:
+      name: "§c十次分解"
+      lore:
+        - "&f您可以复制粘贴此槽位用来写自己需要的分解条件"
+    rules:
+      - condition:
+          - 物品目标('chest', '13')
+          - "match.{分解十次分解类型}('{分解物品名}',{分解是否精确识别})"
+          - 物品统计.仓库('{分解十次分解类型}','{分解物品名}')>=10 else '&7[&a分解系统&7] §f您没有这么多可以分解的材料' #示例匹配完整物品名，需要继续加往后面加条件和要求即可
+        action:
+          - addItem('mm','{分解奖励}',{分解十次增幅})
+          - 物品扣除.仓库('{分解十次分解类型}','{分解物品名}',10,{分解是否精确识别})
+          - 消息('&7[&a分解系统&7] &f分解完成')
+        break: true
+      - condition:
+          - 物品目标('chest', '13')
+          - "match.{分解十次分解类型}('{分解物品名2}',{分解是否精确识别})"
+          - 物品统计.仓库('{分解十次分解类型}','{分解物品名2}')>=10 else '&7[&a分解系统&7] §f您没有这么多可以分解的材料' #示例匹配完整物品名，需要继续加往后面加条件和要求即可
+        action:
+          - addItem('mm','{分解奖励2}',{分解十次增幅})
+          - 物品扣除.仓库('{分解十次分解类型}','{分解物品名2}',10,{分解是否精确识别})
+          - 消息('&7[&a分解系统&7] &f分解完成')
+        break: true
+  "J":
+    char: "J"
+    display:
+      material:
+      name: "§c一组分解"
+      lore:
+        - "&f您可以复制粘贴此槽位用来写自己需要的分解条件"
+    rules:
+      - condition:
+          - 物品目标('chest', '16')
+          - "match.{分解一组分解类型}('{分解物品名}',{分解是否精确识别})"
+          - 物品统计.仓库('{分解一组分解类型}','{分解物品名}')>=64 else '&7[&a分解系统&7] §f您没有这么多可以分解的材料' #示例匹配完整物品名，需要继续加往后面加条件和要求即可
+        action:
+          - addItem('mm','{分解奖励}',{分解一组增幅})
+          - 物品扣除.仓库('{分解一组分解类型}','{分解物品名}',64,{分解是否精确识别})
+          - 消息('&7[&a分解系统&7] &f分解完成')
+        break: true
+      - condition:
+          - 物品目标('chest', '16')
+          - "match.{分解一组分解类型}('{分解物品名2}',{分解是否精确识别})"
+          - 物品统计.仓库('{分解一组分解类型}','{分解物品名2}')>=64 else '&7[&a分解系统&7] §f您没有这么多可以分解的材料' #示例匹配完整物品名，需要继续加往后面加条件和要求即可
+        action:
+          - addItem('mm','{分解奖励2}',{分解一组增幅})
+          - 物品扣除.仓库('{分解一组分解类型}','{分解物品名2}',64,{分解是否精确识别})
+          - 消息('&7[&a分解系统&7] &f分解完成')
+        break: true
+
+
+message:
+  slot_match_false: "§c此物品无法分解"
+  money_false: "§7你没有足够的金币分解"
+  desc:
+    icon:
+      enough: §a✔§r
+      insufficient: §c✘§r
+    demand:
+      item: '§7[%icon%§7] §f%name% §r× %demand%'
+      money: '§7[%icon%§7] §f金币 §r× %demand%'
+      points: '§7[%icon%§7] §f点券 §r× %demand%'
+      currency: '§7[%icon%§7] §f%name% §r× %demand%'

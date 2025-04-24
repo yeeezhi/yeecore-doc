@@ -1,0 +1,200 @@
+
+
+# 配置由用户 3012235075 提供
+
+
+title: "&c&n抽奖记录查询"
+
+
+
+layout:
+  - "####X####"
+  - "#ABCDEFG#"
+  - "#HIJKLMN#"
+  - "#POUZ   #"
+  - "#########"
+entry:
+  A物品获取记录: "%variable_info_A获取记录%"
+  B物品获取记录: "%variable_info_B获取记录%"
+  C物品获取记录: "%variable_info_C获取记录%"
+  D物品获取记录: "%variable_info_D获取记录%"
+  E物品获取记录: "%variable_info_E获取记录%"
+  F物品获取记录: "%variable_info_F获取记录%"
+  G物品获取记录: "%variable_info_G获取记录%"
+  H物品获取记录: "%variable_info_H获取记录%"
+  I物品获取记录: "%variable_info_I获取记录%"
+  J物品获取记录: "%variable_info_J获取记录%"
+  K物品获取记录: "%variable_info_K获取记录%"
+  L物品获取记录: "%variable_info_L获取记录%"
+  M物品获取记录: "%variable_info_M获取记录%"
+  N物品获取记录: "%variable_info_N获取记录%"
+  O物品获取记录: "%variable_info_O获取记录%"
+  P物品获取记录: "%variable_info_P获取记录%"
+  U物品获取记录: "%variable_info_U获取记录%"
+  Z物品获取记录: "%variable_info_Z获取记录%"
+function:
+  "玻璃板":
+    char: "#"
+    display:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+      lore:
+        - "&c当前保底进度:&e%variable_info_幸运值%"
+        - "&c当前总前进步数:&e%variable_info_前进步数%"
+        - "&c是否启动:&e%variable_info_是否启动%"
+        - ""
+  "x":
+    char: "X"
+    display:
+      material: PLAYER_HEAD
+      skull: "%player_name%"
+      name: "&a%player_name%"
+      lore:
+        - "§b▪ &a下方是您奖池物品您的获取次数"
+        - "§b▪ &a如果没有获取到对应物品不会显示"
+  "A":
+    char: "A"
+    display:
+      item: "mm A {A物品获取记录}"
+      reward: false
+      desc:
+        - ""
+        - "§a您此物品获取了:&e{A物品获取记录} &a次"
+  "B":
+    char: "B"
+    display:
+      item: "mm B {B物品获取记录}"
+      reward: false
+      desc:
+        - ""
+        - "§a您此物品获取了:&e{B物品获取记录} &a次"
+  "C":
+    char: "C"
+    display:
+      item: "mm C {C物品获取记录}"
+      reward: false
+      desc:
+        - ""
+        - "§a您此物品获取了:&e{C物品获取记录} &a次"
+  "D":
+    char: "D"
+    display:
+      item: "mm D {D物品获取记录}"
+      reward: false
+      desc:
+        - ""
+        - "§a您此物品获取了:&e{D物品获取记录} &a次"
+  "E":
+    char: "E"
+    display:
+      item: "mm E {E物品获取记录}"
+      reward: false
+      desc:
+        - ""
+        - "§a您此物品获取了:&e{E物品获取记录} &a次"
+  "F":
+    char: "F"
+    display:
+      item: "mm F {F物品获取记录}"
+      reward: false
+      desc:
+        - ""
+        - "§a您此物品获取了:&e{F物品获取记录} &a次"
+  "G":
+    char: "G"
+    display:
+      item: "mm G {G物品获取记录}"
+      reward: false
+      desc:
+        - ""
+        - "§a您此物品获取了:&e{G物品获取记录} &a次"
+  "H":
+    char: "H"
+    display:
+      item: "mm H {H物品获取记录}"
+      reward: false
+      desc:
+        - ""
+        - "§a您此物品获取了:&e{H物品获取记录} &a次"
+  "I":
+    char: "I"
+    display:
+      item: "mm I {I物品获取记录}"
+      reward: false
+      desc:
+        - ""
+        - "§a您此物品获取了:&e{I物品获取记录} &a次"
+  "J":
+    char: "J"
+    display:
+      item: "mm J {J物品获取记录}"
+      reward: false
+      desc:
+        - ""
+        - "§a您此物品获取了:&e{J物品获取记录} &a次"
+  "K":
+    char: "K"
+    display:
+      item: "mm K {K物品获取记录}"
+      reward: false
+      desc:
+        - ""
+        - "§a您此物品获取了:&e{K物品获取记录} &a次"
+  "L":
+    char: "L"
+    display:
+      item: "mm L {L物品获取记录}"
+      reward: false
+      desc:
+        - ""
+        - "§a您此物品获取了:&e{L物品获取记录} &a次"
+  "M":
+    char: "M"
+    display:
+      item: "mm M {M物品获取记录}"
+      reward: false
+      desc:
+        - ""
+        - "§a您此物品获取了:&e{M物品获取记录} &a次"
+  "N":
+    char: "N"
+    display:
+      item: "mm N {N物品获取记录}"
+      reward: false
+      desc:
+        - ""
+        - "§a您此物品获取了:&e{N物品获取记录} &a次"
+  "O":
+    char: "O"
+    display:
+      item: "mm O {O物品获取记录}"
+      reward: false
+      desc:
+        - ""
+        - "§a您此物品获取了:&e{O物品获取记录} &a次"
+  "P":
+    char: "P"
+    display:
+      item: "mm P {P物品获取记录}"
+      reward: false
+      desc:
+        - ""
+        - "§a您此物品获取了:&e{P物品获取记录} &a次"
+  "U":
+    char: "U"
+    display:
+      item: "mm U {U物品获取记录}"
+      reward: false
+      desc:
+        - ""
+        - "§a您此物品获取了:&e{U物品获取记录} &a次"
+  "Z":
+    char: "Z"
+    display:
+      item: "mm Z {Z物品获取记录}"
+      reward: false
+      desc:
+        - ""
+        - "§a您此物品获取了:&e{Z物品获取记录} &a次"
+
+

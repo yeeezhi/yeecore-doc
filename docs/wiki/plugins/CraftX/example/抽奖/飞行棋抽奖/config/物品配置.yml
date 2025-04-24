@@ -1,0 +1,268 @@
+
+A:
+  Id: 399
+  Display: '&a测试道具A'
+  Lore:
+    - '&7类别 §7➥ &a绿宝石'
+    - '&7来源 §7➥ &c兑换 &7评级 §7➥ &d至臻'
+    - ''
+    - '&7镶嵌后增加 §7➥'
+    - '§f生命力&a+300'
+    - '  '
+  Options:
+    Unbreakable: true
+    HideFlags: true
+B:
+  Id: 268
+  Display: '&b测试道具B'
+  Lore:
+    - '&7类别 §7➥ &b魔法符文'
+    - '&7来源 §7➥ &e神秘遗迹的隐秘房间发现 &7评级 §7➥ &d珍稀'
+    - ''
+    - '&7镶嵌后增加 §7➥'
+    - '§f魔法伤害&a+60'
+    - '§f施法距离增加&a+10%'
+    - '  '
+  Options:
+    Unbreakable: true
+    HideFlags: true
+
+C:
+  Id: 399
+  Display: '&c测试道具C'
+  Lore:
+    - '&7类别 §7➥ &c力量护符'
+    - '&7来源 §7➥ &c击败强力野兽掉落 &7评级 §7➥ &d史诗'
+    - ''
+    - '&7镶嵌后增加 §7➥'
+    - '§f近战攻击力&a+80'
+    - '§f攻击时有几率触发力量爆发'
+    - '  '
+  Options:
+    Unbreakable: true
+    HideFlags: true
+
+D:
+  Id: 264
+  Display: '&d测试道具D'
+  Lore:
+    - '&7类别 §7➥ &d守护镜片'
+    - '&7来源 §7➥ &d完成守护任务奖励 &7评级 §7➥ &d坚固'
+    - ''
+    - '&7镶嵌后增加 §7➥'
+    - '§f远程防御力&a+50'
+    - '§f受到远程攻击时有几率反弹伤害'
+    - '  '
+  Options:
+    Unbreakable: true
+    HideFlags: true
+
+E:
+  Id: 268
+  Display: '&e测试道具E'
+  Lore:
+    - '&7类别 §7➥ &e敏捷之羽'
+    - '&7来源 §7➥ &a在飞翔之谷中拾取 &7评级 §7➥ &d灵动'
+    - ''
+    - '&7镶嵌后增加 §7➥'
+    - '§f攻击速度&a+15%'
+    - '§f移动时几率躲避敌人攻击'
+    - '  '
+  Options:
+    Unbreakable: true
+    HideFlags: true
+
+F:
+  Id: 399
+  Display: '&f测试道具F'
+  Lore:
+    - '&7类别 §7➥ &f智慧之书'
+    - '&7来源 §7➥ &f解开智慧谜题的最终奖励 &7评级 §7➥ &d博学'
+    - ''
+    - '&7镶嵌后增加 §7➥'
+    - '§f智力&a+70'
+    - '§f技能学习速度加快&a+12%'
+    - '  '
+  Options:
+    Unbreakable: true
+    HideFlags: true
+
+G:
+  Id: 264
+  Display: '&9测试道具G'
+  Lore:
+    - '&7类别 §7➥ &9冰霜结晶'
+    - '&7来源 §7➥ &9探索冰寒洞穴深处获得 &7评级 §7➥ &d寒冷'
+    - ''
+    - '&7镶嵌后增加 §7➥'
+    - '§f冰霜伤害&a+70'
+    - '§f攻击有几率降低敌人移动速度'
+    - '  '
+  Options:
+    Unbreakable: true
+    HideFlags: true
+
+H:
+  Id: 268
+  Display: '&6测试道具H'
+  Lore:
+    - '&7类别 §7➥ &6火焰护腕'
+    - '&7来源 §7➥ &6在火山口附近找到 &7评级 §7➥ &d炽热'
+    - ''
+    - '&7镶嵌后增加 §7➥'
+    - '§f火焰伤害&a+80'
+    - '§f攻击有几率点燃敌人'
+    - '  '
+  Options:
+    Unbreakable: true
+    HideFlags: true
+
+I:
+  Id: 399
+  Display: '&5测试道具I'
+  Lore:
+    - '&7类别 §7➥ &5生命之种'
+    - '&7来源 §7➥ &5在生命之森的圣地中发现 &7评级 §7➥ &d生机'
+    - ''
+    - '&7镶嵌后增加 §7➥'
+    - '§f最大生命值&a+400'
+    - '§f生命恢复速度加快&a+15%'
+    - '  '
+  Options:
+    Unbreakable: true
+    HideFlags: true
+
+J:
+  Id: 264
+  Display: '&4测试道具J'
+  Lore:
+    - '&7类别 §7➥ &4暗影手套'
+    - '&7来源 §7➥ &4击败暗影盗贼掉落 &7评级 §7➥ &d隐秘'
+    - ''
+    - '&7镶嵌后增加 §7➥'
+    - '§f暗影伤害&a+60'
+    - '§f在暗处时攻击力提升'
+    - '  '
+  Options:
+    Unbreakable: true
+    HideFlags: true
+
+K:
+  Id: 268
+  Display: '&3测试道具K'
+  Lore:
+    - '&7类别 §7➥ &3雷电之戒'
+    - '&7来源 §7➥ &3在雷电交加的山顶获得 &7评级 §7➥ &d轰鸣'
+    - ''
+    - '&7镶嵌后增加 §7➥'
+    - '§f雷电伤害&a+70'
+    - '§f攻击有几率触发雷电连锁'
+    - '  '
+  Options:
+    Unbreakable: true
+    HideFlags: true
+
+L:
+  Id: 399
+  Display: '&2测试道具L'
+  Lore:
+    - '&7类别 §7➥ &2神圣勋章'
+    - '&7来源 §7➥ &2完成神圣试炼奖励 &7评级 §7➥ &d圣洁'
+    - ''
+    - '&7镶嵌后增加 §7➥'
+    - '§f对邪恶生物伤害&a+90'
+    - '§f受到邪恶攻击时有几率恢复生命'
+    - '  '
+  Options:
+    Unbreakable: true
+    HideFlags: true
+
+M:
+  Id: 264
+  Display: '&1测试道具M'
+  Lore:
+    - '&7类别 §7➥ &1时空碎片'
+    - '&7来源 §7➥ &1探索时空裂缝得到 &7评级 §7➥ &d神秘'
+    - ''
+    - '&7镶嵌后增加 §7➥'
+    - '§f时间魔法效果增强&a+10%'
+    - '§f有几率重置技能冷却时间'
+    - '  '
+  Options:
+    Unbreakable: true
+    HideFlags: true
+
+N:
+  Id: 268
+  Display: '&0测试道具N'
+  Lore:
+    - '&7类别 §7➥ &0星辰之石'
+    - '&7来源 §7➥ &0在星空祭坛上找到 &7评级 §7➥ &d璀璨'
+    - ''
+    - '&7镶嵌后增加 §7➥'
+    - '§f魔法暴击率&a+12%'
+    - '§f夜晚时所有属性提升'
+    - '  '
+  Options:
+    Unbreakable: true
+    HideFlags: true
+
+O:
+  Id: 399
+  Display: '&d测试道具O'
+  Lore:
+    - '&7类别 §7➥ &d治愈宝石'
+    - '&7来源 §7➥ &d在治愈之泉旁边发现 &7评级 §7➥ &d温和'
+    - ''
+    - '&7镶嵌后增加 §7➥'
+    - '§f治疗技能效果&a+20%'
+    - '§f受到伤害时有几率自动恢复生命'
+    - '  '
+  Options:
+    Unbreakable: true
+    HideFlags: true
+
+P:
+  Id: 264
+  Display: '&c测试道具P'
+  Lore:
+    - '&7类别 §7➥ &c破坏之剑碎片'
+    - '&7来源 §7➥ &c在古老战场遗址挖掘到 &7评级 §7➥ &d残缺'
+    - ''
+    - '&7镶嵌后增加 §7➥'
+    - '§f物理伤害&a+70'
+    - '§f攻击有几率无视敌人防御'
+    - '  '
+  Options:
+    Unbreakable: true
+    HideFlags: true
+
+U:
+  Id: 268
+  Display: '&e测试道具U'
+  Lore:
+    - '&7类别 §7➥ &e祝福项链'
+    - '&7来源 §7➥ &e参加祝福仪式奖励 &7评级 §7➥ &d幸运'
+    - ''
+    - '&7镶嵌后增加 §7➥'
+    - '§f所有属性&a+20'
+    - '§f有几率避免一次负面状态'
+    - '  '
+  Options:
+    Unbreakable: true
+    HideFlags: true
+
+Z:
+  Id: 399
+  Display: '&a测试道具Z'
+  Lore:
+    - '&7类别 §7➥ &a希望之冠'
+    - '&7来源 §7➥ &a在希望之巅的宝箱中获得 &7评级 §7➥ &d荣耀'
+    - ''
+    - '&7镶嵌后增加 §7➥'
+    - '§f最大生命值&a+500'
+    - '§f在濒死状态时攻击力大幅提升'
+    - '  '
+  Options:
+    Unbreakable: true
+    HideFlags: true
