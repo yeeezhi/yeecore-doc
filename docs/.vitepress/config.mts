@@ -220,6 +220,14 @@ export default defineConfig({
             },
 
             {
+                text: 'Trigrex',
+                collapsed: false,
+                link: '/wiki/plugins/Trigrex/intro',
+                items: [
+                    {text: '触发器', link: '/wiki/plugins/Trigrex/trigger'},
+                ],
+            },
+            {
                 text: '百宝阁',
                 collapsed: false,
                 items: [

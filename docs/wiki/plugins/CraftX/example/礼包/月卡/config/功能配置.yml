@@ -25,11 +25,11 @@ function:
         - "§7当前状态: {当前状态}"
     # 判断冷却
     condition:
-      - "变量模块.get('月卡') > 0 else '{prefix}§7月卡领取次数已用完，续购即可继续领取丰厚奖励！'"
-      - "变量模块.get('月卡冷却') == 0 else '{prefix}§7今日的月卡奖励已领取，明天也别忘了来领取哦！'"
+      - "variable.get('月卡') > 0 else '{prefix}§7月卡领取次数已用完，续购即可继续领取丰厚奖励！'"
+      - "variable.get('月卡冷却') == 0 else '{prefix}§7今日的月卡奖励已领取，明天也别忘了来领取哦！'"
     # 设置冷却
     action:
-      - "变量模块.set('月卡冷却',1)"
+      - "variable.set('月卡冷却',1)"
       - "bc('{preifx}§a尊贵的月卡玩家 §e%player_name% §a领取了今日月卡')"
       ###下面配置你的奖励
       - "command('points give %player_name% 300')"

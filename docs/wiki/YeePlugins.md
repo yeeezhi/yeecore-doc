@@ -47,25 +47,25 @@ cloud-plugins:
 
 以下插件已支持云端加载, 适配版本: 1.9-1.21
 
-| 插件名           | 状态   |
-|---------------|------|
-| CraftX        | `内测` |
-| YeeIntensify  | 正常   |
-| YeeForge      | 正常   |
-| YeeGem        | 内测   |
-| YeeTalent     | 正常   |
-| YeeJewelry    | 正常   |
-| YeeRank       | 正常   |
-| YeeHuya       | 正常   |
-| YeeLive       | 正常   |
-| YeeGuide      | 正常   |
-| YeeCrate      | 正常   |
-| YeeTask       | 正常   |
-| YeeBattlePass | 正常   |
-| ScratchCard   | 正常   |
-| SpaceRingPlus | 正常   |
-| SpaceRingItem | 正常   |
-| SpaceRingShop | 正常   |
-| SpaceGoldmine | 正常   |
+| 插件名           | 状态 |
+|---------------|----|
+| CraftX        | 正常 |
+| YeeIntensify  | 正常 |
+| YeeForge      | 正常 |
+| YeeGem        | 正常 |
+| YeeTalent     | 正常 |
+| YeeJewelry    | 正常 |
+| YeeRank       | 正常 |
+| YeeHuya       | 正常 |
+| YeeLive       | 正常 |
+| YeeGuide      | 正常 |
+| YeeCrate      | 正常 |
+| YeeTask       | 正常 |
+| YeeBattlePass | 正常 |
+| ScratchCard   | 正常 |
+| SpaceRingPlus | 正常 |
+| SpaceRingItem | 正常 |
+| SpaceRingShop | 正常 |
+| SpaceGoldmine | 正常 |
 
 如果您在使用过程中遇到问题，请及时联系售后群获取帮助。
