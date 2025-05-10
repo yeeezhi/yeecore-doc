@@ -225,6 +225,7 @@ export default defineConfig({
                 link: '/wiki/plugins/Trigrex/intro',
                 items: [
                     {text: '触发器', link: '/wiki/plugins/Trigrex/trigger'},
+                    {text: '监听器', link: '/wiki/plugins/Trigrex/listen'},
                 ],
             },
             {

@@ -84,16 +84,24 @@ action:
   - 消息('触发成功,方块类型 {block-type}')
 ```
 
+### 移动
+
+```yaml
+type: move
+```
+
 ### 下蹲
 
 ```yaml
-type: sneak
+# 下蹲、下蹲结束
+type: sneak,sneak-end
 ```
 
 ### 奔跑
 
 ```yaml
-type: sprint
+# 奔跑、奔跑结束
+type: sprint,sprint-end
 ```
 
 ### 定时触发
@@ -105,13 +113,8 @@ type: timer
 ### 战斗状态
 
 ```yaml
-type: combat
-```
-
-### 战斗脱离
-
-```yaml
-type: combat-end
+# 战斗状态,战斗脱离
+type: combat,combat-end
 ```
 
 ### 玩家攻击
@@ -150,6 +153,12 @@ type: kill-entity
 type: kill-player
 ```
 
+### 方块破坏
+
+```yaml
+type: block-break
+```
+
 ### 物品拾取
 
 ```yaml
@@ -177,13 +186,13 @@ type: command
 ### 龙核按键
 
 ```yaml
-type: dragon-keyboard
+# 按下按键、释放按键
+type: dragon-keyboard,dragon-keyboard-end
 ```
 
 ### 萌芽按键
 
 ```yaml
-type: germ-keyboard
+# 按下按键、释放按键
+type: germ-keyboard,germ-keyboard-end
 ```
-
-## 玩家事件
