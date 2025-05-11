@@ -6,19 +6,28 @@ outline: [ 2, 3 ]
 
 施工中...
 
-## 玩家事件
+## 事件监听
 
 - 支持 `org.bukkit.event.player`
-  包下的[玩家事件](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/player/package-summary.html)
+  包下的[玩家事件](https://bukkit.windit.net/javadoc/org/bukkit/event/player/package-summary.html)
 - 使用指令 `/trxt listen` 可查看支持的事件列表
 - 物品目标：玩家手持物品，路径目标：玩家所在位置
+
+## 监听优先级
+
+默认 `normal`，优先顺序如下：
+
+- `lowest` → `low` → `normal` → `high` → `highest` → `monitor`
 
 ### 示例
 
 ```yaml
 事件监听示例:
+  # 监听事件
   listen: PlayerDropItemEvent
-  # 监听器匹配条件
+  # 监听优先级
+  priority: normal
+  # 前置条件
   condition:
     - ""
   # 执行动作
