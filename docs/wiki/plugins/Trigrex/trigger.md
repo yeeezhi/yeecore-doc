@@ -1,88 +1,49 @@
 ---
-outline: [ 2, 3 ]
+outline: [ 1, 2 ]
 ---
 
 # 触发器
 
-施工中...
+施工中...仅列出与当前功能相关参数，更多详见完整配置
 
-## 配置
-
-| 参数              | 说明            | 参数类型                    | 默认值    |
-|-----------------|---------------|-------------------------|--------|
-| type            | 触发器类型         | string                  | -      |
-| priority        | 优先级           | string                  | normal |
-| condition       | 前置条件          | list                    | -      |
-| location        | 位置需求          | string                  | -      |
-| action          | 动作            | list                    | -      |
-| rules           | 动作规则          | map                     | -      |
-| skill           | MythicMobs 技能 | list                    | -      |
-| entry           | 变量库           | map                     | -      |
-| cooldown        | 冷却时间          | number                  | -      |
-| cooldown-action | 冷却执行动作        | list                    | -      |
-| cancel          | 取消事件          | boolean & string & list | false  |
-| async           | 异步执行          | boolean                 | false  |
-| disable         | 禁用触发器         | boolean                 | false  |
-
-::: details 示例配置
+## MythicMobs
 
 ```yaml
-示例配置:
-  # 触发器类型，使用逗号分隔多个类型
-  type: right,left
-  # 处理优先级
-  # 默认 normal，用于控制处理顺序，非 Bukkit 事件优先级。顺序如下：
-  # lowest → low → normal → high → highest → monitor
-  priority: normal
-  # 临时变量
-  entry:
-    "玩家名": "%player_name%"
-  # 触发条件
-  condition:
-    - ""
-  # 位置需求
-  # 若有实体或方块目标，则取其位置；否则使用玩家位置
-  location: world,9,61,5
-  # 若条件结果为 true，则取消（拦截）对应事件
-  cancel: true
-  # 触发动作
-  action:
-    - 消息('右键')
-  # 按条件执行动作
-  rules:
-    - condition:
-        - ""
-      action:
-        - ""
-  # MythicMobs 技能
-  skill:
-    - 万千骰子
-  # 冷却时间（毫秒）
-  cooldown: 500
-  # 冷却执行动作
-  cooldown-action:
-    - 消息('{prefix}§e药水使用频繁')
-  # 禁用触发器
-  disable: false
-  # 异步处理，开启后将不处理事件拦截
-  async: false
-
+# 击杀怪物
+type: kill-mob
+# 怪物条件
+mob:
+  - "恶魔士兵"
+# 掉落物
+drop:
+  - "mm 恶魔士兵碎片 5"
+  - "mm 恶魔士兵核心 1~3 0.1"
+# 自动拾取
+auto-pickup: true
 ```
 
-:::
+## 龙核按键
 
-## 触发类型
+```yaml
+# 按下按键、释放按键
+type: dragon-keyboard,dragon-keyboard-end
+```
 
-以下仅列出与当前功能相关参数，更多详见上方配置参数
+## 萌芽按键
 
-### 左键
+```yaml
+# 按下按键、释放按键
+type: germ-keyboard,germ-keyboard-end
+```
+
+## 左键
 
 ```yaml
 # 左键、左键+SHIFT
 type: left,left-shift
 ```
 
-### 右键
+## 右键
 
 ```yaml
 # 右键、右键+SHIFT、右键实体、右键实体+SHIFT
@@ -100,13 +61,7 @@ action:
   - 消息('触发成功,方块类型 {block-type}')
 ```
 
-### 移动
-
-```yaml
-type: move
-```
-
-### 区域
+## 区域
 
 ```yaml
 进入区域:
@@ -121,21 +76,33 @@ type: move
     - 消息('&a已离开区域')
 ```
 
-### 下蹲
+## 下蹲
 
 ```yaml
 # 下蹲、下蹲结束
 type: sneak,sneak-end
 ```
 
-### 奔跑
+## 奔跑
 
 ```yaml
 # 奔跑、奔跑结束
 type: sprint,sprint-end
 ```
 
-### Cron
+## 移动
+
+```yaml
+type: move
+```
+
+## 传送
+
+```yaml
+type: teleport
+```
+
+## Cron
 
 - [Cron表达式在线生成](https://cron.ciding.cc/)
 
@@ -145,95 +112,202 @@ type: cron
 cron: "0 0/5 * * * ?"
 ```
 
-### 定时触发
+## 定时触发
 
 ```yaml
 type: timer
 ```
 
-### 战斗状态
+## 战斗状态
 
 ```yaml
 # 战斗状态,战斗脱离
 type: combat,combat-end
 ```
 
-### 玩家攻击
+## 玩家攻击
 
 ```yaml
 type: attack
 ```
 
-### 玩家受击
+## 玩家受击
 
 ```yaml
 type: defense
 ```
 
-### 玩家死亡
+## 玩家死亡
 
 ```yaml
 type: death
 ```
 
-### 玩家重生
+## 玩家重生
 
 ```yaml
 type: respawn
 ```
 
-### 击杀实体
+## 击杀实体
 
 ```yaml
 type: kill-entity
 ```
 
-### 击杀玩家
+## 击杀玩家
 
 ```yaml
 type: kill-player
 ```
 
-### 方块破坏
+## 方块破坏
 
 ```yaml
 type: block-break
+# 方块条件
+block:
+  - DIAMOND_ORE
+# 额外掉落物
+drop:
+  - "mc APPLE 1"
 ```
 
-### 物品拾取
+变量
+
+- 方块类型: `{block-type}`
+
+## 方块放置
+
+```yaml
+type: block-place
+location: world,0~25,0~255,20~50
+action:
+  - 消息('{prefix}&7禁止放置')
+cancel: true
+```
+
+变量
+
+- 方块类型: `{block-type}`
+
+## 物品拾取
 
 ```yaml
 type: pickup
 ```
 
-### 物品丢弃
+## 物品丢弃
 
 ```yaml
 type: drop
 ```
 
-### 玩家聊天
+## 物品消耗
 
 ```yaml
-type: chat
+type: consume
 ```
 
-### 执行指令
+## 物品合成
+
+```yaml
+type: craft
+condition:
+  - match.type('HOPPER')
+action:
+  - 消息('{prefix}&7禁止合成')
+cancel: true
+```
+
+## 附魔台
+
+```yaml
+type: enchant
+action:
+  - 消息('{prefix}&7禁止使用附魔台')
+cancel: true
+```
+## 铁砧
+
+```yaml
+type: anvil
+action:
+  - 消息('{prefix}&7禁止使用铁砧')
+cancel: true
+```
+
+## 执行指令
 
 ```yaml
 type: command
 ```
 
-### 龙核按键
+## 玩家聊天
 
 ```yaml
-# 按下按键、释放按键
-type: dragon-keyboard,dragon-keyboard-end
+type: chat
 ```
 
-### 萌芽按键
+**变量**
+
+- 消息: `{message}`
+
+## 玩家钓鱼
 
 ```yaml
-# 按下按键、释放按键
-type: germ-keyboard,germ-keyboard-end
+type: fish
+condition:
+  - "'{entity-type}' == 'PLAYER'"
+action:
+  - 消息('{prefix}&7禁止玩家使用钓竿钓玩家')
+cancel: true
 ```
+
+**变量**
+
+- [钓鱼状态](https://bukkit.windit.net/javadoc/org/bukkit/event/player/PlayerFishEvent.State.html): `{state}`
+
+## 登录游戏
+
+```yaml
+type: login
+```
+
+## 进入游戏
+
+```yaml
+type: join
+```
+
+## 退出游戏
+
+```yaml
+type: quit
+```
+
+## 打开GUI
+
+```yaml
+# GUI打开、关闭
+type: inventory-open,inventory-close
+```
+
+**变量**
+
+- 标题: `{inventory-title}`
+- [类型](https://bukkit.windit.net/javadoc/org/bukkit/event/inventory/InventoryType.html): `{inventory-type}`
+
+## 点击GUI
+
+```yaml
+type: inventory-click
+```
+
+**变量**
+
+- 标题: `{inventory-title}`
+- [类型](https://bukkit.windit.net/javadoc/org/bukkit/event/inventory/InventoryType.html): `{inventory-type}`
+- 点击槽位: `{slot}`
+- [点击类型](https://bukkit.windit.net/javadoc/org/bukkit/event/inventory/ClickType.html): `{click-type}`
+- [动作类型](https://bukkit.windit.net/javadoc/org/bukkit/event/inventory/InventoryAction.html): `{action-type}`
