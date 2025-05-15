@@ -205,6 +205,8 @@ type: drop
 
 ## 物品消耗
 
+在玩家成功吃下或喝下可食用物品时触发，如食物、药水、牛奶等
+
 ```yaml
 type: consume
 ```
@@ -228,6 +230,7 @@ action:
   - 消息('{prefix}&7禁止使用附魔台')
 cancel: true
 ```
+
 ## 铁砧
 
 ```yaml
@@ -311,3 +314,11 @@ type: inventory-click
 - 点击槽位: `{slot}`
 - [点击类型](https://bukkit.windit.net/javadoc/org/bukkit/event/inventory/ClickType.html): `{click-type}`
 - [动作类型](https://bukkit.windit.net/javadoc/org/bukkit/event/inventory/InventoryAction.html): `{action-type}`
+
+## 切换主副手
+
+仅使用 `F键` 切换主副手时触发
+
+```yaml
+type: sawp-hand
+```
