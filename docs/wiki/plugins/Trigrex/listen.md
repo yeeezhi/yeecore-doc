@@ -17,7 +17,7 @@ outline: [ 2, 2 ]
 
 ```yaml
 监听示例:
-  # 监听事件
+  # 监听事件，支持简写（省略包名）或使用完整类路径
   listen: PlayerDropItemEvent
   # 监听优先级
   # 默认 normal。顺序如下：
@@ -37,29 +37,23 @@ outline: [ 2, 2 ]
 
 ### 触发器目标
 
-从事件方法中获取玩家对象
+触发器可通过事件中的方法或字段，获取目标 **玩家** 或 **实体** 对象。配置格式如下：
 
-```yaml
-player-method: getPlayer
-```
+**玩家目标**
 
-对应事件方法：
+| 类型   | 配置示例                       | 对应 Java 成员                  |
+|------|----------------------------|-----------------------------|
+| 方法获取 | `player-method: getPlayer` | `public Player getPlayer()` |
+| 字段获取 | `player-property: player`  | `private Player player;`    |
 
-```java
-public Player getPlayer()
-```
+- 未配置玩家目标时，默认以全服在线玩家为触发目标
 
-从事件字段中获取玩家对象
+**实体目标**
 
-```yaml
-player-property: player
-```
-
-对应事件字段：
-
-```java
-private Player player;
-```
+| 类型   | 配置示例                       | 对应 Java 成员                  |
+|------|----------------------------|-----------------------------|
+| 方法获取 | `entity-method: getEntity` | `public Entity getEntity()` |
+| 字段获取 | `entity-property: entity`  | `private Entity entity;`    |
 
 ### 示例
 
